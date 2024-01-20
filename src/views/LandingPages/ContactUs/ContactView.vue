@@ -6,7 +6,7 @@ import DefaultNavbar from "@/examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "@/examples/footers/FooterDefault.vue";
 
 //image
-import image from "@/assets/img/illustrations/illustration-signin.jpg";
+import image from "@/assets/img/contact/hero.svg";
 
 //material components
 import MaterialInput from "@/components/MaterialInput.vue";
@@ -15,22 +15,101 @@ import MaterialButton from "@/components/MaterialButton.vue";
 
 // material-input
 import setMaterialInput from "@/assets/js/material-input";
-onMounted(() => {
+import MaterialAlert from "@/components/MaterialAlert.vue";
+onMounted(async () => {
   setMaterialInput();
 });
 </script>
+
+<script>
+import emailjs from "@emailjs/browser";
+
+export default {
+  data() {
+    return {
+      emailSend: {
+        status: null,
+        description: "",
+      },
+    };
+  },
+  methods: {
+    setEmailStatus(status, description) {
+      this.emailSend = {
+        status,
+        description,
+      };
+
+      setTimeout(() => {
+        this.emailSend = {
+          status: null,
+          description: "",
+        };
+      }, 3000);
+    },
+    sendEmail() {
+      event.preventDefault();
+      const previousData = localStorage.getItem("contactData");
+      if (this.$refs.form && previousData) {
+        switch (true) {
+          case !JSON.parse(previousData).description.length:
+            this.setEmailStatus("danger", "Invalid description");
+            this.emailSend = {
+              status: "danger",
+              description: "Invalid description",
+            };
+            return;
+
+          case !JSON.parse(previousData).email.length:
+            this.setEmailStatus("danger", "Invalid email");
+            this.emailSend = {
+              status: "danger",
+              description: "Invalid description",
+            };
+            return;
+
+          case !JSON.parse(previousData).full_name.length:
+            this.setEmailStatus("danger", "Invalid Full Name");
+            this.emailSend = {
+              status: "danger",
+              description: "Invalid description",
+            };
+            return;
+
+          default:
+            return;
+        }
+
+        return;
+
+        emailjs
+          .sendForm(
+            "service_8qcw8ld",
+            "template_tueqx0b",
+            this.$refs.form,
+            "aEnoEFTTKWgqrVkEr"
+          )
+          .then(
+            (result) => {
+              console.log("SUCCESS!", result.text);
+            },
+            (error) => {
+              console.log("FAILED...", error.text);
+            }
+          );
+      } else {
+        this.setEmailStatus("danger", "Missing fields");
+      }
+    },
+  },
+};
+</script>
+
 <template>
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
-        <DefaultNavbar
-          :sticky="true"
-          :action="{
-            route: 'https://www.creative-tim.com/product/vue-material-kit-pro',
-            color: 'bg-gradient-success',
-            label: 'Buy Now',
-          }"
-        />
+        <DefaultNavbar :sticky="true" />
       </div>
     </div>
   </div>
@@ -45,7 +124,9 @@ onMounted(() => {
               class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center"
               :style="{
                 backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                backgroundPositionY: '50%',
               }"
               loading="lazy"
             ></div>
@@ -71,11 +152,17 @@ onMounted(() => {
                   please email hello@creative-tim.com or contact using our
                   contact form.
                 </p>
-                <form id="contact-form" method="post" autocomplete="off">
+                <form
+                  id="contact-form"
+                  ref="form"
+                  method="post"
+                  autocomplete="off"
+                >
                   <div class="card-body p-0 my-3">
                     <div class="row">
                       <div class="col-md-6">
                         <MaterialInput
+                          model="full_name"
                           class="input-group-static mb-4"
                           type="text"
                           label="Full Name"
@@ -86,6 +173,7 @@ onMounted(() => {
                         <MaterialInput
                           class="input-group-static mb-4"
                           type="email"
+                          model="email"
                           label="Email"
                           placeholder="hello@creative-tim.com"
                         />
@@ -96,6 +184,7 @@ onMounted(() => {
                         id="message"
                         class="input-group-static mb-4"
                         :rows="6"
+                        model="description"
                         placeholder="Describe your problem in at least 250 characters"
                         >How can we help you?</MaterialTextArea
                       >
@@ -103,6 +192,7 @@ onMounted(() => {
                     <div class="row">
                       <div class="col-md-12 text-center">
                         <MaterialButton
+                          @click="sendEmail()"
                           variant="gradient"
                           color="success"
                           class="mt-3 mb-0"
@@ -119,5 +209,24 @@ onMounted(() => {
       </div>
     </div>
   </section>
+
+  <MaterialAlert
+    v-if="emailSend.status !== null"
+    @click="setEmailStatus(null, '')"
+    class="contact-alert"
+    :color="emailSend.status"
+    fontWeight="bold"
+    >{{ emailSend.description }}</MaterialAlert
+  >
   <DefaultFooter />
 </template>
+
+<style scoped>
+.contact-alert {
+  position: fixed;
+  bottom: 0;
+  z-index: 51;
+  right: 0;
+  cursor: pointer;
+}
+</style>

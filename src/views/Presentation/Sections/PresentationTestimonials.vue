@@ -2,9 +2,9 @@
 import DefaultReviewCard from "@/examples/cards/reviewCards/DefaultReviewCard.vue";
 </script>
 <template>
-  <section class="py-7">
+  <section class="my-3 py-3">
     <div class="container">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-6 mx-auto text-center">
           <h2 class="mb-0">Trusted by over</h2>
           <h2 class="text-gradient text-success mb-3">
@@ -15,8 +15,8 @@ import DefaultReviewCard from "@/examples/cards/reviewCards/DefaultReviewCard.vu
             institutions love Creative Tim's products.
           </p>
         </div>
-      </div>
-      <div class="row mt-6">
+      </div> -->
+      <div class="row">
         <DefaultReviewCard
           name="Nick Willever"
           date="1 day ago"
@@ -45,7 +45,7 @@ import DefaultReviewCard from "@/examples/cards/reviewCards/DefaultReviewCard.vu
           :rating="5.0"
         />
       </div>
-      <hr class="horizontal dark my-5" />
+      <!-- <hr class="horizontal dark my-5" />
       <div class="row">
         <div class="col-lg-2 col-md-4 col-6 ms-auto">
           <img
@@ -82,7 +82,7 @@ import DefaultReviewCard from "@/examples/cards/reviewCards/DefaultReviewCard.vu
             alt="Logo"
           />
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

@@ -5,7 +5,7 @@ import RotatingCardBack from "../../../examples/cards/rotatingCards/RotatingCard
 import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.vue";
 </script>
 <template>
-  <section class="my-5 py-5">
+  <section class="my-3 py-3">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">

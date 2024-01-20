@@ -1,5 +1,7 @@
 <script setup>
-defineProps({
+import { defineProps, toRefs } from "vue";
+
+const props = defineProps({
   id: {
     type: String,
     default: "",
@@ -52,7 +54,12 @@ defineProps({
     type: String,
     default: "",
   },
+  model: {
+    type: String,
+    default: "",
+  },
 });
+
 function getClasses(size, success, error) {
   let sizeValue, isValidValue;
 
@@ -69,23 +76,72 @@ function getClasses(size, success, error) {
   return `${sizeValue} ${isValidValue}`;
 }
 </script>
+
+<script>
+export default {
+  data() {
+    return {
+      inputValue: "",
+    };
+  },
+
+  mounted() {
+    const { model } = toRefs(this.props);
+    this.inputValue = this.fetchData(model.value);
+  },
+
+  methods: {
+    fetchData(model) {
+      const previousData = localStorage.getItem("contactData");
+
+      if (previousData) {
+        const parsedPrevData = JSON.parse(previousData);
+        return parsedPrevData[model];
+      }
+
+      return "";
+    },
+
+    handleInput(value, model) {
+      const previousData = localStorage.getItem("contactData");
+      let parsedPrevData;
+      if (previousData) {
+        parsedPrevData = JSON.parse(previousData);
+
+        parsedPrevData[model] = value;
+      } else {
+        parsedPrevData = {
+          full_name: "",
+          email: "",
+          description: "",
+        };
+      }
+      parsedPrevData = JSON.stringify(parsedPrevData);
+      localStorage.setItem("contactData", parsedPrevData);
+    },
+  },
+};
+</script>
+
 <template>
   <div class="input-group">
-    <label v-if="label" :class="label.class">{{
-      typeof label == "string" ? label : label.text
-    }}</label>
+    <label v-if="label" :class="label.class"
+      >{{ typeof label == "string" ? label : label.text }}</label
+    >
     <span v-if="icon" class="input-group-text"
       ><i class="fas" :class="`fa-${icon}`" aria-hidden="true"></i
     ></span>
     <input
+      @input="handleInput($event.target.value, model)"
       :id="id"
+      :name="model"
       :type="type"
       class="form-control"
+      :ref="model"
       :class="[getClasses(size, success, error), inputClass]"
-      :value="value"
+      v-model="inputValue"
       :placeholder="placeholder"
-      :isRequired="isRequired"
-      :disabled="isDisabled"
+      isRequired
     />
   </div>
 </template>

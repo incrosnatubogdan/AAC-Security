@@ -1,6 +1,6 @@
 import closeProtectionCta from "@/assets/img/services/close_protection/cta.jpg";
 
-export const closeProtectionServices = [
+export const luxuryEventServices = [
   {
     icon: "stadium",
     title: "Event Security",

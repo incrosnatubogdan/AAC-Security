@@ -64,16 +64,16 @@ const router = createRouter({
       name: "hotel",
       component: Hotel,
     },
+    {
+      path: "/pages/landing-pages/contact-us",
+      name: "contact",
+      component: ContactView,
+    },
     // Unused go here
     {
       path: "/pages/landing-pages/about-us",
       name: "about",
       component: AboutView,
-    },
-    {
-      path: "/pages/landing-pages/contact-us",
-      name: "contactus",
-      component: ContactView,
     },
     {
       path: "/pages/landing-pages/author",
