@@ -19,10 +19,15 @@ defineProps({
     label: String,
     default: () => ({
       color: "bg-gradient-success",
-      label: "Find Out More",
+      label: "Call us +4479 5102 7265",
     }),
   },
 });
+</script>
+<script>
+export default {
+  inheritAttrs: false,
+};
 </script>
 <template>
   <div class="card">
@@ -33,7 +38,7 @@ defineProps({
     </div>
     <div class="card-body text-center">
       <h5 class="font-weight-normal">
-        <a href="javascript:;">{{ title }}</a>
+        <a href="tel:+447951027265">{{ title }}</a>
       </h5>
       <p class="mb-0">
         {{ description }}

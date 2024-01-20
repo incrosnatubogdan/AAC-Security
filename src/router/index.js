@@ -23,6 +23,13 @@ import ElDropdowns from "../layouts/sections/elements/dropdowns/DropdownsView.vu
 import ElProgressBars from "../layouts/sections/elements/progress-bars/ProgressBarsView.vue";
 import ElToggles from "../layouts/sections/elements/toggles/TogglesView.vue";
 import ElTypography from "../layouts/sections/elements/typography/TypographyView.vue";
+
+import CloseProtection from "../views/LandingPages/Services/CloseProtection.vue";
+import LuxuryEvent from "../views/LandingPages/Services/LuxuryEvent.vue";
+import ResidentialSecurity from "../views/LandingPages/Services/ResidentialSecurity.vue";
+import Corporate from "../views/LandingPages/Services/Corporate.vue";
+import Hotel from "../views/LandingPages/Services/Hotel.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -31,6 +38,33 @@ const router = createRouter({
       name: "presentation",
       component: PresentationView,
     },
+    {
+      path: "/close-protection-vip",
+      name: "closeProtection",
+      component: CloseProtection,
+    },
+    {
+      path: "/luxury-event-security",
+      name: "luxuryEvent",
+      component: LuxuryEvent,
+    },
+    {
+      path: "/residential-security",
+      name: "residentialSecurity",
+      component: ResidentialSecurity,
+    },
+    
+    {
+      path: "/corporate-security",
+      name: "corporate",
+      component: Corporate,
+    },
+    {
+      path: "/hotel-security",
+      name: "hotel",
+      component: Hotel,
+    },
+    // Unused go here
     {
       path: "/pages/landing-pages/about-us",
       name: "about",

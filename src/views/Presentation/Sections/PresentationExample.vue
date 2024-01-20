@@ -90,7 +90,7 @@ export default {
               :key="title"
             >
               <ExampleCard
-                class="min-height-160 shadow-lg mt-4"
+                class="min-height-160 max-height-200 shadow-lg mt-4"
                 :image="image"
                 :title="title"
                 :subtitle="subtitle"

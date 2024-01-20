@@ -2,10 +2,11 @@
 import { onMounted, onUnmounted } from "vue";
 
 //example components
-import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
+import NavbarDefault from "../../examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../examples/footers/FooterDefault.vue";
 import Header from "../../examples/Header.vue";
 import FilledInfoCard from "../../examples/cards/infoCards/FilledInfoCard.vue";
+import WhatsAppButton from "../../components/WhatsAppButton.vue"
 
 //Vue Material Kit 2 components
 import MaterialSocialButton from "@/components/MaterialSocialButton.vue";
@@ -14,7 +15,7 @@ import MaterialSocialButton from "@/components/MaterialSocialButton.vue";
 import PresentationCounter from "./Sections/PresentationCounter.vue";
 import PresentationPages from "./Sections/PresentationPages.vue";
 import PresentationExample from "./Sections/PresentationExample.vue";
-import data from "./Sections/Data/designBlocksData";
+import servicesData from "../../helpers/services/data";
 import BuiltByDevelopers from "./Components/BuiltByDevelopers.vue";
 import PresentationTestimonials from "./Sections/PresentationTestimonials.vue";
 import PresentationInformation from "./Sections/PresentationInformation.vue";
@@ -74,10 +75,12 @@ onUnmounted(() => {
     </div>
   </Header>
 
+  <WhatsAppButton />
+
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
     <PresentationCounter />
     <PresentationInformation />
-    <PresentationExample :data="data" />
+    <PresentationExample :data="servicesData" />
     <PresentationPages />
     <BuiltByDevelopers />
 

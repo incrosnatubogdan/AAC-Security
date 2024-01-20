@@ -2,6 +2,7 @@
 import { RouterLink } from "vue-router";
 import { ref, watch } from "vue";
 import { useWindowsWidth } from "../../assets/js/useWindowsWidth";
+import Logo from "@/assets/img/logo.png";
 
 // images
 import ArrDark from "@/assets/img/down-arrow-dark.svg";
@@ -15,31 +16,31 @@ const props = defineProps({
     color: String,
     label: String,
     default: () => ({
-      route: "https://www.creative-tim.com/product/vue-material-kit",
+      route: "tel:+447951027265",
       color: "bg-gradient-success",
-      label: "Free Download"
-    })
+      label: "Call us +4479 5102 7265",
+    }),
   },
   transparent: {
     type: Boolean,
-    default: false
+    default: false,
   },
   light: {
     type: Boolean,
-    default: false
+    default: false,
   },
   dark: {
     type: Boolean,
-    default: false
+    default: false,
   },
   sticky: {
     type: Boolean,
-    default: false
+    default: false,
   },
   darkText: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
 // set arrow  color
@@ -98,7 +99,7 @@ watch(
       'my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-4 position-absolute mt-4':
         props.sticky,
       'navbar-light bg-white py-3': props.light,
-      ' navbar-dark bg-gradient-dark z-index-3 py-3': props.dark
+      ' navbar-dark bg-gradient-dark z-index-3 py-3': props.dark,
     }"
   >
     <div
@@ -113,33 +114,45 @@ watch(
         :class="[
           (props.transparent && textDark.value) || !props.transparent
             ? 'text-dark font-weight-bolder ms-sm-3'
-            : 'text-white font-weight-bolder ms-sm-3'
+            : 'text-white font-weight-bolder ms-sm-3',
+          'p-0',
         ]"
         :to="{ name: 'presentation' }"
         rel="tooltip"
-        title="Designed and Coded by Creative Tim"
+        title="AAP Security"
         data-placement="bottom"
       >
-        Material Kit 2
+        <img
+          :src="Logo"
+          alt="logo"
+          loading="lazy"
+          :style="{ height: '40px' }"
+        />
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
         :class="
-          props.transparent || props.dark
+          (props.transparent || props.dark
             ? 'text-white'
-            : 'font-weight-bolder ms-sm-3'
+            : 'font-weight-bolder ms-sm-3',
+          'p-0')
         "
         to="/"
         rel="tooltip"
-        title="Designed and Coded by Creative Tim"
+        title="AAP Security"
         data-placement="bottom"
       >
-        Material Design
+        <img
+          :src="Logo"
+          alt="logo"
+          loading="lazy"
+          :style="{ height: '40px' }"
+        />
       </RouterLink>
       <a
-        href="https://www.creative-tim.com/product/vue-material-kit-pro"
+        href="tel:+447951027265"
         class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
-        >Buy Now</a
+        >Call us +4479 5102 7265</a
       >
       <button
         class="navbar-toggler shadow-none ms-2"
@@ -161,6 +174,150 @@ watch(
         id="navigation"
       >
         <ul class="navbar-nav navbar-nav-hover ms-auto">
+
+          <!-- Start here -->
+
+          <li class="nav-item dropdown dropdown-hover mx-2">
+            <a
+              role="button"
+              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+              :class="getTextColor()"
+              id="dropdownMenuPages"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i
+                class="material-icons opacity-6 me-2 text-md"
+                :class="getTextColor()"
+                >dashboard</i
+              >
+              Services
+              <img
+                :src="getArrowColor()"
+                alt="down-arrow"
+                class="arrow ms-2 d-lg-block d-none"
+              />
+              <img
+                :src="getArrowColor()"
+                alt="down-arrow"
+                class="arrow ms-1 d-lg-none d-block ms-auto"
+              />
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-2 border-radius-xl mt-0 mt-lg-3"
+              aria-labelledby="dropdownMenuPages"
+            >
+              <div class="row d-none d-lg-block">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="position-relative">
+                      <RouterLink
+                        :to="{ name: 'closeProtection' }"
+                        class="dropdown-item border-radius-md"
+                      >
+                        <span>Close Protection & VIP</span>
+                      </RouterLink>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row d-none d-lg-block">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="position-relative">
+                      <RouterLink
+                        :to="{ name: 'luxuryEvent' }"
+                        class="dropdown-item border-radius-md"
+                      >
+                        <span>Luxury Event Security</span>
+                      </RouterLink>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row d-none d-lg-block">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="position-relative">
+                      <RouterLink
+                        :to="{ name: 'residentialSecurity' }"
+                        class="dropdown-item border-radius-md"
+                      >
+                        <span>Residential security</span>
+                      </RouterLink>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row d-none d-lg-block">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="position-relative">
+                      <RouterLink
+                        :to="{ name: 'corporate' }"
+                        class="dropdown-item border-radius-md"
+                      >
+                        <span>Corporate </span>
+                      </RouterLink>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row d-none d-lg-block">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="position-relative">
+                      <RouterLink
+                        :to="{ name: 'hotel' }"
+                        class="dropdown-item border-radius-md"
+                      >
+                        <span>Hotel</span>
+                      </RouterLink>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-lg-none">
+                <div
+                  class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0"
+                >
+                  Landing Pages
+                </div>
+                <RouterLink
+                  :to="{ name: 'about' }"
+                  class="dropdown-item border-radius-md"
+                >
+                  <span>About Us</span>
+                </RouterLink>
+                <RouterLink
+                  :to="{ name: 'contactus' }"
+                  class="dropdown-item border-radius-md"
+                >
+                  <span>Contact Us</span>
+                </RouterLink>
+                <RouterLink
+                  :to="{ name: 'author' }"
+                  class="dropdown-item border-radius-md"
+                >
+                  <span>Author</span>
+                </RouterLink>
+                <div
+                  class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
+                >
+                  Account
+                </div>
+                <RouterLink
+                  :to="{ name: 'signin-basic' }"
+                  class="dropdown-item border-radius-md"
+                >
+                  <span>Sign In</span>
+                </RouterLink>
+              </div>
+            </div>
+          </li>
+
+          <!-- End here -->
+
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               role="button"
