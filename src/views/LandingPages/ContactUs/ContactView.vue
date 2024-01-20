@@ -50,53 +50,59 @@ export default {
     sendEmail() {
       event.preventDefault();
       const previousData = localStorage.getItem("contactData");
+      const lastContactSentTime = localStorage.getItem("lastContactSentTime");
+      let newSeconds = null;
+
+      if (lastContactSentTime) {
+        newSeconds =
+          (new Date().getTime() - new Date(lastContactSentTime).getTime()) /
+          60000;
+
+        if (newSeconds > 5) {
+          newSeconds = null;
+        }
+      }
+
       if (this.$refs.form && previousData) {
         switch (true) {
           case !JSON.parse(previousData).description.length:
             this.setEmailStatus("danger", "Invalid description");
-            this.emailSend = {
-              status: "danger",
-              description: "Invalid description",
-            };
             return;
 
           case !JSON.parse(previousData).email.length:
             this.setEmailStatus("danger", "Invalid email");
-            this.emailSend = {
-              status: "danger",
-              description: "Invalid description",
-            };
             return;
 
           case !JSON.parse(previousData).full_name.length:
             this.setEmailStatus("danger", "Invalid Full Name");
-            this.emailSend = {
-              status: "danger",
-              description: "Invalid description",
-            };
             return;
 
+          case newSeconds !== null:
+            console.log(newSeconds, "newSeconds");
+            this.setEmailStatus(
+              "warning",
+              "We have received your previous request, and we'll get back to you"
+            );
+            return;
           default:
-            return;
+            console.log(newSeconds, "newSeconds");
+            localStorage.setItem("lastContactSentTime", new Date());
+
+            emailjs
+              .sendForm(
+                import.meta.env.VITE_GOOGLE_EMAIL,
+                import.meta.env.VITE_TEMPLATE,
+                this.$refs.form,
+                import.meta.env.VITE_SDK
+              )
+              .then((result) => {
+                this.emailSend = {
+                  status: "success",
+                  description:
+                    "We have received your email and will get back to you!",
+                };
+              });
         }
-
-        return;
-
-        emailjs
-          .sendForm(
-            "service_8qcw8ld",
-            "template_tueqx0b",
-            this.$refs.form,
-            "aEnoEFTTKWgqrVkEr"
-          )
-          .then(
-            (result) => {
-              console.log("SUCCESS!", result.text);
-            },
-            (error) => {
-              console.log("FAILED...", error.text);
-            }
-          );
       } else {
         this.setEmailStatus("danger", "Missing fields");
       }
