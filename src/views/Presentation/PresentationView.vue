@@ -5,7 +5,7 @@ import { onMounted, onUnmounted } from "vue";
 import NavbarDefault from "../../examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../examples/footers/FooterDefault.vue";
 import Header from "../../examples/Header.vue";
-import WhatsAppButton from "../../components/WhatsAppButton.vue"
+import WhatsAppButton from "../../components/WhatsAppButton.vue";
 
 import MaterialSocialButton from "@/components/MaterialSocialButton.vue";
 
@@ -67,7 +67,7 @@ onUnmounted(() => {
   <WhatsAppButton />
 
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-    <PresentationCounter />
+    <!-- <PresentationCounter /> -->
     <PresentationInformation />
     <PresentationExample :data="servicesData" />
     <PresentationTestimonials />
@@ -79,7 +79,7 @@ onUnmounted(() => {
             <h4 class="mb-1">Thank you for your support!</h4>
             <p class="lead mb-0">We deliver the best web products</p>
           </div>
-          <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-end mt-5">
+          <!-- <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-end mt-5">
             <MaterialSocialButton
               route="https://twitter.com/intent/tweet?text=Check%20Material%20Design%20System%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23bootstrap5&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-design-system-pro"
               component="twitter"
@@ -98,7 +98,7 @@ onUnmounted(() => {
               color="pinterest"
               label="Pin it"
             />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

@@ -32,13 +32,6 @@ export default [
         route: "closeProtection",
         pro: false
       },
-      {
-        image: closeProtection4,
-        title: "Crisis Management",
-        subtitle: "",
-        route: "closeProtection",
-        pro: false
-      },
     ]
   }
 ];

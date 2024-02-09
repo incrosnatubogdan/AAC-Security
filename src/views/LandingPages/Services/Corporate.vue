@@ -15,6 +15,7 @@ import {
   closeProtectionServicesCta,
 } from "../../../helpers/services/closeProtection";
 import servicesData from "../../../helpers/services/data";
+import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
@@ -58,4 +59,5 @@ onUnmounted(() => {
     />
   </div>
   <DefaultFooter />
+  <WhatsAppButton />
 </template>
