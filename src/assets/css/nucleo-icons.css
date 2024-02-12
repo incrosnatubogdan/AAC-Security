@@ -12,6 +12,23 @@ License - nucleoapp.com/license/
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'Incompleeta';
+  src: url('../fonts/IncompleetaRegular.eot');
+  src: local('Incompleeta'), local('IncompleetaRegular'),
+      url('../fonts/IncompleetaRegular.eot') format('embedded-opentype'),
+      url('../fonts/IncompleetaRegular.woff2') format('woff2'),
+      url('../fonts/IncompleetaRegular.woff') format('woff'),
+      url('../fonts/IncompleetaRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.new-font {
+  font-family: 'Incompleeta' !important;
+}
+
 /*------------------------
     base class definition
 -------------------------*/

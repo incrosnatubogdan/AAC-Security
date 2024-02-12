@@ -12,10 +12,10 @@ import bg0 from "@/assets/img/bg9.jpg";
 import Typed from "typed.js";
 
 //sections
-import Information from "./Sections/AboutInformation.vue";
-import AboutTeam from "./Sections/AboutTeam.vue";
-import Featuring from "./Sections/AboutFeaturing.vue";
-import Newsletter from "./Sections/AboutNewsletter.vue";
+import Information from "../AboutUs/Sections/AboutInformation.vue";
+import AboutTeam from "../AboutUs/Sections/AboutTeam.vue";
+import Featuring from "../AboutUs/Sections/AboutFeaturing.vue";
+import Newsletter from "../AboutUs/Sections/AboutNewsletter.vue";
 
 import {
   closeProtectionServices,
@@ -69,8 +69,8 @@ onUnmounted(() => {
             </h1>
             <div id="typed-strings">
               <h1>team</h1>
-              <h1>design</h1>
-              <h1>tool</h1>
+              <h1>industry</h1>
+              <h1>clientele</h1>
             </div>
             <p class="lead mb-4 text-white opacity-8">
               We’re constantly trying to express ourselves and actualize our
@@ -79,21 +79,6 @@ onUnmounted(() => {
             <button type="submit" class="btn bg-white text-dark">
               Create Account
             </button>
-            <h6 class="text-white mb-2 mt-5">Find us on</h6>
-            <div class="d-flex justify-content-center">
-              <a href="javascript:;"
-                ><i class="fab fa-facebook text-lg text-white me-4"></i
-              ></a>
-              <a href="javascript:;"
-                ><i class="fab fa-instagram text-lg text-white me-4"></i
-              ></a>
-              <a href="javascript:;"
-                ><i class="fab fa-twitter text-lg text-white me-4"></i
-              ></a>
-              <a href="javascript:;"
-                ><i class="fab fa-google-plus text-lg text-white"></i
-              ></a>
-            </div>
           </div>
         </div>
       </div>
