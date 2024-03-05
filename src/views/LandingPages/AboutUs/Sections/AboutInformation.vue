@@ -39,6 +39,7 @@ defineProps({
             :image="callToAction.icon"
             :title="callToAction.title"
             :description="callToAction.description"
+            :action="callToAction.action"
           />
         </div>
       </div>

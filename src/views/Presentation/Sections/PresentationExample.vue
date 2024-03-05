@@ -69,7 +69,7 @@ export default {
           <div :class="`row ${index != 0 ? 'mt-3' : ''}`">
             <div
               class="col-md-4 mt-md-0"
-              v-for="{ image, title, subtitle, route, pro } in items"
+              v-for="{ image, title, subtitle, route } in items"
               :key="title"
             >
               <ExampleCard
@@ -78,7 +78,6 @@ export default {
                 :title="title"
                 :subtitle="subtitle"
                 :route="route"
-                :pro="pro"
               />
             </div>
           </div>

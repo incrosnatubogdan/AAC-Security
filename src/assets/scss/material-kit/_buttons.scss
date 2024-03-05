@@ -86,6 +86,14 @@
     display: $btn-material-icon-display;
     top: $btn-material-icon-top;
   }
+
+  > a {
+    color: white;
+  }
+
+  &.bg-white > a {
+    color: black;
+  }
 }
 
 .btn-check{

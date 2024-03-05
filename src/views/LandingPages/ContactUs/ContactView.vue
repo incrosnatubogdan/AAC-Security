@@ -224,7 +224,7 @@ export default {
     fontWeight="bold"
     >{{ emailSend.description }}</MaterialAlert
   >
-  <DefaultFooter />
+  <!-- <DefaultFooter /> -->
 </template>
 
 <style scoped>

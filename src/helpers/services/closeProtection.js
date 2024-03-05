@@ -30,5 +30,9 @@ export const closeProtectionServices = [
 export const closeProtectionServicesCta = {
   icon: closeProtectionCta,
   title: 'Lorem ipsum',
-  description: 'Give us a call for all your training needs'
+  description: 'Give us a call for all your training needs',
+  action: {
+    route: 'tel:+447951027265',
+    label: "Call us +4479 5102 7265",
+  }
 }

@@ -13,9 +13,6 @@ import Typed from "typed.js";
 
 //sections
 import Information from "../AboutUs/Sections/AboutInformation.vue";
-import AboutTeam from "../AboutUs/Sections/AboutTeam.vue";
-import Featuring from "../AboutUs/Sections/AboutFeaturing.vue";
-import Newsletter from "../AboutUs/Sections/AboutNewsletter.vue";
 
 import {
   closeProtectionServices,
@@ -48,11 +45,6 @@ onUnmounted(() => {
 </script>
 <template>
   <DefaultNavbar
-    :action="{
-      route: 'javascript:;',
-      label: 'Buy Now',
-      color: 'btn-white',
-    }"
     transparent
   />
   <header class="bg-gradient-dark">
@@ -74,10 +66,10 @@ onUnmounted(() => {
             </div>
             <p class="lead mb-4 text-white opacity-8">
               We’re constantly trying to express ourselves and actualize our
-              dreams. If you have the opportunity to play this game
+              dreams. Join in on the opportunity by sending your CV
             </p>
             <button type="submit" class="btn bg-white text-dark">
-              Create Account
+              <a href="mailto:someone@example.com">Send us your CV</a>
             </button>
           </div>
         </div>
@@ -85,12 +77,10 @@ onUnmounted(() => {
     </div>
   </header>
   <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <h2 class="container pt-4">Expected duties</h2>
     <Information 
       :serviceDescription="closeProtectionServices"
       :callToAction="closeProtectionServicesCta" />
-    <AboutTeam />
-    <Featuring />
-    <Newsletter />
   </div>
-  <DefaultFooter />
+  <!-- <DefaultFooter /> -->
 </template>

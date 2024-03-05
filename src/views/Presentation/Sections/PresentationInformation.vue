@@ -13,20 +13,18 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
             <RotatingCardFront
               image="https://images.pexels.com/photos/1427581/pexels-photo-1427581.jpeg?cs=srgb&dl=pexels-samuel-w%C3%B6lfl-1427581.jpg&fm=jpg"
               icon="touch_app"
-              title="Feel the <br /> Material Kit"
-              description="All the Bootstrap components that you need in a development have been
-        re-design with the new look."
+              title="Welcome to </br > AAP Security"
+              description="Find out how you can secure your business and events"
             />
 
             <RotatingCardBack
               image="https://images.pexels.com/photos/9647534/pexels-photo-9647534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              title="Discover More"
-              description="You will save a lot of time going from prototyping to full-functional
-                code because all elements are implemented."
+              title="Customized Solutions"
+              description="We offer comprehensive security solutions tailored to meet your specific needs and concerns."
               :action="[
                 {
-                  route: './/sections/page-sections/hero-sections.html',
-                  label: 'Start with Headers',
+                  route: '/pages/landing-pages/contact-us',
+                  label: 'Contact us',
                 },
               ]"
             />

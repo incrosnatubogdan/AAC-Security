@@ -1,34 +1,34 @@
 import closeProtectionCta from "@/assets/img/services/close_protection/cta.jpg";
 
-export const closeProtectionServices = [
+export const residentialSecurityServices = [
   {
     icon: "stadium",
-    title: "Event Security",
+    title: "Security Patrols",
     description:
-      "Providing security services for public appearances, promotional events, and other gatherings involving the VIP",
+      "Conducting regular patrols of residential neighborhoods or communities to deter criminal activity",
   },
   {
     icon: "work",
-    title: "Travel Security",
+    title: "Security Guard Services",
     description:
-      "Coordinating and securing transportation for the VIP, including travel routes, vehicles, and logistics",
+      "Conducting security checks and responding to security concerns raised by residents",
   },
   {
     icon: "groups3",
-    title: "Risk Mitigation Strategies",
+    title: "Vacation Watch Services",
     description:
-      "Developing and implementing personalized security plans based on the identified threats and risks",
+      "Providing vacation watch services for homeowners who are away for an extended period, including regular property checks and monitoring",
   },
   {
     icon: "important_devices",
-    title: "Threat Assessments",
+    title: "Neighborhood Watch Programs",
     description:
-      "Conducting thorough assessments to identify potential threats and vulnerabilities to the VIP",
+      "Facilitating neighborhood watch programs to encourage residents to collaborate on security initiatives and report suspicious activity",
   },
 ];
 
-export const closeProtectionServicesCta = {
+export const residentialSecurityServicesCta = {
   icon: closeProtectionCta,
-  title: 'Lorem ipsum',
-  description: 'Give us a call for all your training needs'
-}
+  title: "Call now",
+  description: "Give us a call for all your security needs",
+};

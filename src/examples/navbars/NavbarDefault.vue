@@ -316,7 +316,7 @@ watch(
               <i
                 class="material-icons opacity-6 me-2 text-md"
                 :class="getTextColor()"
-                >phone</i
+                >badge</i
               >
               <span>Hiring</span>
             </RouterLink>
