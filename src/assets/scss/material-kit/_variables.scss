@@ -1514,17 +1514,6 @@ $toast-box-shadow: $box-shadow !default;
 $toast-header-color: $h-color !default;
 $toast-header-background-color: rgba($white, 0.85) !default;
 $toast-header-border-color: rgba(0, 0, 0, 0.05) !default;
-
-// Badges
-
-$badge-font-size: 0.75em !default;
-$badge-font-weight: $font-weight-bolder !default;
-$badge-color: $white !default;
-$badge-padding-y: 0.55em !default;
-$badge-padding-x: 0.9em !default;
-$badge-border-radius-custom: 0.45rem !default;
-$badge-border-radius: $badge-border-radius-custom !default;
-
 // Modals
 
 // Padding applied to the modal body
@@ -1737,7 +1726,6 @@ $tilt-transform-up-transition: all 0.5s !default;
 // Variables for Core
 
 @import "variables/animations";
-@import "variables/avatars";
 @import "variables/cards";
 @import "variables/dark-version";
 @import "variables/dropdowns";
@@ -1752,7 +1740,6 @@ $tilt-transform-up-transition: all 0.5s !default;
 @import "variables/form-switch";
 @import "variables/fixed-plugin";
 @import "variables/pagination";
-@import "variables/badge";
 @import "variables/rtl";
 @import "variables/ripple";
 @import "variables/cards-extend";

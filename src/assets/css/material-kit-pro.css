@@ -587,16 +587,6 @@ progress {
   margin-bottom: 0;
 }
 
-.blockquote-footer {
-  margin-top: -1rem;
-  margin-bottom: 1rem;
-  font-size: 0.875em;
-  color: #6c757d;
-}
-.blockquote-footer::before {
-  content: "— ";
-}
-
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -19011,21 +19001,6 @@ label,
 }
 .input-group.input-group-static .input-group-text {
   bottom: 0;
-}
-
-.footer .nav-link {
-  color: #344767;
-  font-weight: 400;
-  font-size: 0.875rem;
-  padding-top: 0;
-  padding-bottom: 0.25rem;
-}
-.footer .nav-link:hover {
-  opacity: 1 !important;
-  transition: opacity 0.3 ease;
-}
-.footer .footer-logo {
-  max-width: 2rem;
 }
 
 .bg-gradient-primary {

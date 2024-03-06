@@ -3,7 +3,6 @@ import { onMounted } from "vue";
 
 //example components
 import DefaultNavbar from "@/examples/navbars/NavbarDefault.vue";
-import DefaultFooter from "@/examples/footers/FooterDefault.vue";
 
 //image
 import image from "@/assets/img/contact/hero.svg";
@@ -224,7 +223,6 @@ export default {
     fontWeight="bold"
     >{{ emailSend.description }}</MaterialAlert
   >
-  <!-- <DefaultFooter /> -->
 </template>
 
 <style scoped>

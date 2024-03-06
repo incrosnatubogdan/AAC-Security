@@ -80,5 +80,4 @@ onUnmounted(() => {
       :callToAction="hiringServicesCta"
     />
   </div>
-  <!-- <DefaultFooter /> -->
 </template>

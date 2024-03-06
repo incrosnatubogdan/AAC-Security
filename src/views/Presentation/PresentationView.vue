@@ -3,14 +3,10 @@ import { onMounted, onUnmounted } from "vue";
 
 //example components
 import NavbarDefault from "../../examples/navbars/NavbarDefault.vue";
-import DefaultFooter from "../../examples/footers/FooterDefault.vue";
 import Header from "../../examples/Header.vue";
 import WhatsAppButton from "../../components/WhatsAppButton.vue";
 
-import MaterialSocialButton from "@/components/MaterialSocialButton.vue";
-
 // sections
-import PresentationCounter from "./Sections/PresentationCounter.vue";
 import PresentationExample from "./Sections/PresentationExample.vue";
 import servicesData from "../../helpers/services/data";
 import PresentationTestimonials from "./Sections/PresentationTestimonials.vue";
@@ -73,17 +69,5 @@ onUnmounted(() => {
     <PresentationInformation />
     <PresentationExample :data="servicesData" />
     <PresentationTestimonials />
-
-    <!-- <div class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 ms-auto">
-            <h4 class="mb-1">Thank you for your support!</h4>
-            <p class="lead mb-0">We deliver the best web products</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
-  <!-- <DefaultFooter /> -->
 </template>
