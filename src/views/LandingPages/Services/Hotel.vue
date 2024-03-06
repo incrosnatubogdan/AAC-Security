@@ -11,15 +11,15 @@ import bg0 from "@/assets/img/services/close_protection/cover.jpg";
 import Information from "../AboutUs/Sections/AboutInformation.vue";
 
 import {
-  closeProtectionServices,
-  closeProtectionServicesCta,
-} from "../../../helpers/services/closeProtection";
+  hotelServices,
+  hotelServicesCta,
+} from "../../../helpers/services/hotel";
 import servicesData from "../../../helpers/services/data";
 import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
-  (service) => service.id === "close-protection-vip"
+  (service) => service.id === "hotel-security"
 )[0];
 //hooks
 onMounted(() => {
@@ -54,8 +54,8 @@ onUnmounted(() => {
   </header>
   <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
     <Information
-      :serviceDescription="closeProtectionServices"
-      :callToAction="closeProtectionServicesCta"
+      :serviceDescription="hotelServices"
+      :callToAction="hotelServicesCta"
     />
   </div>
   <DefaultFooter />

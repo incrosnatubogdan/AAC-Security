@@ -1,17 +1,11 @@
 import closeProtectionCta from "@/assets/img/services/close_protection/cta.jpg";
 
-export const closeProtectionServices = [
+export const hotelServices = [
   {
     icon: "stadium",
-    title: "Event Security",
+    title: "Security Personnel",
     description:
-      "Providing security services for public appearances, promotional events, and other gatherings involving the VIP",
-  },
-  {
-    icon: "work",
-    title: "Travel Security",
-    description:
-      "Coordinating and securing transportation for the VIP, including travel routes, vehicles, and logistics",
+      "Deploying personnel at key locations such as entrances, lobbies, and parking areas to maintain a visible security presence",
   },
   {
     icon: "groups3",
@@ -20,15 +14,21 @@ export const closeProtectionServices = [
       "Developing and implementing personalized security plans based on the identified threats and risks",
   },
   {
-    icon: "important_devices",
-    title: "Threat Assessments",
+    icon: "work",
+    title: "Crowd Management",
     description:
-      "Conducting thorough assessments to identify potential threats and vulnerabilities to the VIP",
+      "Managing crowd flow and ensuring orderly conduct during peak periods, special events, or emergencies",
+  },
+  {
+    icon: "important_devices",
+    title: "Special Event Security",
+    description:
+      "Ensuring the safety and security of event attendees and managing access control during private functions",
   },
 ];
 
-export const closeProtectionServicesCta = {
+export const hotelServicesCta = {
   icon: closeProtectionCta,
-  title: 'Lorem ipsum',
+  title: 'Call now',
   description: 'Give us a call for all your training needs'
 }

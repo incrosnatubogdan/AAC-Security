@@ -98,31 +98,63 @@ export default [
     heading: "Corporate Security",
     id: "corporate-security",
     description:
-      "We aim to ensure the safety, security, and smooth execution of high-profile and upscale events",
+      "We safeguard information, and ensure a secure environment for employees, clients, and visitors",
     items: [
       {
         image: closeProtection1,
-        title: "Security Patrols",
+        title: "Physical Security",
         subtitle: "",
         route: "corporate",
       },
       {
         image: closeProtection2,
-        title: "Security Guard Services",
+        title: "Security Assessment and Planning",
         subtitle: "",
         route: "corporate",
       },
       {
         image: closeProtection3,
-        title: "Vacation Watch Services",
+        title: "Event Security",
         subtitle: "",
         route: "corporate",
       },
       {
         image: closeProtection3,
-        title: "Neighborhood Watch Programs",
+        title: "Executive Protection",
         subtitle: "",
         route: "corporate",
+      },
+    ],
+  },
+  {
+    heading: "Hotel Security",
+    id: "hotel-security",
+    description:
+      "We focus on ensuring the safety, security, and well-being of guests, staff, and property within hotel establishments",
+    items: [
+      {
+        image: closeProtection1,
+        title: "Security Personnel",
+        subtitle: "",
+        route: "hotel",
+      },
+      {
+        image: closeProtection2,
+        title: "Risk Mitigation Strategies",
+        subtitle: "",
+        route: "hotel",
+      },
+      {
+        image: closeProtection3,
+        title: "Crowd Management",
+        subtitle: "",
+        route: "hotel",
+      },
+      {
+        image: closeProtection3,
+        title: "Special Event Security",
+        subtitle: "",
+        route: "hotel",
       },
     ],
   },

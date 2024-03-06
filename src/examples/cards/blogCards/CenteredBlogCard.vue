@@ -45,7 +45,7 @@ export default {
         {{ description }}
       </p>
       <button type="button" class="btn btn-sm mb-0 mt-3 bg-gradient-success">
-        <a href="tel:+447951027265">{{ action.label }}</a>
+        <a :href="action.route">{{ action.label }}</a>
       </button>
     </div>
   </div>

@@ -1,6 +1,6 @@
 import closeProtectionCta from "@/assets/img/services/close_protection/cta.jpg";
 
-export const corporateServices = [
+export const hiringServices = [
   {
     icon: "stadium",
     title: "Physical Security",
@@ -27,8 +27,14 @@ export const corporateServices = [
   },
 ];
 
-export const corporateServicesCta = {
+const email = import.meta.env.VITE_HIRING_EMAIL;
+
+export const hiringServicesCta = {
   icon: closeProtectionCta,
-  title: 'Call now',
-  description: 'Give us a call for all your training needs'
+  title: 'Email us your CV',
+  description: "Send your CV to us and we'll respond as soon as possbile",
+  action : {
+    route: `mailto:${email}`,
+    label: `Email us at ${email}`
+  }
 }

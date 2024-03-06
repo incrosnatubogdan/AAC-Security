@@ -3,8 +3,6 @@ import { onMounted, onUnmounted } from "vue";
 
 //example components
 import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
-import DefaultFooter from "../../../examples/footers/FooterDefault.vue";
-
 //image
 import bg0 from "@/assets/img/bg9.jpg";
 
@@ -15,11 +13,12 @@ import Typed from "typed.js";
 import Information from "../AboutUs/Sections/AboutInformation.vue";
 
 import {
-  closeProtectionServices,
-  closeProtectionServicesCta,
-} from "../../../helpers/services/closeProtection";
+  hiringServices,
+  hiringServicesCta,
+} from "../../../helpers/services/hiring";
 
 const body = document.getElementsByTagName("body")[0];
+const mailToRoute = `mailto:${import.meta.env.VITE_HIRING_EMAIL}`;
 //hooks
 onMounted(() => {
   body.classList.add("about-us");
@@ -44,9 +43,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <DefaultNavbar
-    transparent
-  />
+  <DefaultNavbar transparent />
   <header class="bg-gradient-dark">
     <div
       class="page-header min-vh-75"
@@ -69,7 +66,7 @@ onUnmounted(() => {
               dreams. Join in on the opportunity by sending your CV
             </p>
             <button type="submit" class="btn bg-white text-dark">
-              <a href="mailto:someone@example.com">Send us your CV</a>
+              <a :href="mailToRoute">Send us your CV</a>
             </button>
           </div>
         </div>
@@ -78,9 +75,10 @@ onUnmounted(() => {
   </header>
   <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
     <h2 class="container pt-4">Expected duties</h2>
-    <Information 
-      :serviceDescription="closeProtectionServices"
-      :callToAction="closeProtectionServicesCta" />
+    <Information
+      :serviceDescription="hiringServices"
+      :callToAction="hiringServicesCta"
+    />
   </div>
   <!-- <DefaultFooter /> -->
 </template>
