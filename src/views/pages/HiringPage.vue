@@ -2,7 +2,7 @@
 import { onMounted, onUnmounted } from "vue";
 
 //example components
-import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
+import DefaultNavbar from "@/components/NavbarDefault.vue";
 //image
 import bg0 from "@/assets/img/bg9.jpg";
 
@@ -10,12 +10,12 @@ import bg0 from "@/assets/img/bg9.jpg";
 import Typed from "typed.js";
 
 //sections
-import Information from "../AboutUs/Sections/AboutInformation.vue";
+import Information from "./sections/ServicesInformation.vue";
 
 import {
   hiringServices,
   hiringServicesCta,
-} from "../../../helpers/services/hiring";
+} from "../../helpers/services/hiring";
 
 const body = document.getElementsByTagName("body")[0];
 const mailToRoute = `mailto:${import.meta.env.VITE_HIRING_EMAIL}`;
@@ -80,4 +80,4 @@ onUnmounted(() => {
       :callToAction="hiringServicesCta"
     />
   </div>
-</template>
+</template>../../components/NavbarDefault.vue

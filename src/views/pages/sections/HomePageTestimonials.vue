@@ -1,5 +1,5 @@
 <script setup>
-import DefaultReviewCard from "@/examples/cards/reviewCards/DefaultReviewCard.vue";
+import DefaultReviewCard from "@/components/cards/reviewCards/DefaultReviewCard.vue";
 </script>
 <template>
   <section class="my-3 py-3">

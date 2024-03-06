@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { ref, watch } from "vue";
-import { useWindowsWidth } from "../../assets/js/useWindowsWidth";
+import { useWindowsWidth } from "@/assets/js/useWindowsWidth";
 import Logo from "@/assets/img/logo.png";
 
 // images
@@ -353,4 +353,4 @@ watch(
     </div>
   </nav>
   <!-- End Navbar -->
-</template>
+</template>../assets/js/useWindowsWidth

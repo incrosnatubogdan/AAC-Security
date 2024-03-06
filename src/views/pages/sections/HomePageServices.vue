@@ -1,5 +1,5 @@
 <script setup>
-import ExampleCard from "../Components/ExampleCard.vue";
+import ServiceCard from "../../../components/ServiceCard.vue";
 
 defineProps({
   data: {
@@ -71,7 +71,7 @@ export default {
               v-for="{ image, title, subtitle, route } in items"
               :key="title"
             >
-              <ExampleCard
+              <ServiceCard
                 class="min-height-160 max-height-200 shadow-lg mt-4"
                 :image="image"
                 :title="title"

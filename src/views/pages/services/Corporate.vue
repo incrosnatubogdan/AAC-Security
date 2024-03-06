@@ -7,18 +7,18 @@ import DefaultNavbar from "../../../components/NavbarDefault.vue";
 //image
 import bg0 from "@/assets/img/services/close_protection/cover.jpg";
 //sections
-import Information from "../AboutUs/Sections/AboutInformation.vue";
+import Information from "../sections/ServicesInformation.vue";
 
 import {
-  luxuryEventServices,
-  luxuryEventServicesCta,
-} from "../../../helpers/services/luxuryEvent";
+  corporateServices,
+  corporateServicesCta,
+} from "../../../helpers/services/corporate";
 import servicesData from "../../../helpers/services/data";
 import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
-  (service) => service.id === "luxury-event-security"
+  (service) => service.id === "corporate-security"
 )[0];
 //hooks
 onMounted(() => {
@@ -53,9 +53,9 @@ onUnmounted(() => {
   </header>
   <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
     <Information
-      :serviceDescription="luxuryEventServices"
-      :callToAction="luxuryEventServicesCta"
+      :serviceDescription="corporateServices"
+      :callToAction="corporateServicesCta"
     />
   </div>
   <WhatsAppButton />
-</template>../../pages/AboutInformation.vue../../../components/NavbarDefault.vue
+</template>../../pages/ServicesInformation.vue../../../components/NavbarDefault.vue

@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 
 //example components
-import DefaultNavbar from "@/examples/navbars/NavbarDefault.vue";
+import DefaultNavbar from "@/components/NavbarDefault.vue";
 
 //image
 import image from "@/assets/img/contact/hero.svg";

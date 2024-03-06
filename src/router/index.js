@@ -1,14 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
-import PresentationView from "../views/Presentation/PresentationView.vue";
-import ContactView from "../views/LandingPages/ContactUs/ContactView.vue";
-import Hiring from "../views/LandingPages/ContactUs/Hiring.vue";
-import SignInBasicView from "../views/LandingPages/SignIn/BasicView.vue";
+import HomePage from "../views/pages/HomePage.vue";
+import ContactPage from "../views/pages/ContactPage.vue";
+import HiringPage from "../views/pages/HiringPage.vue";
 
-import CloseProtection from "../views/LandingPages/Services/CloseProtection.vue";
-import LuxuryEvent from "../views/LandingPages/Services/LuxuryEvent.vue";
-import ResidentialSecurity from "../views/LandingPages/Services/ResidentialSecurity.vue";
-import Corporate from "../views/LandingPages/Services/Corporate.vue";
-import Hotel from "../views/LandingPages/Services/Hotel.vue";
+import CloseProtection from "../views/pages/services/CloseProtection.vue";
+import LuxuryEvent from "../views/pages/services/LuxuryEvent.vue";
+import ResidentialSecurity from "../views/pages/services/ResidentialSecurity.vue";
+import Corporate from "../views/pages/services/Corporate.vue";
+import Hotel from "../views/pages/services/Hotel.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,7 +15,7 @@ const router = createRouter({
     {
       path: "/",
       name: "presentation",
-      component: PresentationView,
+      component: HomePage,
     },
     {
       path: "/close-protection-vip",
@@ -45,20 +44,14 @@ const router = createRouter({
       component: Hotel,
     },
     {
-      path: "/pages/landing-pages/contact-us",
+      path: "/contact",
       name: "contact",
-      component: ContactView,
+      component: ContactPage,
     },
-    // Unused go here
     {
       path: "/hiring",
       name: "hiring",
-      component: Hiring,
-    },
-    {
-      path: "/pages/landing-pages/basic",
-      name: "signin-basic",
-      component: SignInBasicView,
+      component: HiringPage,
     },
   ],
 });

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // example components
-import DefaultInfoCard from "../../../../examples/cards/infoCards/DefaultInfoCard.vue";
-import CenteredBlogCard from "../../../../examples/cards/blogCards/CenteredBlogCard.vue";
-import { ServiceDescription } from "../../../../helpers/model";
+import DefaultInfoCard from "@/components/cards/infoCards/DefaultInfoCard.vue";
+import CenteredBlogCard from "@/components/cards/blogCards/CenteredBlogCard.vue";
+import { ServiceDescription } from "../../../helpers/model";
 import { PropType } from "vue"
 
 defineProps({
@@ -45,4 +45,4 @@ defineProps({
       </div>
     </div>
   </section>
-</template>
+</template>../../helpers/model

@@ -7,7 +7,7 @@ import DefaultNavbar from "../../../components/NavbarDefault.vue";
 //image
 import bg0 from "@/assets/img/services/close_protection/cover.jpg";
 //sections
-import Information from "../AboutUs/Sections/AboutInformation.vue";
+import Information from "../sections/ServicesInformation.vue";
 
 import {
   luxuryEventServices,
@@ -58,4 +58,4 @@ onUnmounted(() => {
     />
   </div>
   <WhatsAppButton />
-</template>../../pages/AboutInformation.vue../../../components/NavbarDefault.vue
+</template>../../pages/ServicesInformation.vue../../../components/NavbarDefault.vue

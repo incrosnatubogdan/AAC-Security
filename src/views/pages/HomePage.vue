@@ -2,15 +2,15 @@
 import { onMounted, onUnmounted } from "vue";
 
 //example components
-import NavbarDefault from "../../examples/navbars/NavbarDefault.vue";
-import Header from "../../examples/Header.vue";
-import WhatsAppButton from "../../components/WhatsAppButton.vue";
+import NavbarDefault from "@/components/NavbarDefault.vue";
+import Header from "@/components/Header.vue";
+import WhatsAppButton from "@/components/WhatsAppButton.vue";
 
 // sections
-import PresentationExample from "./Sections/PresentationExample.vue";
-import servicesData from "../../helpers/services/data";
-import PresentationTestimonials from "./Sections/PresentationTestimonials.vue";
-import PresentationInformation from "./Sections/PresentationInformation.vue";
+import HomePageServices from "./sections/HomePageServices.vue";
+import servicesData from "@/helpers/services/data";
+import HomePageTestimonials from "./sections/HomePageTestimonials.vue";
+import HomePageInfo from "./sections/HomePageInfo.vue";
 
 //images
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
@@ -66,8 +66,9 @@ onUnmounted(() => {
 
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
     <!-- <PresentationCounter /> -->
-    <PresentationInformation />
-    <PresentationExample :data="servicesData" />
-    <PresentationTestimonials />
+    <HomePageInfo />
+    <HomePageServices :data="servicesData" />
+    <HomePageTestimonials />
   </div>
 </template>
+./sections/PresentationExample.vue../../components/NavbarDefault.vue../../components/Header.vue
