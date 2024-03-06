@@ -31,10 +31,10 @@ const email = import.meta.env.VITE_HIRING_EMAIL;
 
 export const hiringServicesCta = {
   icon: closeProtectionCta,
-  title: 'Email us your CV',
+  title: "Email us your CV",
   description: "Send your CV to us and we'll respond as soon as possbile",
-  action : {
+  action: {
     route: `mailto:${email}`,
-    label: `Email us at ${email}`
-  }
-}
+    label: `Email us at ${email}`,
+  },
+};

@@ -38,16 +38,8 @@ export default {
 </script>
 <template>
   <RouterLink :to="{ name: route }">
-    <div
-      class="card move-on-hover"
-      v-bind="$attrs"
-    >
-      <img
-        class="w-100"
-        :src="image"
-        :alt="title"
-        loading="lazy"
-      />
+    <div class="card move-on-hover" v-bind="$attrs">
+      <img class="w-100" :src="image" :alt="title" loading="lazy" />
     </div>
     <div class="mt-2 ms-2">
       <h6 class="mb-0">{{ title }}</h6>

@@ -9,8 +9,8 @@ defineProps({
     default: () => ({
       name: "AAP Security",
       logo: logoDark,
-      route: "/"
-    })
+      route: "/",
+    }),
   },
   menus: {
     type: Array,
@@ -18,7 +18,7 @@ defineProps({
     items: {
       type: Array,
       name: String,
-      href: String
+      href: String,
     },
     default: () => [
       {
@@ -26,18 +26,18 @@ defineProps({
         items: [
           {
             name: "about us",
-            href: "https://www.creative-tim.com/presentation"
+            href: "https://www.creative-tim.com/presentation",
           },
           {
             name: "freebies",
-            href: "https://www.creative-tim.com/templates/free"
+            href: "https://www.creative-tim.com/templates/free",
           },
           {
             name: "premium tools",
-            href: "https://www.creative-tim.com/templates/premium"
+            href: "https://www.creative-tim.com/templates/premium",
           },
-          { name: "blog", href: "https://www.creative-tim.com/blog" }
-        ]
+          { name: "blog", href: "https://www.creative-tim.com/blog" },
+        ],
       },
       {
         name: "resources",
@@ -45,54 +45,54 @@ defineProps({
           { name: "illustrations", href: "https://iradesign.io/" },
           {
             name: "bits & snippets",
-            href: "https://www.creative-tim.com/bits"
+            href: "https://www.creative-tim.com/bits",
           },
           {
             name: "affiliate program",
-            href: "https://www.creative-tim.com/affiliates/new"
-          }
-        ]
+            href: "https://www.creative-tim.com/affiliates/new",
+          },
+        ],
       },
       {
         name: "help & support",
         items: [
           {
             name: "contact us",
-            href: "https://www.creative-tim.com/contact-us"
+            href: "https://www.creative-tim.com/contact-us",
           },
           {
             name: "knowledge center",
-            href: "https://www.creative-tim.com/knowledge-center"
+            href: "https://www.creative-tim.com/knowledge-center",
           },
           {
             name: "custom development",
-            href: "https://services.creative-tim.com/"
+            href: "https://services.creative-tim.com/",
           },
           {
             name: "sponsorships",
-            href: "https://www.creative-tim.com/sponsorships"
-          }
-        ]
+            href: "https://www.creative-tim.com/sponsorships",
+          },
+        ],
       },
       {
         name: "legal",
         items: [
           {
             name: "terms & conditions",
-            href: "https://www.creative-tim.com/terms"
+            href: "https://www.creative-tim.com/terms",
           },
           {
             name: "privacy policy",
-            href: "https://www.creative-tim.com/privacy"
+            href: "https://www.creative-tim.com/privacy",
           },
           {
             name: "licenses (EULA)",
-            href: "https://www.creative-tim.com/license"
-          }
-        ]
-      }
-    ]
-  }
+            href: "https://www.creative-tim.com/license",
+          },
+        ],
+      },
+    ],
+  },
 });
 </script>
 <template>
@@ -116,9 +116,7 @@ defineProps({
 
         <div class="col-12">
           <div class="text-center">
-            <p class="text-dark my-4 text-sm font-weight-normal">
-             
-            </p>
+            <p class="text-dark my-4 text-sm font-weight-normal"></p>
           </div>
         </div>
       </div>

@@ -54,7 +54,7 @@ const router = createRouter({
       name: "residentialSecurity",
       component: ResidentialSecurity,
     },
-    
+
     {
       path: "/corporate-security",
       name: "corporate",

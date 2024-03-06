@@ -29,6 +29,6 @@ export const corporateServices = [
 
 export const corporateServicesCta = {
   icon: closeProtectionCta,
-  title: 'Call now',
-  description: 'Give us a call for all your training needs'
-}
+  title: "Call now",
+  description: "Give us a call for all your training needs",
+};

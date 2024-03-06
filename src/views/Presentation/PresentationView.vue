@@ -54,7 +54,10 @@ onUnmounted(() => {
             >
               AAP Security
             </h1>
-            <p class="lead text-white px-5 mt-3 quote-font" :style="{ fontWeight: '500' }">
+            <p
+              class="lead text-white px-5 mt-3 quote-font"
+              :style="{ fontWeight: '500' }"
+            >
               "Vigilance Without Compromise"
             </p>
           </div>

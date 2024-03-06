@@ -31,8 +31,7 @@ export default {
     };
   },
 
-  mounted() {
-  },
+  mounted() {},
 
   methods: {
     handleInput(value, model) {
@@ -54,14 +53,13 @@ export default {
     },
   },
 };
-
 </script>
 
 <template>
   <div class="input-group">
     <label :for="id" :class="labelClass"><slot /></label>
     <textarea
-    @input="handleInput($event.target.value, model)"
+      @input="handleInput($event.target.value, model)"
       :name="model"
       class="form-control"
       :id="id"

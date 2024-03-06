@@ -312,7 +312,10 @@ watch(
             </div>
           </li>
           <li class="nav-item mx-2">
-            <RouterLink :to="{ name: 'hiring' }" class="nav-link ps-2 d-flex cursor-pointer align-items-center">
+            <RouterLink
+              :to="{ name: 'hiring' }"
+              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+            >
               <i
                 class="material-icons opacity-6 me-2 text-md"
                 :class="getTextColor()"
@@ -322,7 +325,10 @@ watch(
             </RouterLink>
           </li>
           <li class="nav-item mx-2">
-            <RouterLink :to="{ name: 'contact' }" class="nav-link ps-2 d-flex cursor-pointer align-items-center">
+            <RouterLink
+              :to="{ name: 'contact' }"
+              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+            >
               <i
                 class="material-icons opacity-6 me-2 text-md"
                 :class="getTextColor()"
