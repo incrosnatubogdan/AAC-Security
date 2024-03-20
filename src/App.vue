@@ -10,4 +10,8 @@ import { RouterView } from "vue-router";
 .vci--right-label {
   top: 40% !important;
 }
+
+.vci--container {
+  border-radius: 12px;
+}
 </style>
