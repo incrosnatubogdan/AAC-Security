@@ -153,9 +153,9 @@ export default {
               </div>
               <div class="card-body">
                 <p class="pb-3">
-                  For further questions, including partnership opportunities,
-                  please email hello@creative-tim.com or contact using our
-                  contact form.
+                  Discover how AAP Security can enhance your security and peace of mind. Contact us
+today to learn more about our services and how we can tailor our solutions to meet your
+unique needs.
                 </p>
                 <form
                   id="contact-form"

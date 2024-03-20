@@ -23,7 +23,7 @@ import DefaultInfoCard from "@/components/cards/infoCards/DefaultInfoCard.vue";
               description="We offer comprehensive security solutions tailored to meet your specific needs and concerns."
               :action="[
                 {
-                  route: '/pages/landing-pages/contact-us',
+                  route: '/contact',
                   label: 'Contact us',
                 },
               ]"
@@ -31,34 +31,38 @@ import DefaultInfoCard from "@/components/cards/infoCards/DefaultInfoCard.vue";
           </RotatingCard>
         </div>
         <div class="col-lg-6 ms-auto">
-          <div class="row justify-content-start">
+          <div class="row justify-content-start mb-2">
             <DefaultInfoCard
               icon="content_copy"
-              title="Full Documentation"
-              description="Built by developers for developers. Check the foundation and
-                  you will find everything inside our documentation."
+              title="Personal Security"
+              description="Whether you need close protection, residential
+security, or secure transportation, our expert team is equipped to offer top-notch
+personal security services, ensuring your safety in every scenario."
             />
             <DefaultInfoCard
               icon="flip_to_front"
-              title="Bootstrap 5 Ready"
-              description="The world’s most popular front-end open source toolkit,
-                  featuring Sass variables and mixins."
+              title="Corporate Security Solutions"
+              description="We provide a holistic approach to corporate
+security, encompassing risk assessment, surveillance, and crisis management to
+protect your assets, data, and personnel."
             />
           </div>
-          <div class="row justify-content-start mt-5">
+          <div class="row justify-content-start">
             <DefaultInfoCard
               class="mt-3"
               icon="price_change"
-              title="Save Time & Money"
-              description="Creating your design from scratch with dedicated designers can
-                be very expensive. Start with our Design System."
+              title="Event Security"
+              description="From private gatherings to large-scale events, our security
+personnel are trained to manage all aspects of event security, ensuring a safe
+environment for all attendees."
             />
             <DefaultInfoCard
               class="mt-3"
               icon="devices"
-              title="Fully Responsive"
-              description="Regardless of the screen size, the website content will
-                  naturally fit the given resolution."
+              title="Technology-Driven Solutions"
+              description="Leveraging the latest in security technology,
+we offer advanced surveillance, alarm systems, and access control options to fortify
+your security infrastructure."
             />
           </div>
         </div>
