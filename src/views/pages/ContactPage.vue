@@ -132,6 +132,8 @@ export default {
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPositionY: '50%',
+                backgroundPositionX: '90%',
+                backgroundSize: '80%'
               }"
               loading="lazy"
             ></div>
