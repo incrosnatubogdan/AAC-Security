@@ -26,11 +26,43 @@ defineProps({
       <span class="mask bg-gradient-dark"></span>
       <div class="container">
         <div class="row">
-          <div :class="isFull ? 'col-lg-10 ms-lg-1' : 'col-lg-8 ms-lg-4'">
-            <h1 v-if="title" class="text-white">{{ title }}</h1>
-            <p class="lead text-white opacity-8">
+          <div class="col-lg-12">
+            <h1 v-if="title" class="text-white">Why choose us?</h1>
+            <!-- <p class="lead text-white opacity-8">
               {{ description }}
-            </p>
+            </p> -->
+            <div class="d-flex mt-5">
+              <i
+                class="material-icons services-icon"
+                >dashboard</i
+              >
+              <span class="c-white">
+                <h3 class="c-white">Commitment to Excellence</h3>
+                The company is committed to delivering high-quality security services with a focus on skill, dedication, and forward-thinking strategies.
+              </span>
+            </div>
+
+            <div class="d-flex mt-5">
+              <i
+                class="material-icons services-icon"
+                >dashboard</i
+              >
+              <span class="c-white">
+                <h3 class="c-white">Comprehensive Security Approach</h3>
+                Emphasizes a holistic strategy in security, integrating knowledge and progression to meet evolving challenges.
+              </span>
+            </div>
+
+            <div class="d-flex my-5">
+              <i
+                class="material-icons services-icon"
+                >dashboard</i
+              >
+              <span class="c-white">
+                <h3 class="c-white">Leadership and Expertise</h3>
+                Founded by Adrien and Arina, AAP Security is led by a blend of extensive security experience and educational insight, ensuring top-tier talent and innovative solutions.
+              </span>
+            </div>
             <a
               href="/contact"
               class="text-white icon-move-right"
@@ -44,3 +76,12 @@ defineProps({
     </div>
   </div>
 </template>
+
+<style>
+.material-icons.services-icon {
+  margin-right: 30px;
+  font-size: 80px;
+  text-align: center;
+  color: #862B2B;
+}
+</style>

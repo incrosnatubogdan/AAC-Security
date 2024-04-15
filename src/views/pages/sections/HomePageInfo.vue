@@ -8,8 +8,8 @@ import DefaultInfoCard from "@/components/cards/infoCards/DefaultInfoCard.vue";
   <section class="my-3 py-3">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
-          <RotatingCard>
+        <!-- <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4"> -->
+          <!-- <RotatingCard>
             <RotatingCardFront
               image="https://images.pexels.com/photos/1427581/pexels-photo-1427581.jpeg?cs=srgb&dl=pexels-samuel-w%C3%B6lfl-1427581.jpg&fm=jpg"
               icon="touch_app"
@@ -28,37 +28,33 @@ import DefaultInfoCard from "@/components/cards/infoCards/DefaultInfoCard.vue";
                 },
               ]"
             />
-          </RotatingCard>
-        </div>
-        <div class="col-lg-6 ms-auto">
+          </RotatingCard> -->
+        <!-- </div> -->
+        <div class="col-lg-12 ms-auto">
           <div class="row justify-content-start mb-2">
             <DefaultInfoCard
-              icon="content_copy"
+              col="col-lg-3 col-md-6 col-sm-12 d-flex"
               title="Personal Security"
               description="Whether you need close protection, residential
 security, or secure transportation, our expert team is equipped to offer top-notch
 personal security services, ensuring your safety in every scenario."
             />
             <DefaultInfoCard
-              icon="flip_to_front"
+              col="col-lg-3 col-md-6 col-sm-12 d-flex"
               title="Corporate Security Solutions"
               description="We provide a holistic approach to corporate
 security, encompassing risk assessment, surveillance, and crisis management to
 protect your assets, data, and personnel."
             />
-          </div>
-          <div class="row justify-content-start">
             <DefaultInfoCard
-              class="mt-3"
-              icon="price_change"
+              col="col-lg-3 col-md-6 col-sm-12 d-flex"
               title="Event Security"
               description="From private gatherings to large-scale events, our security
 personnel are trained to manage all aspects of event security, ensuring a safe
 environment for all attendees."
             />
             <DefaultInfoCard
-              class="mt-3"
-              icon="devices"
+              col="col-lg-3 col-md-6 col-sm-12 d-flex py-1"
               title="Technology-Driven Solutions"
               description="Leveraging the latest in security technology,
 we offer advanced surveillance, alarm systems, and access control options to fortify

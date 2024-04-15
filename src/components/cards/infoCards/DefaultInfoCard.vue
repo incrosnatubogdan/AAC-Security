@@ -38,7 +38,7 @@ export default {
 </script>
 <template>
   <div :class="`${col ? col : 'col-md-6'}`">
-    <div v-bind="$attrs" class="info">
+    <div v-bind="$attrs" class="info services-card">
       <i
         v-if="icon"
         class="material-icons text-gradient"

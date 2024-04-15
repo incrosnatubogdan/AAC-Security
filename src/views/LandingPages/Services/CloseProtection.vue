@@ -48,6 +48,12 @@ onUnmounted(() => {
               {{ pageInfo.description }}
             </p>
           </div>
+
+          <div class="d-flex">
+            <p v-for="services in closeProtectionServices">
+              {{ services }}
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -44,17 +44,18 @@ onUnmounted(() => {
         <div class="row">
           <div class="col-lg-7 text-center mx-auto position-relative">
             <h1
-              class="text-white pt-3 mt-n5 me-2 new-font"
-              :style="{ display: 'inline-block ' }"
+              class="text-white pt-3 mt-n5 me-2 quote-font"
+              :style="{ display: 'inline-block ', fontWeight: '500' }"
             >
-              AAP Security
+              Beyond Safety: Total Peace of Mind <br>
+              Customized Security for Every Aspect of Your Life
             </h1>
-            <p
+            <!-- <p
               class="lead text-white px-5 mt-3 quote-font"
               :style="{ fontWeight: '500' }"
             >
-              "Security Tailored for You"
-            </p>
+            
+            </p> -->
           </div>
         </div>
       </div>
@@ -66,8 +67,8 @@ onUnmounted(() => {
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
     <!-- <PresentationCounter /> -->
     <HomePageInfo />
-    <TextSection :isFull="true" :description="introDescription" />
-    <div class="container">
+    <!-- <TextSection :isFull="true" :description="introDescription" /> -->
+    <!-- <div class="container">
       <VueCompareImage 
     aspectRatio="wider"
     :slideOnClick="false"
@@ -77,13 +78,13 @@ onUnmounted(() => {
       rightImage="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
       rightImageLabel="Arina: Co-founder Arina, the entrepreneurial force behind ASK33 and Nexus College of London, brings a strategic perspective to our services, ensuring our approaches are not just effective but also aligned with our clients’ long-term objectives." />
       
-    </div>
-    <HomePageServices :data="servicesData" />
+    </div> -->
+    <!-- <HomePageServices :data="servicesData" /> -->
     
     <TextSection :isFull="false" :description="chooseUsDescription" :title="'Why Choose Us'" />
     
     <HomePageTestimonials />
-    <TextSection :isFull="false" :description="commitmentDescription" :title="'Commitment to Excellence'" />
+    <!-- <TextSection :isFull="false" :description="commitmentDescription" :title="'Commitment to Excellence'" /> -->
 
   </div>
 </template>

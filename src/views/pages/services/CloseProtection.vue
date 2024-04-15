@@ -36,28 +36,38 @@ onUnmounted(() => {
   <DefaultNavbar transparent />
   <header class="bg-gradient-dark">
     <div
-      class="page-header min-vh-75"
+      class="page-header min-vh-100"
       :style="{ backgroundImage: `url(${bg0})` }"
     >
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center mx-auto my-auto">
-            <h3 class="mb-4 text-white opacity-8">{{ pageInfo.heading }}</h3>
-            <p class="lead mb-4 text-white opacity-8">
+            <h3 class="mb-4 text-white opacity-8 text-decoration-underline">{{ pageInfo.heading }}</h3>
+            <p class="lead mb-5 text-white opacity-8">
               {{ pageInfo.description }}
             </p>
           </div>
+
+          <div class="row mt-5">
+            <p class="c-white col-lg-3 col-md-6 col-sm-12" v-for="service in closeProtectionServices">
+              <h3 class="c-white">{{ service.title }}</h3>
+              {{ service.description }}
+            </p>
+          </div>
+          <button type="button" class="btn btn-sm mb-0 mt-3 bg-gradient-success cta-button-services">
+            <a href="tel:+447951027265"> CALL US </a>
+          </button>
         </div>
       </div>
     </div>
   </header>
-  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+  <!-- <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
     <Information
       :serviceDescription="closeProtectionServices"
       :callToAction="closeProtectionServicesCta"
     />
-  </div>
+  </div> -->
 
   <WhatsAppButton />
 </template>../../pages/ServicesInformation.vue../../../components/NavbarDefault.vue
