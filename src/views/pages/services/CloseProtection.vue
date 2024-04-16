@@ -2,20 +2,16 @@
 import { onMounted, onUnmounted } from "vue";
 
 //example components
-import DefaultNavbar from "../../../components/NavbarDefault.vue";
+import NavbarDefault from "@/components/NavbarDefault.vue";
+import WhatsAppButton from "@/components/WhatsAppButton.vue";
 
 //image
 import bg0 from "@/assets/img/services/close_protection/cover.jpg";
-//sections
-import Information from "../sections/ServicesInformation.vue";
 
 import {
   closeProtectionServices,
-  closeProtectionServicesCta,
 } from "../../../helpers/services/closeProtection";
 import servicesData from "../../../helpers/services/data";
-
-import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
@@ -33,7 +29,8 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <DefaultNavbar transparent />
+  <NavbarDefault />
+  <!-- <WhatsAppButton /> -->
   <header class="bg-gradient-dark">
     <div
       class="page-header min-vh-100"
@@ -51,7 +48,7 @@ onUnmounted(() => {
 
           <div class="row mt-5">
             <p class="c-white col-lg-3 col-md-6 col-sm-12" v-for="service in closeProtectionServices">
-              <h3 class="c-white">{{ service.title }}</h3>
+              <h5 class="c-white">{{ service.title }}</h5>
               {{ service.description }}
             </p>
           </div>
@@ -62,12 +59,4 @@ onUnmounted(() => {
       </div>
     </div>
   </header>
-  <!-- <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
-    <Information
-      :serviceDescription="closeProtectionServices"
-      :callToAction="closeProtectionServicesCta"
-    />
-  </div> -->
-
-  <WhatsAppButton />
-</template>../../pages/ServicesInformation.vue../../../components/NavbarDefault.vue
+</template>

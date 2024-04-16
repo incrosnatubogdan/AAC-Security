@@ -25,6 +25,9 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  isOnFirstSlide: {
+    type: Boolean,
+  },
   light: {
     type: Boolean,
     default: false,
@@ -80,12 +83,21 @@ watch(
     }
   }
 );
-
-const showOld = false
 </script>
 <template>
+  <div v-if="props.isOnFirstSlide" class="navbar-call-cta d-flex bg-gradient-success">
+    <span>Experience Premier Protection</span>
+    <a
+        href="tel:+447951027265"
+        class="btn btn-sm bg-black mb-0 ms-auto text-white "
+        >
+        <i class="material-icons text-md mx-2">phone</i>
+        Get in touch</a
+      >
+  </div>
   <nav
-    class="navbar navbar-expand-lg top-0 z-index-3 w-100 shadow-none navbar-transparent position-absolute mb-3 navbar-dark bg-black z-index-3 py-3"
+    class="navbar navbar-expand-lg  z-index-3 w-100 shadow-none navbar-transparent position-absolute mb-3 navbar-dark bg-black z-index-3 py-3"
+    :class="props.isOnFirstSlide ? 'top-40' : 'top-0'"
   >
     <div
       :class="
@@ -115,11 +127,6 @@ const showOld = false
           :style="{ height: '40px' }"
         />
       </RouterLink>
-      <!-- <a
-        href="tel:+447951027265"
-        class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
-        >Call us +4479 5102 7265</a
-      > -->
       <button
         class="navbar-toggler shadow-none ms-2"
         type="button"
@@ -136,13 +143,46 @@ const showOld = false
         </span>
       </button>
       <div
-        class="collapse navbar-collapse w-100 px-5"
+        class="collapse navbar-collapse w-100 px-5 bg-black"
         id="navigation"
       >
         <ul class="navbar-nav navbar-nav-hover w-100 justify-content-between">
           <!-- Start here -->
+          <li class="nav-item mx-2">
+            <RouterLink
+              :to="{ name: 'hiring' }"
+              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+            >
+              <span>Hiring</span>
+            </RouterLink>
+          </li>
+          <li class="nav-item mx-2">
+            <RouterLink
+              :to="{ name: 'about-us' }"
+              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+            >
+              <span>About us</span>
+            </RouterLink>
+          </li>
 
-          <li class="nav-item dropdown dropdown-hover">
+          <li class="nav-item">
+            <RouterLink
+        class="navbar-brand d-none d-md-block p-0 position-relative"
+        :to="{ name: 'presentation' }"
+        rel="tooltip"
+        title="AAP Security"
+        data-placement="bottom"
+      >
+        <img
+          :src="Logo"
+          alt="logo"
+          loading="lazy"
+          :style="{ width: '140px', position: 'absolute', left: '-40px', top: '-30px' }"
+        />
+      </RouterLink>
+          </li>
+
+          <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
@@ -164,7 +204,7 @@ const showOld = false
               />
             </a>
             <div
-              class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-2 border-radius-xl mt-0 mt-lg-3"
+              class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-2 border-radius-xl mt-0 mt-lg-3 bg-black"
               aria-labelledby="dropdownMenuPages"
             >
               <div class="row d-none d-lg-block">
@@ -272,38 +312,7 @@ const showOld = false
               </div>
             </div>
           </li>
-          <li class="nav-item mx-2">
-            <RouterLink
-              :to="{ name: 'hiring' }"
-              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
-            >
-              <span>Hiring</span>
-            </RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink
-        class="navbar-brand d-none d-md-block p-0 position-relative"
-        :to="{ name: 'presentation' }"
-        rel="tooltip"
-        title="AAP Security"
-        data-placement="bottom"
-      >
-        <img
-          :src="Logo"
-          alt="logo"
-          loading="lazy"
-          :style="{ width: '140px', position: 'absolute', left: '-40px', top: '-30px' }"
-        />
-      </RouterLink>
-          </li>
-          <li class="nav-item mx-2">
-            <RouterLink
-              :to="{ name: 'about-us' }"
-              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
-            >
-              <span>About us</span>
-            </RouterLink>
-          </li>
+          
           <li class="nav-item mx-2">
             <RouterLink
               :to="{ name: 'contact' }"
@@ -320,11 +329,46 @@ const showOld = false
 
 <style>
 .bg-black {
-  background-color: #1C1F20;
+  background-color: #1C1F20 !important;
 }
 
-.nav-item span {
+.nav-item span,
+.nav-item a.nav-link {
   font-family: 'Atrament' !important;
   font-size: 24px;
+  color: white;
+}
+
+.nav-item .dropdown-item:hover, 
+.nav-item .dropdown-item:focus {
+  background-color: #303435 !important;
+}
+
+.router-link-active {
+  text-decoration: underline;
+  text-decoration-color: #862B2B;
+  text-underline-offset: 8px;
+}
+
+.top-40 {
+  top: 40px !important;
+}
+
+@media (min-width: 550px) {
+  .navbar-call-cta {
+  padding: 4px 4rem;
+}
+}
+
+@media (max-width: 551px) {
+  .navbar-call-cta {
+  padding: 4px;
+}
+}
+
+
+.navbar-call-cta  > span {
+  color: white;
+  font-size: 20px;
 }
 </style>

@@ -57,5 +57,5 @@ onUnmounted(() => {
       :callToAction="hotelServicesCta"
     />
   </div>
-  <WhatsAppButton />
+  <!-- <WhatsAppButton /> -->
 </template>../../pages/AboutInformation.vue../../../components/NavbarDefault.vue

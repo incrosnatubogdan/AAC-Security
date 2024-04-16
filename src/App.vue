@@ -34,4 +34,8 @@ import { RouterView } from "vue-router";
 button.cta-button-services {
   width: 120px;
 }
+
+.fp-watermark {
+  display: none;
+}
 </style>

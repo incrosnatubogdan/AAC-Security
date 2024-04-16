@@ -2,7 +2,9 @@
 import { onMounted, onUnmounted } from "vue";
 
 //example components
-import DefaultNavbar from "@/components/NavbarDefault.vue";
+import NavbarDefault from "@/components/NavbarDefault.vue";
+import WhatsAppButton from "@/components/WhatsAppButton.vue";
+
 //image
 import bg0 from "@/assets/img/bg9.jpg";
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
@@ -49,7 +51,8 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <DefaultNavbar :sticky="true" />
+  <NavbarDefault />
+  <!-- <WhatsAppButton /> -->
   <full-page ref="fullpage" :options="options" id="fullpage">
     <div class="section">
       <div
@@ -150,8 +153,9 @@ onUnmounted(() => {
                 GET IN TOUCH
                 </h3>
                 <p class="text-white mt-5">Discover how AAP Security can enhance your security and peace of mind. Contact us today to learn more about our services and how we can tailor our solutions to meet your unique needs</p>
-                <div class="row">
-                  <div class="col-lg-6 justify-content-center d-flex">
+                <div class="container">
+                  <div class="row">
+                  <div class="col-6 justify-content-center d-flex">
                     <RouterLink
                       :to="{ name: 'contact' }"
                       class="nav-link ps-2 d-flex cursor-pointer align-items-center"
@@ -162,7 +166,7 @@ onUnmounted(() => {
                       >
                     </RouterLink>
                   </div>
-                  <div class="col-lg-6 justify-content-center d-flex">
+                  <div class="col-6 justify-content-center d-flex">
                     <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="tel:+447951027265"> 
                       <i
                         class="material-icons about-us-cta"
@@ -170,6 +174,7 @@ onUnmounted(() => {
                       >
                     </a>
                   </div>
+                </div>
                 </div>
               </div>
             </div>

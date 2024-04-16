@@ -161,7 +161,7 @@ export default {
                           type="email"
                           model="email"
                           label="Email"
-                          placeholder="hello@creative-tim.com"
+                          placeholder="your@email.com"
                         />
                       </div>
                     </div>

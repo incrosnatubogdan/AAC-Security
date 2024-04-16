@@ -2,7 +2,8 @@
 import { onMounted, onUnmounted } from "vue";
 
 //example components
-import DefaultNavbar from "@/components/NavbarDefault.vue";
+import NavbarDefault from "@/components/NavbarDefault.vue";
+import WhatsAppButton from "@/components/WhatsAppButton.vue";
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
 
 //image
@@ -51,7 +52,8 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <DefaultNavbar transparent />
+  <NavbarDefault />
+  <!-- <WhatsAppButton /> -->
   <full-page ref="fullpage" :options="options" id="fullpage">
     <div class="section">
       <div
@@ -67,7 +69,7 @@ onUnmounted(() => {
                 <h1 class="text-white">JOB OPENINGS </h1>
                 <p class="text-white mt-5">We offer rewarding careers with comprehensive training, competitive salaries, and growth opportunities in a supportive and professional environment. Join us to make a meaningful impact in the security industry alongside a team committed to excellence and integrity.</p>
                 <div class="row mt-5">
-                  <div class="col-lg-6 justify-content-center d-flex">
+                  <div class="col-lg-6 justify-content-center d-flex mb-3">
                     <a class="d-flex cursor-pointer align-items-center flex-column hiring-page-options pb-0" href="#security-officer"> 
                       <h5 class="text-white">SECURITY OFFICER</h5>
                       <p class="text-white">LONDON</p>
