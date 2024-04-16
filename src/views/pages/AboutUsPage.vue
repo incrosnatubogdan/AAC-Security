@@ -8,6 +8,8 @@ import WhatsAppButton from "@/components/WhatsAppButton.vue";
 //image
 import bg0 from "@/assets/img/bg9.jpg";
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
+import adrienImg from "@/assets/img/team_1.webp";
+import arinaImg from "@/assets/img/team_2.webp";
 //dep
 import Typed from "typed.js";
 
@@ -81,7 +83,7 @@ onUnmounted(() => {
           :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
-        <img class="founder-image" src="https://media.canva.com/1/image-resize/1/800_533_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9oMHJKUS9NQUdCeHhoMHJKUS8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAJnopO1op_q5Hs-ffPFjds6okwzKHzxH3V8h7wmMrA2l&exp=1713269768&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAADAZASVE2VQ5uZ7x3z_vz9JftwAogc8WCMJlF3n8UYzO" alt="">
+        <img class="founder-image" :src="adrienImg" alt="">
           <div class="container">
             <div class="row">
               <div class="col-lg-4 text-center mx-auto position-relative">
@@ -101,7 +103,7 @@ onUnmounted(() => {
           :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
-        <img class="founder-image" src="https://media.canva.com/1/image-resize/1/533_800_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS94V1JZRS9NQUdCeHd4V1JZRS8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAOEsOCLWn7RY68WvUu615S9kdMiQg0YiITwTi0Gaco8r&exp=1713267746&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAACC7uF5FD2RovenCuoUAZr16dvqVVHx49-V2hwGTHWYo" alt="">
+        <img class="founder-image" :src="arinaImg" alt="">
           <div class="container">
             <div class="row">
               <div class="col-lg-4 text-center mx-auto position-relative">
