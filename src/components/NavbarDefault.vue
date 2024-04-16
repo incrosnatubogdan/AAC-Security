@@ -326,6 +326,19 @@ watch(
           </li>
           <li class="nav-item mx-2">
             <RouterLink
+              :to="{ name: 'about-us' }"
+              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+            >
+              <i
+                class="material-icons opacity-6 me-2 text-md"
+                :class="getTextColor()"
+                >phone</i
+              >
+              <span>About us</span>
+            </RouterLink>
+          </li>
+          <li class="nav-item mx-2">
+            <RouterLink
               :to="{ name: 'contact' }"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
             >
