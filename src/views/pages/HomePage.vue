@@ -15,14 +15,18 @@ import home_bg_3 from "@/assets/img/home/home_bg_3.jpg";
 export default {
   data() {
     return {
-      isOnFirstSlide: true,
+      isFirstSlide: true,
       options : {
           licenseKey: 'gplv3-license',
           menu: '#menu',
-          anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+          anchors: ['landing-page', 'page2', 'page3', 'page4', 'page5'],
           sectionsColor: ['transparent', '#ff5f45', '#0798ec', '#0798ec'],
           onLeave: (origin, destination, direction, trigger) => {
-            this.isOnFirstSlide = destination.anchor === 'page1'
+            console.log(destination.anchor)
+            if(destination) {
+              this.isFirstSlide = destination.anchor === 'landing-page'
+            }
+            
           }
       }
     };
@@ -33,6 +37,7 @@ export default {
     // const fullpage = document.getElementById("fullpage")[0];
     body.classList.add("presentation-page");
     body.classList.add("bg-gray-200");
+    window.location.href = document.URL.replace(/#.*$/, "") + "#landing-page"
   },
 
   beforeUnmount() {
@@ -40,21 +45,14 @@ export default {
     body.classList.remove("presentation-page");
     body.classList.remove("bg-gray-200");
   },
-
-  methods: {
-    afterLoad(origin) {
-      console.log('After load: ' + origin);
-      // console.log(this.$refs.fullpage.api)
-    },
-  }
 }
 </script>
 
 <template>
-  <NavbarDefault :isOnFirstSlide="isOnFirstSlide" />
+  <NavbarDefault :isOnFirstSlide="isFirstSlide" />
 
-  <full-page ref="fullpage" :options="options" id="fullpage" @after-slide-load="afterLoad">
-    <div class="section" data-anchor="page1">
+  <full-page ref="fullpage" :options="options" id="fullpage">
+    <div class="section" data-anchor="landing-page">
       <Header>
         <div
           class="page-header min-vh-100"

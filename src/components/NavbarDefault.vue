@@ -26,7 +26,7 @@ const props = defineProps({
     default: false,
   },
   isOnFirstSlide: {
-    type: Boolean,
+    default: false
   },
   light: {
     type: Boolean,
@@ -73,6 +73,8 @@ if (type.value === "mobile") {
   textDark.value = false;
 }
 
+console.log(props.isOnFirstSlide)
+
 watch(
   () => type.value,
   (newValue) => {
@@ -85,7 +87,7 @@ watch(
 );
 </script>
 <template>
-  <div v-if="props.isOnFirstSlide" class="navbar-call-cta d-flex bg-gradient-success">
+  <div class="navbar-call-cta d-flex bg-gradient-success" :class="isOnFirstSlide ? '' : 'd-none' ">
     <span>Experience Premier Protection</span>
     <a
         href="tel:+447951027265"
@@ -97,7 +99,7 @@ watch(
   </div>
   <nav
     class="navbar navbar-expand-lg  z-index-3 w-100 shadow-none navbar-transparent position-absolute mb-3 navbar-dark bg-black z-index-3 py-3"
-    :class="props.isOnFirstSlide ? 'top-40' : 'top-0'"
+    :class="isOnFirstSlide ? 'top-40' : 'top-0'"
   >
     <div
       :class="
