@@ -124,7 +124,7 @@ watch(
           :src="Logo"
           alt="logo"
           loading="lazy"
-          :style="{ height: '40px' }"
+          :style="{ height: '40px'}"
         />
       </RouterLink>
       <button
@@ -177,7 +177,7 @@ watch(
           :src="Logo"
           alt="logo"
           loading="lazy"
-          :style="{ width: '140px', position: 'absolute', left: '-40px', top: '-30px' }"
+          :style="{ width: '140px', position: 'absolute', left: '-40px', top: props.isOnFirstSlide ? '-30px' : '-14px'  }"
         />
       </RouterLink>
           </li>
@@ -362,13 +362,12 @@ watch(
 
 @media (max-width: 551px) {
   .navbar-call-cta {
-  padding: 4px;
+    padding: 4px;
+  }
 }
-}
-
 
 .navbar-call-cta  > span {
   color: white;
-  font-size: 20px;
+  font-size: 2vh;
 }
 </style>

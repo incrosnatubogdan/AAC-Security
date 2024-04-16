@@ -3,48 +3,20 @@ import { onMounted, onUnmounted } from "vue";
 
 //example components
 import NavbarDefault from "@/components/NavbarDefault.vue";
-import WhatsAppButton from "@/components/WhatsAppButton.vue";
-import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
-
-//image
-import bg0 from "@/assets/img/bg9.jpg";
-
-//dep
-import Typed from "typed.js";
-
-//sections
-import Information from "./sections/ServicesInformation.vue";
-
-import {
-  hiringServices,
-  hiringServicesCta,
-} from "../../helpers/services/hiring";
-
-const body = document.getElementsByTagName("body")[0];
-const mailToRoute = `mailto:${import.meta.env.VITE_HIRING_EMAIL}`;
+import hiring_2 from "@/assets/img/hiring/hiring_2.jpg";
 //hooks
-onMounted(() => {
-  body.classList.add("about-us");
-  body.classList.add("bg-gray-200");
-
-  if (document.getElementById("typed")) {
-    // eslint-disable-next-line no-unused-vars
-    var typed = new Typed("#typed", {
-      stringsElement: "#typed-strings",
-      typeSpeed: 90,
-      backSpeed: 90,
-      backDelay: 200,
-      startDelay: 500,
-      loop: true,
-    });
-  }
-});
-
+import hiring_1 from "@/assets/img/hiring/hiring_1.jpg";
+const body = document.getElementsByTagName("body")[0];
 const options = {
     licenseKey: 'gplv3-license',
     menu: '#menu',
     anchors: ['page1', 'security-officer', 'security-manager'],
 }
+
+onMounted(() => {
+  body.classList.add("about-us");
+  body.classList.add("bg-gray-200");
+});
 
 onUnmounted(() => {
   body.classList.remove("about-us");
@@ -58,7 +30,7 @@ onUnmounted(() => {
     <div class="section">
       <div
           class="page-header min-vh-100"
-          :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          :style="`background-image: url(${hiring_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
          <div class="container">
@@ -93,7 +65,7 @@ onUnmounted(() => {
     <div class="section">
       <div
           class="page-header min-vh-100"
-          :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          :style="`background-image: url(${hiring_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
           <div class="container">

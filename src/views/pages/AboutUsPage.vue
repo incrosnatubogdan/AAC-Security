@@ -3,42 +3,17 @@ import { onMounted, onUnmounted } from "vue";
 
 //example components
 import NavbarDefault from "@/components/NavbarDefault.vue";
-import WhatsAppButton from "@/components/WhatsAppButton.vue";
-
+import about_2 from "@/assets/img/about/about_2.jpg";
 //image
-import bg0 from "@/assets/img/bg9.jpg";
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
 import adrienImg from "@/assets/img/team_1.webp";
 import arinaImg from "@/assets/img/team_2.webp";
-//dep
-import Typed from "typed.js";
-
-//sections
-import Information from "./sections/ServicesInformation.vue";
-
-import {
-  hiringServices,
-  hiringServicesCta,
-} from "../../helpers/services/hiring";
 
 const body = document.getElementsByTagName("body")[0];
-const mailToRoute = `mailto:${import.meta.env.VITE_HIRING_EMAIL}`;
 //hooks
 onMounted(() => {
   body.classList.add("about-us");
   body.classList.add("bg-gray-200");
-
-  if (document.getElementById("typed")) {
-    // eslint-disable-next-line no-unused-vars
-    var typed = new Typed("#typed", {
-      stringsElement: "#typed-strings",
-      typeSpeed: 90,
-      backSpeed: 90,
-      backDelay: 200,
-      startDelay: 500,
-      loop: true,
-    });
-  }
 });
 
 const options = {
@@ -59,7 +34,7 @@ onUnmounted(() => {
     <div class="section">
       <div
           class="page-header min-vh-100"
-          :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
           <div class="container">
@@ -80,7 +55,7 @@ onUnmounted(() => {
     <div class="section">
       <div
           class="page-header min-vh-100"
-          :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
         <img class="founder-image" :src="adrienImg" alt="">
@@ -100,7 +75,7 @@ onUnmounted(() => {
     <div class="section">
       <div
           class="page-header min-vh-100"
-          :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
         <img class="founder-image" :src="arinaImg" alt="">

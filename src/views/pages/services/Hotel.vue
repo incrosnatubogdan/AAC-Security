@@ -5,12 +5,11 @@ import { onMounted, onUnmounted } from "vue";
 import NavbarDefault from "../../../components/NavbarDefault.vue";
 
 //image
-import bg0 from "@/assets/img/services/close_protection/cover.jpg";
+import bg0 from "@/assets/img/services/hotel_cover.png";
 import {
   hotelServices,
 } from "../../../helpers/services/hotel";
 import servicesData from "../../../helpers/services/data";
-import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(

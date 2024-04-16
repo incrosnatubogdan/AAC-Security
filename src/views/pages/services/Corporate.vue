@@ -5,7 +5,7 @@ import { onMounted, onUnmounted } from "vue";
 import NavbarDefault from "../../../components/NavbarDefault.vue";
 
 //image
-import bg0 from "@/assets/img/services/close_protection/cover.jpg";
+import bg0 from "@/assets/img/services/corporate_cover.jpg";
 
 import {
   corporateServices,

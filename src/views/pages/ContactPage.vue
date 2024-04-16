@@ -3,11 +3,7 @@ import { onMounted } from "vue";
 
 //example components
 import DefaultNavbar from "@/components/NavbarDefault.vue";
-import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
-
-//image
-import image from "@/assets/img/contact/hero.svg";
-
+import contact_1 from "@/assets/img/contact/contact_1.jpg";
 //material components
 import MaterialInput from "@/components/MaterialInput.vue";
 import MaterialTextArea from "@/components/MaterialTextArea.vue";
@@ -114,7 +110,7 @@ export default {
 <template>
   <DefaultNavbar :sticky="true" />
   <section>
-    <div class="page-header min-vh-100" :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+    <div class="page-header min-vh-100" :style="`background-image: url(${contact_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy">
       <div class="container">
         <div class="row">

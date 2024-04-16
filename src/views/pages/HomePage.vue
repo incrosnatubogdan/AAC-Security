@@ -1,16 +1,13 @@
 <script setup>
 import NavbarDefault from "@/components/NavbarDefault.vue";
 import Header from "@/components/Header.vue";
-import WhatsAppButton from "@/components/WhatsAppButton.vue";
-// sections
-import HomePageServices from "./sections/HomePageServices.vue";
-import servicesData from "@/helpers/services/data";
-import HomePageTestimonials from "./sections/HomePageTestimonials.vue";
+
 import HomePageInfo from "./sections/HomePageInfo.vue";
 //images
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
-import TextSection from "@/components/TextSection.vue";
-import { introDescription, chooseUsDescription, commitmentDescription } from "@/helpers/home"
+import home_bg_1 from "@/assets/img/home/home_bg_1.jpg";
+import home_bg_2 from "@/assets/img/home/home_bg_2.jpg";
+import home_bg_3 from "@/assets/img/home/home_bg_3.jpg";
 </script>
 
 <script>
@@ -55,6 +52,7 @@ export default {
 
 <template>
   <NavbarDefault :isOnFirstSlide="isOnFirstSlide" />
+
   <full-page ref="fullpage" :options="options" id="fullpage" @after-slide-load="afterLoad">
     <div class="section" data-anchor="page1">
       <Header>
@@ -86,7 +84,7 @@ export default {
       </Header>
     </div>
 
-    <div class="section page-header min-vh-100" data-anchor="page2" :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
+    <div class="section page-header min-vh-100" data-anchor="page2" :style="`background-image: url(${home_bg_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
         <div class="row">
               <div class="col-lg-12 text-center">
                 <HomePageInfo />
@@ -97,7 +95,7 @@ export default {
     <div class="section" data-anchor="page3">
       <div
           class="page-header min-vh-100"
-          :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          :style="`background-image: url(${home_bg_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
         <div class="container">
@@ -110,12 +108,11 @@ export default {
       </div>
     </div>
 
-    <div class="section page-header min-vh-100" :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
+    <div class="section page-header min-vh-100" :style="`background-image: url(${home_bg_3}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
         <div class="slide">
         <div class="container">
           <div class="row">
           <div class="col-md-8 offset-md-2 offset-1 col-10 d-flex justify-content-center align-items-center flex-column flex-lg-row">
-              <i class="material-icons services-icon">dashboard</i>
               <span class="c-white">
                 <h3 class="c-white">Commitment to Excellence</h3>
                 The company is committed to delivering high-quality security services with a focus on skill, dedication, and forward-thinking strategies.
@@ -128,7 +125,6 @@ export default {
         <div class="container">
           <div class="row">
             <div class="col-md-8 offset-md-2 offset-1 col-10 d-flex justify-content-center align-items-center flex-column flex-lg-row">
-              <i class="material-icons services-icon">dashboard</i>
               <span class="c-white">
                 <h3 class="c-white">Comprehensive Security Approach</h3>
                 Emphasizes a holistic strategy in security, integrating knowledge and progression to meet evolving challenges.
@@ -141,7 +137,6 @@ export default {
         <div class="container">
           <div class="row">
           <div class="col-md-8 offset-md-2 offset-1 col-10 d-flex justify-content-center align-items-center flex-column flex-lg-row">
-              <i class="material-icons services-icon">dashboard</i>
               <span class="c-white">
                 <h3 class="c-white">Leadership and Expertise</h3>
                 Founded by Adrien and Arina, AAP Security is led by a blend of extensive security experience and educational insight, ensuring top-tier talent and innovative solutions.

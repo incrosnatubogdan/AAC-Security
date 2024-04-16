@@ -6,7 +6,7 @@ import NavbarDefault from "@/components/NavbarDefault.vue";
 import WhatsAppButton from "@/components/WhatsAppButton.vue";
 
 //image
-import bg0 from "@/assets/img/services/close_protection/cover.jpg";
+import bg0 from "@/assets/img/services/close_protection_cover.jpg";
 
 import {
   closeProtectionServices,
