@@ -86,16 +86,32 @@ export default {
       </Header>
     </div>
 
-    <div class="section" data-anchor="page2">
-      <HomePageInfo />
+    <div class="section page-header min-vh-100" data-anchor="page2" :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
+        <div class="row">
+              <div class="col-lg-12 text-center">
+                <HomePageInfo />
+              </div>
+            </div>
     </div>
 
     <div class="section" data-anchor="page3">
-      <h1 class="text-white text-center">Why choose us?</h1>
+      <div
+          class="page-header min-vh-100"
+          :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          loading="lazy"
+        >
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center mx-auto position-relative">
+                <h1 class="text-white text-center">Why choose us?</h1>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
 
-    <div class="section">
-      <div class="slide">
+    <div class="section page-header min-vh-100" :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
+        <div class="slide">
         <div class="container">
           <div class="row">
           <div class="col-md-8 offset-md-2 offset-1 col-10 d-flex justify-content-center align-items-center flex-column flex-lg-row">
