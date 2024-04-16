@@ -21,7 +21,6 @@ const options = {
     menu: '#menu',
     anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
     sectionsColor: ['transparent', '#ff5f45', '#0798ec', '#0798ec'],
-    title: 'AAC Security'
 }
 onMounted(() => {
   body.classList.add("presentation-page");
@@ -48,7 +47,7 @@ onUnmounted(() => {
     <div class="section">
       <Header>
         <div
-          class="page-header min-vh-75"
+          class="page-header min-vh-100"
           :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >

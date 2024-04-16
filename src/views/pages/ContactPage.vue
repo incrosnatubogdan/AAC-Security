@@ -3,6 +3,7 @@ import { onMounted } from "vue";
 
 //example components
 import DefaultNavbar from "@/components/NavbarDefault.vue";
+import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
 
 //image
 import image from "@/assets/img/contact/hero.svg";
@@ -111,36 +112,16 @@ export default {
 </script>
 
 <template>
-  <div class="container position-sticky z-index-sticky top-0">
-    <div class="row">
-      <div class="col-12">
-        <DefaultNavbar :sticky="true" />
-      </div>
-    </div>
-  </div>
+  <DefaultNavbar :sticky="true" />
   <section>
-    <div class="page-header min-vh-100">
+    <div class="page-header min-vh-100" :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          loading="lazy">
       <div class="container">
         <div class="row">
-          <div
-            class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column"
-          >
-            <div
-              class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center"
-              :style="{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-                backgroundPositionY: '50%',
-                backgroundPositionX: '90%',
-                backgroundSize: '80%'
-              }"
-              loading="lazy"
-            ></div>
+          <div class="col-lg-4 col-sm-12 d-flex align-items-center">
+            <h1 class="text-white">CONTACT US</h1>
           </div>
-          <div
-            class="mt-8 col-xl-5 col-lg-6 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5"
-          >
+          <div class="col-lg-8 col-sm-12">
             <div
               class="card d-flex blur justify-content-center shadow-lg my-sm-0 my-sm-6 mt-8 mb-5"
             >
@@ -155,9 +136,7 @@ export default {
               </div>
               <div class="card-body">
                 <p class="pb-3">
-                  Discover how AAP Security can enhance your security and peace of mind. Contact us
-today to learn more about our services and how we can tailor our solutions to meet your
-unique needs.
+                  Discover how AAP Security can enhance your security and peace of mind. Contact us today to learn more about our services and how we can tailor our solutions to meet your unique needs.
                 </p>
                 <form
                   id="contact-form"
@@ -210,8 +189,9 @@ unique needs.
                   </div>
                 </form>
               </div>
-            </div>
           </div>
+          </div>
+          
         </div>
       </div>
     </div>

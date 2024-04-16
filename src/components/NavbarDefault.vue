@@ -56,16 +56,7 @@ function getArrowColor() {
 
 // set text color
 const getTextColor = () => {
-  let color;
-  if (props.transparent && textDark.value) {
-    color = "text-dark";
-  } else if (props.transparent) {
-    color = "text-white";
-  } else {
-    color = "text-dark";
-  }
-
-  return color;
+  return 'text-white';
 };
 
 // set nav color on mobile && desktop
@@ -89,18 +80,12 @@ watch(
     }
   }
 );
+
+const showOld = false
 </script>
 <template>
   <nav
-    class="navbar navbar-expand-lg top-0"
-    :class="{
-      'z-index-3 w-100 shadow-none navbar-transparent position-absolute my-3':
-        props.transparent,
-      'my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-4 position-absolute mt-4':
-        props.sticky,
-      'navbar-light bg-white py-3': props.light,
-      ' navbar-dark bg-gradient-dark z-index-3 py-3': props.dark,
-    }"
+    class="navbar navbar-expand-lg top-0 z-index-3 w-100 shadow-none navbar-transparent position-absolute mb-3 navbar-dark bg-black z-index-3 py-3"
   >
     <div
       :class="
@@ -109,28 +94,9 @@ watch(
           : 'container-fluid px-0'
       "
     >
+      
       <RouterLink
-        class="navbar-brand d-none d-md-block"
-        :class="[
-          (props.transparent && textDark.value) || !props.transparent
-            ? 'text-dark font-weight-bolder ms-sm-3'
-            : 'text-white font-weight-bolder ms-sm-3',
-          'p-0',
-        ]"
-        :to="{ name: 'presentation' }"
-        rel="tooltip"
-        title="AAP Security"
-        data-placement="bottom"
-      >
-        <img
-          :src="Logo"
-          alt="logo"
-          loading="lazy"
-          :style="{ height: '40px' }"
-        />
-      </RouterLink>
-      <RouterLink
-        class="navbar-brand d-block d-md-none"
+        class="navbar-brand d-block d-lg-none"
         :class="
           (props.transparent || props.dark
             ? 'text-white'
@@ -149,11 +115,11 @@ watch(
           :style="{ height: '40px' }"
         />
       </RouterLink>
-      <a
+      <!-- <a
         href="tel:+447951027265"
         class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
         >Call us +4479 5102 7265</a
-      >
+      > -->
       <button
         class="navbar-toggler shadow-none ms-2"
         type="button"
@@ -170,10 +136,10 @@ watch(
         </span>
       </button>
       <div
-        class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0"
+        class="collapse navbar-collapse w-100 px-5"
         id="navigation"
       >
-        <ul class="navbar-nav navbar-nav-hover ms-auto">
+        <ul class="navbar-nav navbar-nav-hover w-100 justify-content-between">
           <!-- Start here -->
 
           <li class="nav-item dropdown dropdown-hover">
@@ -185,11 +151,6 @@ watch(
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i
-                class="material-icons opacity-6 me-2 text-md"
-                :class="getTextColor()"
-                >dashboard</i
-              >
               Services
               <img
                 :src="getArrowColor()"
@@ -316,24 +277,30 @@ watch(
               :to="{ name: 'hiring' }"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
             >
-              <i
-                class="material-icons opacity-6 me-2 text-md"
-                :class="getTextColor()"
-                >badge</i
-              >
               <span>Hiring</span>
             </RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink
+        class="navbar-brand d-none d-md-block p-0 position-relative"
+        :to="{ name: 'presentation' }"
+        rel="tooltip"
+        title="AAP Security"
+        data-placement="bottom"
+      >
+        <img
+          :src="Logo"
+          alt="logo"
+          loading="lazy"
+          :style="{ width: '140px', position: 'absolute', left: '-40px', top: '-30px' }"
+        />
+      </RouterLink>
           </li>
           <li class="nav-item mx-2">
             <RouterLink
               :to="{ name: 'about-us' }"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
             >
-              <i
-                class="material-icons opacity-6 me-2 text-md"
-                :class="getTextColor()"
-                >phone</i
-              >
               <span>About us</span>
             </RouterLink>
           </li>
@@ -342,28 +309,22 @@ watch(
               :to="{ name: 'contact' }"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
             >
-              <i
-                class="material-icons opacity-6 me-2 text-md"
-                :class="getTextColor()"
-                >phone</i
-              >
               <span>Contact us</span>
             </RouterLink>
-          </li>
-        </ul>
-        <ul class="navbar-nav d-lg-block d-none">
-          <li class="nav-item">
-            <a
-              :href="action.route"
-              class="btn btn-sm mb-0"
-              :class="action.color"
-              onclick="smoothToPricing('pricing-soft-ui')"
-              >{{ action.label }}</a
-            >
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- End Navbar -->
-</template>../assets/js/useWindowsWidth
+</template>
+
+<style>
+.bg-black {
+  background-color: #1C1F20;
+}
+
+.nav-item span {
+  font-family: 'Atrament' !important;
+  font-size: 24px;
+}
+</style>
