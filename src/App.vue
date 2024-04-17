@@ -31,8 +31,11 @@ import { RouterView } from "vue-router";
   color: white;
 }
 
-button.cta-button-services {
+button.btn.cta-button-services,
+button.btn.cta-button-services:hover {
   width: 120px;
+  background: #862B2B;
+  background-color: #862B2B;
 }
 
 .fp-watermark {

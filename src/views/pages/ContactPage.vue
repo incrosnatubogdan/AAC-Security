@@ -115,7 +115,7 @@ export default {
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-sm-12 d-flex align-items-center">
-            <h1 class="text-white">CONTACT US</h1>
+            <h2 class="text-white">CONTACT US</h2>
           </div>
           <div class="col-lg-8 col-sm-12">
             <div

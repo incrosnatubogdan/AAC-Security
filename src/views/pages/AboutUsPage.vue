@@ -19,6 +19,7 @@ onMounted(() => {
 const options = {
     licenseKey: 'gplv3-license',
     menu: '#menu',
+    scrollingSpeed: 0,
     anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
 }
 

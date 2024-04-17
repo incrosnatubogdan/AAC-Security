@@ -5,7 +5,8 @@ import { onMounted, onUnmounted } from "vue";
 import NavbarDefault from "../../../components/NavbarDefault.vue";
 
 //image
-import bg0 from "@/assets/img/services/corporate_cover.jpg";
+import bg0 from "@/assets/img/services/corporate_cover_dash.jpg";
+import bg1 from "@/assets/img/services/corporate_cover.jpg";
 
 import {
   corporateServices,
@@ -52,7 +53,7 @@ onUnmounted(() => {
               {{ service.description }}
             </p>
           </div>
-          <button type="button" class="btn btn-sm mb-0 mt-3 bg-gradient-success cta-button-services">
+          <button type="button" class="btn btn-sm mb-0 mt-3 bg-gradient-light cta-button-services">
             <a href="tel:+447951027265"> CALL US </a>
           </button>
         </div>

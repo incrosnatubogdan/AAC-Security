@@ -33,10 +33,9 @@ environment for all attendees."
             />
             <DefaultInfoCard
               col="col-lg-3 col-md-6 col-sm-12 d-flex py-1 mb-2"
-              title="Technology-Driven Solutions"
+              title="Close protection"
               description="Leveraging the latest in security technology,
-we offer advanced surveillance, alarm systems, and access control options to fortify
-your security infrastructure."
+              we offer security services for public appearances, promotional events, and other gatherings involving you."
             />
           </div>
         </div>

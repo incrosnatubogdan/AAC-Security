@@ -7,7 +7,7 @@ import HomePageInfo from "./sections/HomePageInfo.vue";
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
 import home_bg_1 from "@/assets/img/home/home_bg_1.jpg";
 import home_bg_2 from "@/assets/img/home/home_bg_2.jpg";
-import home_bg_3 from "@/assets/img/home/home_bg_3.jpg";
+import home_bg_3 from "@/assets/img/home/home_why.png";
 </script>
 
 <script>
@@ -18,15 +18,14 @@ export default {
       isFirstSlide: true,
       options : {
           licenseKey: 'gplv3-license',
+          scrollingSpeed: 0,
           menu: '#menu',
-          anchors: ['landing-page', 'page2', 'page3', 'page4', 'page5'],
+          anchors: ['landing-page1', 'landing-page2', 'landing-page3', 'landing-page4', 'landing-page5'],
           sectionsColor: ['transparent', '#ff5f45', '#0798ec', '#0798ec'],
           onLeave: (origin, destination, direction, trigger) => {
-            console.log(destination.anchor)
             if(destination) {
               this.isFirstSlide = destination.anchor === 'landing-page'
             }
-            
           }
       }
     };
