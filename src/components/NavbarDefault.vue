@@ -188,16 +188,16 @@ function toggleMenu() {
               aria-expanded="false"
             >
               Services
-              <img
+              <!-- <img
                 :src="getArrowColor()"
                 alt="down-arrow"
                 class="arrow ms-2 d-lg-block d-none"
-              />
-              <img
+              /> -->
+              <!-- <img
                 :src="getArrowColor()"
                 alt="down-arrow"
-                class="arrow ms-1 d-lg-none d-block ms-auto"
-              />
+                class="arrow ms-1 d-lg-block d-none ms-auto"
+              /> -->
             </a>
             <div
               class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-lg p-2 border-radius-xl mt-0 mt-lg-3 bg-black"

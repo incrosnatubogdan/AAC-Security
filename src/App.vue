@@ -41,4 +41,10 @@ button.btn.cta-button-services:hover {
 .fp-watermark {
   display: none;
 }
+
+@media (max-width: 991.98px) {
+  .navbar-toggler + .navbar-collapse .dropdown.nav-item .dropdown-menu {
+    overflow: hidden;
+  }
+}
 </style>
