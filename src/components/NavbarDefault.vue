@@ -51,41 +51,34 @@ const props = defineProps({
 
 // set arrow  color
 function getArrowColor() {
-  if (props.transparent && textDark.value) {
-    return ArrDark;
-  } else if (props.transparent) {
-    return DownArrWhite;
-  } else {
-    return ArrDark;
-  }
+  return DownArrWhite;
 }
 
-// set text color
-const getTextColor = () => {
-  return 'text-white';
-};
+function toggleMenu() {
+  console.log('toggle')
+}
 
 // set nav color on mobile && desktop
 
-let textDark = ref(props.darkText);
-const { type } = useWindowsWidth();
+// let textDark = ref(props.darkText);
+// const { type } = useWindowsWidth();
 
-if (type.value === "mobile") {
-  textDark.value = true;
-} else if (type.value === "desktop" && textDark.value == false) {
-  textDark.value = false;
-}
+// if (type.value === "mobile") {
+//   textDark.value = true;
+// } else if (type.value === "desktop" && textDark.value == false) {
+//   textDark.value = false;
+// }
 
-watch(
-  () => type.value,
-  (newValue) => {
-    if (newValue === "mobile") {
-      textDark.value = true;
-    } else {
-      textDark.value = false;
-    }
-  }
-);
+// watch(
+//   () => type.value,
+//   (newValue) => {
+//     if (newValue === "mobile") {
+//       textDark.value = true;
+//     } else {
+//       textDark.value = false;
+//     }
+//   }
+// );
 </script>
 <template>
   <div class="navbar-call-cta d-flex justify-content-end bg-gradient-success" :class="isOnFirstSlide ? '' : 'd-none' ">
@@ -105,17 +98,11 @@ watch(
 
   </div>
   <nav
-    class="navbar navbar-expand-lg  z-index-3 w-100 shadow-none navbar-transparent position-absolute mb-3 navbar-dark bg-black z-index-3 py-3"
-    :class="isOnFirstSlide ? 'top-40' : 'top-0'"
+    class="navbar navbar-expand-lg z-index-3 w-100 shadow-none navbar-transparent position-fixed mb-3 navbar-dark bg-black z-index-3 py-3"
   >
     <div
-      :class="
-        props.transparent || props.light || props.dark
-          ? 'container'
-          : 'container-fluid px-0'
-      "
+      class="container-fluid px-0"
     >
-      
       <RouterLink
         class="navbar-brand d-block d-lg-none"
         :class="
@@ -137,13 +124,14 @@ watch(
         />
       </RouterLink>
       <button
-        class="navbar-toggler shadow-none ms-2"
+        class="navbar-toggler collapsed shadow-none ms-2"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navigation"
-        aria-controls="navigation"
+        data-bs-target="#topNavigation"
+        aria-controls="topNavigation"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        @click="toggleMenu()"
       >
         <span class="navbar-toggler-icon mt-2">
           <span class="navbar-toggler-bar bar1"></span>
@@ -152,11 +140,10 @@ watch(
         </span>
       </button>
       <div
-        class="collapse navbar-collapse w-100 px-5 bg-black"
-        id="navigation"
+        class="collapse navbar-collapse px-5 bg-black "
+        id="topNavigation"
       >
         <ul class="navbar-nav navbar-nav-hover w-100 justify-content-between">
-          <!-- Start here -->
           <li class="nav-item mx-2">
             <RouterLink
               :to="{ name: 'hiring' }"
@@ -165,6 +152,7 @@ watch(
               <span>Hiring</span>
             </RouterLink>
           </li>
+          
           <li class="nav-item mx-2">
             <RouterLink
               :to="{ name: 'about-us' }"
@@ -176,7 +164,7 @@ watch(
 
           <li class="nav-item">
             <RouterLink
-        class="navbar-brand d-none d-md-block p-0 position-relative"
+        class="navbar-brand d-none d-lg-block p-0 position-relative"
         :to="{ name: 'presentation' }"
         rel="tooltip"
         title="AAP Security"
@@ -194,8 +182,7 @@ watch(
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               role="button"
-              class="nav-link ps-2 d-flex cursor-pointer align-items-center"
-              :class="getTextColor()"
+              class="nav-link dropdown-toggle ps-2 d-flex cursor-pointer align-items-center text-white"
               id="dropdownMenuPages"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -213,7 +200,7 @@ watch(
               />
             </a>
             <div
-              class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-2 border-radius-xl mt-0 mt-lg-3 bg-black"
+              class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-lg p-2 border-radius-xl mt-0 mt-lg-3 bg-black"
               aria-labelledby="dropdownMenuPages"
             >
               <div class="row d-none d-lg-block">
@@ -331,6 +318,7 @@ watch(
             </RouterLink>
           </li>
         </ul>
+        
       </div>
     </div>
   </nav>

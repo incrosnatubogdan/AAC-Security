@@ -26,9 +26,10 @@ export default {
           sectionsColor: ['transparent'],
           onLeave: (origin, destination, direction, trigger) => {
             const firstPage = 'landing-page'
+            const slidePage = 'landing-page4'
             if(destination) {
               this.isFirstSlide = destination.anchor === firstPage
-              const speed = destination.anchor === firstPage || origin.anchor === firstPage ? 400 : 0
+              const speed = destination.anchor === firstPage || origin.anchor === firstPage || destination.anchor === slidePage ? 400 : 0
               this.$refs.fullpageHome.api.setScrollingSpeed(speed)
             }
           }
@@ -86,11 +87,11 @@ export default {
     </div>
 
     <div class="section page-header min-vh-100" data-anchor="landing-page2" :style="`background-image: url(${home_bg_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
-        <div class="row">
-              <div class="col-lg-12 text-center">
-                <HomePageInfo />
-              </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <HomePageInfo />
+        </div>
+      </div>
     </div>
 
     <div class="section" data-anchor="landing-page3">
