@@ -5,34 +5,53 @@ import { onMounted, onUnmounted } from "vue";
 import NavbarDefault from "@/components/NavbarDefault.vue";
 import about_2 from "@/assets/img/about/about_2.jpg";
 //image
-import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
 import adrienImg from "@/assets/img/team_1.webp";
 import arinaImg from "@/assets/img/team_2.webp";
+</script>
 
-const body = document.getElementsByTagName("body")[0];
+<script>
 //hooks
-onMounted(() => {
-  body.classList.add("about-us");
-  body.classList.add("bg-gray-200");
-});
+export default {
+  data() {
+    return {
+      isFirstSlide: true,
+      options : {
+          licenseKey: 'gplv3-license',
+          scrollingSpeed: 700,
+          menu: '#menu',
+          anchors: ['aus1', 'aus2', 'aus3', 'aus4', 'aus5'],
+          sectionsColor: ['transparent', '#ff5f45', '#0798ec', '#0798ec'],
+          onLeave: (origin, destination, direction, trigger) => {
+            const firstPage = 'aus1'
+            if(destination) {
+              this.isFirstSlide = destination.anchor === firstPage
+              const speed = destination.anchor === firstPage || origin.anchor === firstPage ? 400 : 0
+              this.$refs.fullpageAbout.api.setScrollingSpeed(speed)
+            }
+          }
+      }
+    };
+  },
 
-const options = {
-    licenseKey: 'gplv3-license',
-    menu: '#menu',
-    scrollingSpeed: 0,
-    anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+  mounted() {
+    const body = document.getElementsByTagName("body")[0];
+    body.classList.add("presentation-page");
+    body.classList.add("bg-gray-200");
+    window.location.href = document.URL.replace(/#.*$/, "") + "#aus1"
+  },
+
+  beforeUnmount() {
+    const body = document.getElementsByTagName("body")[0];
+    body.classList.remove("presentation-page");
+    body.classList.remove("bg-gray-200");
+  },
 }
-
-onUnmounted(() => {
-  body.classList.remove("about-us");
-  body.classList.remove("bg-gray-200");
-});
 </script>
 <template>
-  <NavbarDefault />
+  <NavbarDefault :isOnFirstSlide="isFirstSlide" />
   <!-- <WhatsAppButton /> -->
-  <full-page ref="fullpage" :options="options" id="fullpage">
-    <div class="section">
+  <full-page ref="fullpageAbout" id="fullpageAbout" :options="options">
+    <div class="section" data-anchor="aus1">
       <div
           class="page-header min-vh-100"
           :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
@@ -43,17 +62,20 @@ onUnmounted(() => {
               <div class="col-lg-7 text-center mx-auto position-relative">
                 <h1
                   class="text-white pt-3 mt-n5 me-2"
-                  :style="{ display: 'inline-block ', fontWeight: '500' }"
+                  :style="{ display: 'inline-block '}"
                 >
                 ABOUT US
                 </h1>
+                <p class="text-white">
+                  Lorem ipsum With seven years of seasoned experience in the security industry, Adrien’s expertise is the cornerstone of our operational excellence. His knack
+                </p>
               </div>
             </div>
           </div>
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" data-anchor="aus2">
       <div
           class="page-header min-vh-100"
           :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
@@ -73,7 +95,7 @@ onUnmounted(() => {
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" data-anchor="aus3">
       <div
           class="page-header min-vh-100"
           :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
@@ -93,10 +115,10 @@ onUnmounted(() => {
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" data-anchor="aus4">
       <div
           class="page-header min-vh-100"
-          :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
           <div class="container">
@@ -115,10 +137,10 @@ onUnmounted(() => {
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" data-anchor="aus5">
       <div
           class="page-header min-vh-100"
-          :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+          :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
           <div class="container">

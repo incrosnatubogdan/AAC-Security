@@ -32,12 +32,12 @@ onUnmounted(() => {
 <template>
   <NavbarDefault />
   <!-- <WhatsAppButton /> -->
-  <header class="bg-gradient-dark">
+  <header class="bg-gradient-dark" >
     <div
       class="page-header min-vh-100"
       :style="{ backgroundImage: `url(${bg0})` }"
     >
-      <span class="mask bg-gradient-dark opacity-6"></span>
+      <span class="mask bg-gradient-dark opacity-4"></span>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center mx-auto my-auto">

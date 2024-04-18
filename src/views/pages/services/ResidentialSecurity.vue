@@ -5,7 +5,7 @@ import { onMounted, onUnmounted } from "vue";
 import DefaultNavbar from "../../../components/NavbarDefault.vue";
 
 //image
-import bg0 from "@/assets/img/services/close_protection/cover.jpg";
+import bg0 from "@/assets/img/services/residential_cover.jpg";
 //sections
 import Information from "../sections/ServicesInformation.vue";
 
@@ -35,12 +35,12 @@ onUnmounted(() => {
 <template>
   <DefaultNavbar />
   <!-- <WhatsAppButton /> -->
-  <header class="bg-gradient-dark">
+  <header>
     <div
       class="page-header min-vh-100"
       :style="{ backgroundImage: `url(${bg0})` }"
     >
-      <span class="mask bg-gradient-dark opacity-6"></span>
+      <span class="mask bg-gradient-dark opacity-4"></span>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center mx-auto my-auto">
@@ -56,7 +56,7 @@ onUnmounted(() => {
               {{ service.description }}
             </p>
           </div>
-          <button type="button" class="btn btn-sm mb-0 mt-3 bg-gradient-success cta-button-services">
+          <button type="button" class="btn btn-sm mb-0 mt-3 bg-gradient-light cta-button-services">
             <a href="tel:+447951027265"> CALL US </a>
           </button>
         </div>

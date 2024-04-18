@@ -9,6 +9,9 @@ import ArrDark from "@/assets/img/down-arrow-dark.svg";
 import downArrow from "@/assets/img/down-arrow.svg";
 import DownArrWhite from "@/assets/img/down-arrow-white.svg";
 
+import facebook_icon from "@/assets/img/icons/facebook.png";
+import instagram_icon from "@/assets/img/icons/instagram.png";
+import linkedin_icon from "@/assets/img/icons/linkedin.png";
 const props = defineProps({
   action: {
     type: Object,
@@ -73,8 +76,6 @@ if (type.value === "mobile") {
   textDark.value = false;
 }
 
-console.log(props.isOnFirstSlide)
-
 watch(
   () => type.value,
   (newValue) => {
@@ -87,15 +88,21 @@ watch(
 );
 </script>
 <template>
-  <div class="navbar-call-cta d-flex bg-gradient-success" :class="isOnFirstSlide ? '' : 'd-none' ">
-    <span>Experience Premier Protection</span>
-    <a
-        href="tel:+447951027265"
-        class="btn btn-sm bg-black mb-0 ms-auto text-white "
-        >
-        <i class="material-icons text-md mx-2">phone</i>
-        Get in touch</a
-      >
+  <div class="navbar-call-cta d-flex justify-content-end bg-gradient-success" :class="isOnFirstSlide ? '' : 'd-none' ">
+    <!-- <span>Experience Premier Protection</span> -->
+      <a
+        href="" class="mb-0 mx-3 text-white d-flex align-items-center">
+        <img :src="facebook_icon" alt="facebook logo">
+      </a>
+
+        <a
+        href="" class="mb-0 mx-3 text-white d-flex align-items-center">
+        <img :src="instagram_icon" alt="instagram logo"></a>
+
+        <a
+        href="" class="mb-0 mx-3 text-white d-flex align-items-center">
+        <img :src="linkedin_icon" alt="linkedin logo"></a>
+
   </div>
   <nav
     class="navbar navbar-expand-lg  z-index-3 w-100 shadow-none navbar-transparent position-absolute mb-3 navbar-dark bg-black z-index-3 py-3"
@@ -368,8 +375,12 @@ watch(
   }
 }
 
-.navbar-call-cta  > span {
-  color: white;
-  font-size: 2vh;
+.navbar-call-cta > a.text-white {
+  min-height: 34px;
+}
+
+
+.navbar-call-cta > a img {
+  height: 24px;
 }
 </style>

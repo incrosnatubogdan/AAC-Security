@@ -41,17 +41,15 @@ onUnmounted(() => {
                 <h1 class="text-white">JOB OPENINGS </h1>
                 <p class="text-white mt-5">We offer rewarding careers with comprehensive training, competitive salaries, and growth opportunities in a supportive and professional environment. Join us to make a meaningful impact in the security industry alongside a team committed to excellence and integrity.</p>
                 <div class="row mt-5">
-                  <div class="col-lg-6 justify-content-center d-flex mb-3">
+                  <div class="col-lg-12 d-flex">
                     <a class="d-flex cursor-pointer align-items-center flex-column hiring-page-options pb-0" href="#security-officer"> 
                       <h5 class="text-white">SECURITY OFFICER</h5>
-                      <p class="text-white">LONDON</p>
+                      <p class="text-white mb-0">LONDON</p>
                       <p class="text-white text-decoration-underline">See full description</p>
                     </a>
-                  </div>
-                  <div class="col-lg-6 justify-content-center d-flex">
-                    <a class="d-flex cursor-pointer align-items-center flex-column hiring-page-options pb-0" href="#security-manager"> 
+                    <a class="d-flex cursor-pointer align-items-center flex-column hiring-page-options pb-0 mx-4" href="#security-manager"> 
                       <h5 class="text-white">SECURITY MANAGER/SUPERVISOR</h5>
-                      <p class="text-white">LONDON</p>
+                      <p class="text-white mb-0">LONDON</p>
                       <p class="text-white text-decoration-underline">See full description</p>
                     </a>
                   </div>
@@ -127,6 +125,11 @@ onUnmounted(() => {
   padding: 12px;
   background-color: #862B2B;
   height: fit-content;
+  min-height: 200px;
+  justify-content: space-around;
+  max-width: 260px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .text-left {

@@ -8,6 +8,8 @@ import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
 import home_bg_1 from "@/assets/img/home/home_bg_1.jpg";
 import home_bg_2 from "@/assets/img/home/home_bg_2.jpg";
 import home_bg_3 from "@/assets/img/home/home_why.png";
+
+
 </script>
 
 <script>
@@ -20,11 +22,14 @@ export default {
           licenseKey: 'gplv3-license',
           scrollingSpeed: 0,
           menu: '#menu',
-          anchors: ['landing-page1', 'landing-page2', 'landing-page3', 'landing-page4', 'landing-page5'],
-          sectionsColor: ['transparent', '#ff5f45', '#0798ec', '#0798ec'],
+          anchors: ['landing-page', 'landing-page2', 'landing-page3', 'landing-page4'],
+          sectionsColor: ['transparent'],
           onLeave: (origin, destination, direction, trigger) => {
+            const firstPage = 'landing-page'
             if(destination) {
-              this.isFirstSlide = destination.anchor === 'landing-page'
+              this.isFirstSlide = destination.anchor === firstPage
+              const speed = destination.anchor === firstPage || origin.anchor === firstPage ? 400 : 0
+              this.$refs.fullpageHome.api.setScrollingSpeed(speed)
             }
           }
       }
@@ -33,7 +38,6 @@ export default {
 
   mounted() {
     const body = document.getElementsByTagName("body")[0];
-    // const fullpage = document.getElementById("fullpage")[0];
     body.classList.add("presentation-page");
     body.classList.add("bg-gray-200");
     window.location.href = document.URL.replace(/#.*$/, "") + "#landing-page"
@@ -50,7 +54,7 @@ export default {
 <template>
   <NavbarDefault :isOnFirstSlide="isFirstSlide" />
 
-  <full-page ref="fullpage" :options="options" id="fullpage">
+  <full-page ref="fullpageHome" :options="options" id="fullpageHome">
     <div class="section" data-anchor="landing-page">
       <Header>
         <div
@@ -81,7 +85,7 @@ export default {
       </Header>
     </div>
 
-    <div class="section page-header min-vh-100" data-anchor="page2" :style="`background-image: url(${home_bg_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
+    <div class="section page-header min-vh-100" data-anchor="landing-page2" :style="`background-image: url(${home_bg_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
         <div class="row">
               <div class="col-lg-12 text-center">
                 <HomePageInfo />
@@ -89,7 +93,7 @@ export default {
             </div>
     </div>
 
-    <div class="section" data-anchor="page3">
+    <div class="section" data-anchor="landing-page3">
       <div
           class="page-header min-vh-100"
           :style="`background-image: url(${home_bg_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
@@ -105,7 +109,7 @@ export default {
       </div>
     </div>
 
-    <div class="section page-header min-vh-100" :style="`background-image: url(${home_bg_3}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
+    <div class="section page-header min-vh-100" data-anchor="landing-page4" :style="`background-image: url(${home_bg_3}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`">
         <div class="slide">
         <div class="container">
           <div class="row">

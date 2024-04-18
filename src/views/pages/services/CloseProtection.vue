@@ -52,7 +52,7 @@ onUnmounted(() => {
               {{ service.description }}
             </p>
           </div>
-          <button type="button" class="btn btn-sm mb-0 mt-3 bg-gradient-success cta-button-services">
+          <button type="button" class="btn btn-sm mb-0 mt-3 bg-gradient-light cta-button-services">
             <a href="tel:+447951027265"> CALL US </a>
           </button>
         </div>
