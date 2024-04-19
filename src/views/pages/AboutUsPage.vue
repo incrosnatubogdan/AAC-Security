@@ -67,7 +67,7 @@ export default {
                 ABOUT US
                 </h1>
                 <p class="text-white">
-                  Lorem ipsum With seven years of seasoned experience in the security industry, Adrien’s expertise is the cornerstone of our operational excellence. His knack
+                  At AAP SECURITY, we bring over a decade of expertise to the forefront, prioritizing a deep understanding of your hospitality business dynamics and unique needs. Our commitment to delivering top-tier security solutions sets us apart, and we take pride in seamlessly integrating into your service team, solidifying our position as a trusted leader in the industry
                 </p>
               </div>
             </div>

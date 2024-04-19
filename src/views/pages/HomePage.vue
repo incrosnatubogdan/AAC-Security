@@ -117,7 +117,11 @@ export default {
           <div class="col-md-8 offset-md-2 offset-1 col-10 d-flex justify-content-center align-items-center flex-column flex-lg-row">
               <span class="c-white">
                 <h3 class="c-white">Commitment to Excellence</h3>
-                The company is committed to delivering high-quality security services with a focus on skill, dedication, and forward-thinking strategies.
+                Our ethos is built on trust, reliability, and unparalleled service quality. We don’t just
+offer security services; we provide peace of mind, knowing that you’re protected by the
+best in the business. Our proactive approach to potential threats and our rele ntless
+pursuit of innovation set us apart, making us the preferred choice for those who value
+their safety and well being.
               </span>
           </div>
           </div>
