@@ -35,7 +35,7 @@ onUnmounted(() => {
       :style="{ backgroundImage: `url(${bg0})` }"
     >
       <span class="mask bg-gradient-dark opacity-4"></span>
-      <div class="container">
+      <div class="container my-5 py-5">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center mx-auto my-auto">
             <h3 class="mb-4 text-white opacity-8 text-decoration-underline">{{ pageInfo.heading }}</h3>

@@ -1,11 +1,8 @@
 <script setup>
-import RotatingCard from "@/components/cards/rotatingCards/RotatingCard.vue";
-import RotatingCardFront from "@/components/cards/rotatingCards/RotatingCardFront.vue";
-import RotatingCardBack from "@/components/cards/rotatingCards/RotatingCardBack.vue";
 import DefaultInfoCard from "@/components/cards/infoCards/DefaultInfoCard.vue";
 </script>
 <template>
-  <section class="my-3 py-3">
+  <section class="my-5 py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-12 ms-auto">

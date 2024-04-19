@@ -33,15 +33,13 @@ onUnmounted(() => {
           :style="`background-image: url(${hiring_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
-         <div class="container">
+         <div class="container my-5 py-5">
             <div class="row">
-              <div class="col-lg-12 text-center mx-auto position-relative">
-              </div>
-              <div class="col-lg-10 text-align-center justify-content-center d-flex flex-wrap flex-column">
+              <div class="col-10 text-align-center justify-content-center d-flex flex-column">
                 <h1 class="text-white">JOB OPENINGS </h1>
                 <p class="text-white mt-5">We offer rewarding careers with comprehensive training, competitive salaries, and growth opportunities in a supportive and professional environment. Join us to make a meaningful impact in the security industry alongside a team committed to excellence and integrity.</p>
                 <div class="row mt-5">
-                  <div class="col-lg-12 d-flex">
+                  <div class="col-12 d-flex">
                     <a class="d-flex cursor-pointer align-items-center flex-column hiring-page-options pb-0" href="#security-officer"> 
                       <h5 class="text-white">SECURITY OFFICER</h5>
                       <p class="text-white mb-0">LONDON</p>
@@ -68,7 +66,7 @@ onUnmounted(() => {
         >
           <div class="container">
             <div class="row">
-              <div class="col-lg-12 text-center mx-auto position-relative">
+              <div class="col-12 text-center mx-auto position-relative">
                 <h3
                   class="text-white pt-3 mt-n5 me-2 mb-5"
                   :style="{ display: 'inline-block ', fontWeight: '500' }"
