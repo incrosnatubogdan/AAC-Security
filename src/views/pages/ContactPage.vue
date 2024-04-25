@@ -91,7 +91,7 @@ export default {
                 this.$refs.form,
                 import.meta.env.VITE_SDK
               )
-              .then((result) => {
+              .then(() => {
                 this.emailSend = {
                   status: "success",
                   description:
@@ -110,8 +110,11 @@ export default {
 <template>
   <DefaultNavbar :sticky="true" />
   <section>
-    <div class="page-header min-vh-100" :style="`background-image: url(${contact_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
-          loading="lazy">
+    <div
+      class="page-header min-vh-100"
+      :style="`background-image: url(${contact_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+      loading="lazy"
+    >
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-sm-12 d-flex align-items-center">
@@ -132,7 +135,9 @@ export default {
               </div>
               <div class="card-body">
                 <p class="pb-3">
-                  Discover how AAP Security can enhance your security and peace of mind. Contact us today to learn more about our services and how we can tailor our solutions to meet your unique needs.
+                  Discover how AAP Security can enhance your security and peace
+                  of mind. Contact us today to learn more about our services and
+                  how we can tailor our solutions to meet your unique needs.
                 </p>
                 <form
                   id="contact-form"
@@ -185,9 +190,8 @@ export default {
                   </div>
                 </form>
               </div>
+            </div>
           </div>
-          </div>
-          
         </div>
       </div>
     </div>

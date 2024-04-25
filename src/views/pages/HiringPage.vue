@@ -9,8 +9,10 @@ import hiring_1 from "@/assets/img/hiring/hiring_1.jpg";
 const body = document.getElementsByTagName("body")[0];
 const options = {
     licenseKey: 'gplv3-license',
+    responsiveWidth: 1200,
+    dragAndMove: true,
     menu: '#menu',
-    anchors: ['page1', 'security-officer', 'security-manager'],
+    anchors: ['hiring_lp', 'security-officer', 'security-manager'],
 }
 
 onMounted(() => {
@@ -24,7 +26,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <NavbarDefault />
+  <NavbarDefault light />
   <!-- <WhatsAppButton /> -->
   <full-page ref="fullpage" :options="options" id="fullpage">
     <div class="section">
@@ -39,16 +41,26 @@ onUnmounted(() => {
                 <h1 class="text-white">JOB OPENINGS </h1>
                 <p class="text-white mt-5">We offer rewarding careers with comprehensive training, competitive salaries, and growth opportunities in a supportive and professional environment. Join us to make a meaningful impact in the security industry alongside a team committed to excellence and integrity.</p>
                 <div class="row mt-5">
-                  <div class="col-12 d-flex">
-                    <a class="d-flex cursor-pointer align-items-center flex-column hiring-page-options pb-0" href="#security-officer"> 
-                      <h5 class="text-white">SECURITY OFFICER</h5>
-                      <p class="text-white mb-0">LONDON</p>
-                      <p class="text-white text-decoration-underline">See full description</p>
+                  <div class="col-12 d-flex flex-wrap">
+                    <a class="d-flex cursor-pointer align-items-center flex-row hiring-page-options pb-0 mt-2" href="#security-officer"> 
+                      <h5 class="text-white">SECURITY OFFICER
+                        <p class="text-white mb-0">LONDON</p>
+                      </h5>
+                      <i
+                        class="material-icons text-white"
+                        style="margin-left: 8px;"
+                        >chevron_right</i
+                      >
                     </a>
-                    <a class="d-flex cursor-pointer align-items-center flex-column hiring-page-options pb-0 mx-4" href="#security-manager"> 
-                      <h5 class="text-white">SECURITY MANAGER/SUPERVISOR</h5>
-                      <p class="text-white mb-0">LONDON</p>
-                      <p class="text-white text-decoration-underline">See full description</p>
+                    <a class="d-flex cursor-pointer align-items-center flex-row hiring-page-options pb-0 mt-2" href="#security-manager"> 
+                      <h5 class="text-white">SECURITY MANAGER/SUPERVISOR
+                        <p class="text-white mb-0">LONDON</p>
+                      </h5>
+                      <i
+                        class="material-icons text-white"
+                        style="margin-left: 8px;"
+                        >chevron_right</i
+                      >
                     </a>
                   </div>
                 </div>
@@ -123,11 +135,11 @@ onUnmounted(() => {
   padding: 12px;
   background-color: #862B2B;
   height: fit-content;
-  min-height: 200px;
+  min-height: 110px;
   justify-content: space-around;
-  max-width: 260px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  margin-right: 16px;
 }
 
 .text-left {

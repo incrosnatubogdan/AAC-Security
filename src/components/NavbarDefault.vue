@@ -1,33 +1,12 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { ref, watch } from "vue";
-import { useWindowsWidth } from "@/assets/js/useWindowsWidth";
-import Logo from "@/assets/img/logo.png";
-
-// images
-import ArrDark from "@/assets/img/down-arrow-dark.svg";
-import downArrow from "@/assets/img/down-arrow.svg";
-import DownArrWhite from "@/assets/img/down-arrow-white.svg";
+import LogoWhite from "@/assets/img/logo_red.png";
+import LogoDark from "@/assets/img/logo_black.png";
 
 import facebook_icon from "@/assets/img/icons/facebook.png";
 import instagram_icon from "@/assets/img/icons/instagram.png";
 import linkedin_icon from "@/assets/img/icons/linkedin.png";
 const props = defineProps({
-  action: {
-    type: Object,
-    route: String,
-    color: String,
-    label: String,
-    default: () => ({
-      route: "tel:+447951027265",
-      color: "bg-gradient-success",
-      label: "Call us +4479 5102 7265",
-    }),
-  },
-  transparent: {
-    type: Boolean,
-    default: false,
-  },
   isOnFirstSlide: {
     default: false
   },
@@ -35,89 +14,53 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  dark: {
-    type: Boolean,
-    default: false,
-  },
   sticky: {
-    type: Boolean,
-    default: false,
-  },
-  darkText: {
     type: Boolean,
     default: false,
   },
 });
 
-// set arrow  color
-function getArrowColor() {
-  return DownArrWhite;
-}
-
 function toggleMenu() {
   console.log('toggle')
 }
 
-// set nav color on mobile && desktop
-
-// let textDark = ref(props.darkText);
-// const { type } = useWindowsWidth();
-
-// if (type.value === "mobile") {
-//   textDark.value = true;
-// } else if (type.value === "desktop" && textDark.value == false) {
-//   textDark.value = false;
-// }
-
-// watch(
-//   () => type.value,
-//   (newValue) => {
-//     if (newValue === "mobile") {
-//       textDark.value = true;
-//     } else {
-//       textDark.value = false;
-//     }
-//   }
-// );
 </script>
 <template>
   <div class="navbar-call-cta d-flex justify-content-end bg-gradient-success" :class="isOnFirstSlide ? '' : 'd-none' ">
     <!-- <span>Experience Premier Protection</span> -->
       <a
-        href="" class="mb-0 mx-3 text-white d-flex align-items-center">
+      target="_blank" rel="noopener noreferrer"
+        href="https://www.facebook.com/profile.php?id=61558573751283&mibextid=LQQJ4d" class="mb-0 mx-3 text-white d-flex align-items-center">
         <img :src="facebook_icon" alt="facebook logo">
       </a>
 
         <a
+        target="_blank" rel="noopener noreferrer"
         href="" class="mb-0 mx-3 text-white d-flex align-items-center">
         <img :src="instagram_icon" alt="instagram logo"></a>
 
         <a
+        target="_blank" rel="noopener noreferrer"
         href="" class="mb-0 mx-3 text-white d-flex align-items-center">
         <img :src="linkedin_icon" alt="linkedin logo"></a>
 
   </div>
   <nav
-    class="navbar navbar-expand-lg z-index-3 w-100 shadow-none navbar-transparent position-fixed mb-3 navbar-dark bg-black z-index-3 py-3"
+    class="navbar navbar-expand-lg z-index-3 w-100 shadow-none navbar-transparent position-fixed mb-3 navbar-dark z-index-3 py-3"
+    :class="light ? 'bg-white' : 'bg-black'"
   >
     <div
       class="container-fluid px-0"
     >
       <RouterLink
-        class="navbar-brand d-block d-lg-none"
-        :class="
-          (props.transparent || props.dark
-            ? 'text-white'
-            : 'font-weight-bolder ms-sm-3',
-          'p-0')
-        "
+        class="navbar-brand d-block d-lg-none font-weight-bolder ms-sm-3 p-0"
         to="/"
         rel="tooltip"
         title="AAP Security"
         data-placement="bottom"
       >
         <img
-          :src="Logo"
+          :src="light ? LogoDark : LogoWhite"
           alt="logo"
           loading="lazy"
           :style="{ height: '40px'}"
@@ -140,7 +83,8 @@ function toggleMenu() {
         </span>
       </button>
       <div
-        class="collapse navbar-collapse px-5 bg-black "
+        class="collapse navbar-collapse px-5"
+        :class="light ? 'bg-white' : 'bg-black'"
         id="topNavigation"
       >
         <ul class="navbar-nav navbar-nav-hover w-100 justify-content-between">
@@ -171,10 +115,10 @@ function toggleMenu() {
         data-placement="bottom"
       >
         <img
-          :src="Logo"
+          :src="light ? LogoDark : LogoWhite"
           alt="logo"
           loading="lazy"
-          :style="{ width: '140px', position: 'absolute', left: '-40px', top: props.isOnFirstSlide ? '-30px' : '-14px'  }"
+          :style="{ width: '120px', position: 'absolute', left: '-30px', top: props.isOnFirstSlide ? '-30px' : '-10px'  }"
         />
       </RouterLink>
           </li>
@@ -182,25 +126,18 @@ function toggleMenu() {
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               role="button"
-              class="nav-link dropdown-toggle ps-2 d-flex cursor-pointer align-items-center text-white"
+              class="nav-link dropdown-toggle ps-2 d-flex cursor-pointer align-items-center"
+              :class="light ? 'text-black' : 'text-white'"
+              
               id="dropdownMenuPages"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               Services
-              <!-- <img
-                :src="getArrowColor()"
-                alt="down-arrow"
-                class="arrow ms-2 d-lg-block d-none"
-              /> -->
-              <!-- <img
-                :src="getArrowColor()"
-                alt="down-arrow"
-                class="arrow ms-1 d-lg-block d-none ms-auto"
-              /> -->
             </a>
             <div
-              class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-lg p-2 border-radius-xl mt-0 mt-lg-3 bg-black"
+              class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-lg p-2 border-radius-xl mt-0 mt-lg-3"
+              :class="light ? 'bg-white' : 'bg-black'"
               aria-labelledby="dropdownMenuPages"
             >
               <div class="row d-none d-lg-block">
@@ -329,12 +266,17 @@ function toggleMenu() {
   background-color: #1C1F20 !important;
 }
 
+.text-black {
+  color: #1C1F20 !important;
+}
+
 .nav-item span,
 .nav-item a.nav-link {
   font-family: 'Atrament' !important;
   font-size: 24px;
   color: white;
 }
+
 
 .nav-item .dropdown-item:hover, 
 .nav-item .dropdown-item:focus {
@@ -371,4 +313,27 @@ function toggleMenu() {
 .navbar-call-cta > a img {
   height: 24px;
 }
+
+/* White navbar */
+
+.navbar.bg-white .nav-item span,
+.navbar.bg-white .nav-item a.nav-link {
+  color: black;
+}
+
+.navbar.bg-white .nav-item span:hover,
+.navbar.bg-white .nav-item a.nav-link:hover {
+  color: var(--bs-dropdown-link-hover-bg);
+}
+
+.navbar.bg-white .navbar-toggler-icon .navbar-toggler-bar {
+  background: black !important;
+}
+
+.navbar.bg-white .nav-item .dropdown-item:hover, 
+.navbar.bg-white .nav-item .dropdown-item:focus {
+  background-color: var(--bs-dropdown-link-hover-bg) !important;
+}
+
 </style>
+
