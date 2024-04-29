@@ -22,6 +22,8 @@ export default {
         responsiveWidth: 0,
         dragAndMove: true,
         easingcss3: "animate__zoomIn",
+        scrollOverflowReset: false, 
+        scrollOverflowOptions: null,
         paddingTop: 0,
         menu: "#menu",
         anchors: [

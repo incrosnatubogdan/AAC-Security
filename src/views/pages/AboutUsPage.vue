@@ -26,6 +26,8 @@ export default {
         licenseKey: "gplv3-license",
         scrollingSpeed: 200,
         responsiveWidth: 0,
+        scrollOverflowReset: false, 
+        scrollOverflowOptions: null,
         dragAndMove: true,
         easingcss3: 'animate__zoomIn',
         paddingTop: 0,

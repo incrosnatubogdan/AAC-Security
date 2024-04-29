@@ -2,7 +2,7 @@
 import DefaultInfoCard from "@/components/cards/infoCards/DefaultInfoCard.vue";
 </script>
 <template>
-  <section class="my-5 py-5">
+  <section class="mt-5 pt-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-12 ms-auto">
