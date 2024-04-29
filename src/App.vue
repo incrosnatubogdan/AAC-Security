@@ -62,6 +62,6 @@ button.btn.cta-button-services:hover {
   }
 
 .page-header.min-vh-100 {
-
+  max-height: 100vh;
 }
 </style>
