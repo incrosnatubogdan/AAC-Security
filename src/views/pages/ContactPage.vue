@@ -108,7 +108,7 @@ export default {
 </script>
 
 <template>
-  <DefaultNavbar light :sticky="true" />
+  <DefaultNavbar light :isOnFirstSlide="true" :sticky="true" />
   <section>
     <div
       class="page-header min-vh-100"

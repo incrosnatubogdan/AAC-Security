@@ -30,7 +30,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <DefaultNavbar light />
+  <DefaultNavbar light :isOnFirstSlide="true" />
   <!-- <WhatsAppButton /> -->
   <header>
     <div

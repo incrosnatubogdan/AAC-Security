@@ -1,39 +1,55 @@
 <script setup>
-import { onMounted, onUnmounted } from "vue";
-
-//example components
 import NavbarDefault from "@/components/NavbarDefault.vue";
 import hiring_2 from "@/assets/img/hiring/hiring_2.jpg";
 //hooks
 import hiring_1 from "@/assets/img/hiring/hiring_1.jpg";
-const body = document.getElementsByTagName("body")[0];
-const options = {
-    licenseKey: 'gplv3-license',
-    responsiveWidth: 0,
-    dragAndMove: true,
-    easingcss3: 'animate__zoomIn',
-    menu: '#menu',
-    anchors: ['hiring_lp', 'security-officer', 'security-manager'],
-    onLeave: (origin, destination, direction, trigger) => {
+</script>
+
+<script>
+//hooks
+export default {
+  data() {
+    return {
+      isFirstSlide: true,
+      options: {
+        licenseKey: "gplv3-license",
+        scrollingSpeed: 200,
+        responsiveWidth: 0,
+        dragAndMove: true,
+        easingcss3: 'animate__zoomIn',
+        paddingTop: 0,
+        menu: "#menu",
+        anchors: ["hiring_lp", "security-officer", "security-manager", "aus4", "aus5"],
+        sectionsColor: ["#ffffff"],
+        
+        onLeave: (origin, destination, direction, trigger) => {
+          const firstPage = "hiring_lp";
           if (destination) {
             origin.item.classList.remove('fadeIn', 'animated');
             destination.item.classList.add('fadeIn', 'animated');
+            this.isFirstSlide = destination.anchor === firstPage;
           }
         },
-}
+      },
+    };
+  },
 
-onMounted(() => {
-  body.classList.add("about-us");
-  body.classList.add("bg-gray-200");
-});
+  mounted() {
+    const body = document.getElementsByTagName("body")[0];
+    body.classList.add("presentation-page");
+    body.classList.add("bg-gray-200");
+    window.location.href = document.URL.replace(/#.*$/, "") + "#aus1";
+  },
 
-onUnmounted(() => {
-  body.classList.remove("about-us");
-  body.classList.remove("bg-gray-200");
-});
+  beforeUnmount() {
+    const body = document.getElementsByTagName("body")[0];
+    body.classList.remove("presentation-page");
+    body.classList.remove("bg-gray-200");
+  },
+};
 </script>
 <template>
-  <NavbarDefault light />
+  <NavbarDefault light :isOnFirstSlide="isFirstSlide" />
   <!-- <WhatsAppButton /> -->
   <full-page ref="fullpage" :options="options" id="fullpage">
     <div class="section">

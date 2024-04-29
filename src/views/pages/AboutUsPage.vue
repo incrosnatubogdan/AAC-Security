@@ -7,7 +7,13 @@ import about_2 from "@/assets/img/about/about_2.jpg";
 //image
 import adrienImg from "@/assets/img/about/team_1.jpeg";
 import arinaImg from "@/assets/img/about/team_1.jpeg";
+
+
 import adrienImgNoBg from "@/assets/img/about/team_1.png";
+import adrienImgBg from "@/assets/img/about/team_1_bg_ai.jpg";
+import adrienImgBg2 from "@/assets/img/about/team_1_bg.jpeg";
+
+
 </script>
 
 <script>
@@ -113,7 +119,33 @@ export default {
 
     <div class="section" data-anchor="aus3">
       <div
-        class="page-header min-vh-100 page-header-founder  no-bg"
+        class="page-header min-vh-100 page-header-founder "
+        :style="`background-image: url(${adrienImgBg2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 60%)`"
+        loading="lazy"
+      >
+        <img class="founder-image" :src="adrienImg" alt="" />
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 text-center mx-auto position-relative"></div>
+            <div
+              class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
+            >
+              <h1 class="text-white">ADRIEN</h1>
+              <p class="text-white lead">His knack for identifying and nurturing
+                talent has been instrumental in assembling a team that’s not
+                just proficient but also genuinely committed to our clients’
+                safety
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-anchor="aus3">
+      <div
+        class="page-header min-vh-100 page-header-founder "
+        :style="`background-image: url(${adrienImgBg});`"
         loading="lazy"
       >
         <img class="founder-image" :src="adrienImg" alt="" />
@@ -245,6 +277,7 @@ export default {
   left: 16px;
   bottom: 16px;
   max-height: 50vh;
+  border-radius: 12px;
 }
 
 .about-us-cta {

@@ -28,7 +28,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <NavbarDefault light />
+  <NavbarDefault :isOnFirstSlide="true" light />
   <!-- <WhatsAppButton /> -->
   <header class="bg-gradient-dark">
     <div
