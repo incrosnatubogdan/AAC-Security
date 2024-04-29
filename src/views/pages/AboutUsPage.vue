@@ -80,7 +80,7 @@ export default {
           <div class="carousel-item active">
             <div class="section" data-anchor="aus2">
       <div
-        class="page-header page-header-founder min-vh-100"
+        class="page-header page-header-founder min-vh-100 py-5 px-4"
         :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
         loading="lazy"
       >
@@ -92,7 +92,7 @@ export default {
               class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column mx-auto"
             >
               <h1 class="text-white animate__animated animate__fadeInLeft">ADRIEN</h1>
-              <p class="text-white lead animate__animated animate__fadeInLeft">
+              <p class="text-white lead animate__animated animate__fadeInLeft py-5 mb-300">
                 With seven years of seasoned experience in the security
                 industry, Adrien’s expertise is the cornerstone of our
                 operational excellence.
@@ -106,7 +106,7 @@ export default {
           <div class="carousel-item">
             <div class="section" data-anchor="aus3">
       <div
-        class="page-header  page-header-founder min-vh-100"
+        class="page-header  page-header-founder min-vh-100 py-5 px-4"
         :style="`background-image: url(${adrienImgBg2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 60%)`"
         loading="lazy"
       >
@@ -118,10 +118,10 @@ export default {
               class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
             >
               <h1 class="text-white animate__animated animate__fadeInLeft">ADRIEN</h1>
-              <p class="text-white lead animate__animated animate__fadeInLeft">His knack for identifying and nurturing
+              <p class="text-white lead animate__animated animate__fadeInLeft py-5 mb-300">His knack for identifying and nurturing
                 talent has been instrumental in assembling a team that’s not
                 just proficient but also genuinely committed to our clients’
-                safety
+                safety.
               </p>
             </div>
           </div>

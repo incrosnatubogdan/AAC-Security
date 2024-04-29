@@ -70,6 +70,10 @@ div.min-vh-100 {
     transform: translate(-50%, -50%);
 }
 
+.mb-300 {
+  margin-bottom: 300px;
+}
+
 @media (max-width: 991.98px) {
   .navbar-toggler + .navbar-collapse .dropdown.nav-item .dropdown-menu {
     overflow: hidden;
@@ -80,9 +84,8 @@ div.min-vh-100 {
     padding-top: 88px;
   }
 
-  .founder-image {
-    left: 50% !important;
-    transform: translateX(-50%);
+  img.founder-image {
+    left: 15%;
     bottom: 8px;
   }
 
