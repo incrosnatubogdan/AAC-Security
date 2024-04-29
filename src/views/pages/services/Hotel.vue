@@ -3,7 +3,7 @@ import { onMounted, onUnmounted } from "vue";
 
 //example components
 import NavbarDefault from "../../../components/NavbarDefault.vue";
-
+import Footer from "@/components/Footer.vue";
 //image
 import bg0 from "@/assets/img/services/hotel_cover.jpg";
 import {
@@ -27,7 +27,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <NavbarDefault light :isOnFirstSlide="true" />
+  <NavbarDefault light />
   <!-- <WhatsAppButton /> -->
   <header>
     <div
@@ -56,5 +56,6 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
+    <Footer />
   </header>
 </template>

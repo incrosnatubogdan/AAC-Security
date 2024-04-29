@@ -7,9 +7,6 @@ import facebook_icon from "@/assets/img/icons/facebook.png";
 import instagram_icon from "@/assets/img/icons/instagram.png";
 import linkedin_icon from "@/assets/img/icons/linkedin.png";
 const props = defineProps({
-  isOnFirstSlide: {
-    default: false
-  },
   light: {
     type: Boolean,
     default: false,
@@ -20,14 +17,34 @@ const props = defineProps({
   },
 });
 
-function toggleMenu() {
-  console.log('toggle')
-}
-
 </script>
+
+<script>
+//hooks
+export default {
+  data() {
+    return {
+      isOnFirstSlide: false,
+      windowHeight: window.innerHeight,
+      address: '364-366 Kensington High St, London W14 8NS, UK'
+    };
+  },
+
+  mounted() {
+    
+    this.isOnFirstSlide = document.documentElement.scrollTop === 0;
+    window.onscroll = () => {
+        setTimeout(() => {
+          const scrollTop = document.documentElement.scrollTop
+          this.isOnFirstSlide = scrollTop === 0;
+        }, 100);    }
+  }
+};
+</script>
+
 <template>
   <div class="navbar-call-cta d-flex justify-content-end bg-gradient-success" :class="isOnFirstSlide ? '' : 'd-none' ">
-    <!-- <span>Experience Premier Protection</span> -->
+    <a class="location d-md-block d-none" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/bg9B9fkdkcrCZgtp9">{{ address }}</a>
       <a
       target="_blank" rel="noopener noreferrer"
         href="https://www.facebook.com/profile.php?id=61558573751283&mibextid=LQQJ4d" class="mb-0 mx-3 text-white d-flex align-items-center">
@@ -46,7 +63,7 @@ function toggleMenu() {
 
   </div>
   <nav
-    class="navbar navbar-expand-lg z-index-3 w-100 shadow-none navbar-transparent position-fixed mb-3 navbar-dark z-index-3 py-3"
+    class="navbar navbar-expand-lg z-index-3 w-100 shadow-none navbar-transparent position-fixed mb-3 navbar-dark z-index-3 py-3 min-vw-100"
     :class="light ? 'bg-white' : 'bg-black'"
   >
     <div
@@ -74,7 +91,6 @@ function toggleMenu() {
         aria-controls="topNavigation"
         aria-expanded="false"
         aria-label="Toggle navigation"
-        @click="toggleMenu()"
       >
         <span class="navbar-toggler-icon mt-2">
           <span class="navbar-toggler-bar bar1"></span>
@@ -118,7 +134,7 @@ function toggleMenu() {
           :src="light ? LogoDark : LogoWhite"
           alt="logo"
           loading="lazy"
-          :style="{ width: '120px', position: 'absolute', left: '-30px', top: props.isOnFirstSlide ? '-30px' : '-10px'  }"
+          :style="{ width: '120px', position: 'absolute', left: '-30px', top: isOnFirstSlide ? '-30px' : '-10px'  }"
         />
       </RouterLink>
           </li>
@@ -254,6 +270,10 @@ function toggleMenu() {
               <span>Contact us</span>
             </RouterLink>
           </li>
+
+          <li class="nav-item d-md-none mx-2">
+            <a class="location" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/bg9B9fkdkcrCZgtp9">{{ address }}</a>
+          </li>
         </ul>
         
       </div>
@@ -262,6 +282,7 @@ function toggleMenu() {
 </template>
 
 <style>
+
 .bg-black {
   background-color: #1C1F20 !important;
 }
@@ -312,6 +333,17 @@ function toggleMenu() {
 
 .navbar-call-cta > a img {
   height: 24px;
+}
+
+.navbar-call-cta > a.location {
+  flex: 1;
+  padding-top: 4px;
+  color: white;
+}
+
+.nav-item a.location {
+  color: grey;
+  font-size: 12px;
 }
 
 /* White navbar */

@@ -12,8 +12,8 @@ import arinaImg from "@/assets/img/about/team_1.jpeg";
 import adrienImgNoBg from "@/assets/img/about/team_1.png";
 import adrienImgBg from "@/assets/img/about/team_1_bg_ai.jpg";
 import adrienImgBg2 from "@/assets/img/about/team_1_bg.jpeg";
-
-
+import adrienBlack from '@/assets/img/about/team_1_black.jpeg'
+import Footer from "@/components/Footer.vue";
 </script>
 
 <script>
@@ -22,28 +22,6 @@ export default {
   data() {
     return {
       isFirstSlide: true,
-      options: {
-        licenseKey: "gplv3-license",
-        scrollingSpeed: 200,
-        responsiveWidth: 0,
-        scrollOverflowReset: false, 
-        scrollOverflowOptions: null,
-        dragAndMove: true,
-        easingcss3: 'animate__zoomIn',
-        paddingTop: 0,
-        menu: "#menu",
-        anchors: ["aus1", "aus2", "aus3", "aus4", "aus5"],
-        sectionsColor: ["#ffffff"],
-        
-        onLeave: (origin, destination, direction, trigger) => {
-          const firstPage = "aus1";
-          if (destination) {
-            origin.item.classList.remove('fadeIn', 'animated');
-            destination.item.classList.add('fadeIn', 'animated');
-            this.isFirstSlide = destination.anchor === firstPage;
-          }
-        },
-      },
     };
   },
 
@@ -62,9 +40,8 @@ export default {
 };
 </script>
 <template>
-  <NavbarDefault light :isOnFirstSlide="isFirstSlide" />
+  <NavbarDefault light/>
   <!-- <WhatsAppButton /> -->
-  <full-page ref="fullpageAbout" id="fullpageAbout" :options="options">
     <div class="section" data-anchor="aus1">
       <div
         class="page-header min-vh-100"
@@ -94,21 +71,28 @@ export default {
       </div>
     </div>
 
-    <div class="section" data-anchor="aus2">
+    <div id="carouselExampleCaptions" class="carousel slide min-vh-100 carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="section" data-anchor="aus2">
       <div
-        class="page-header min-vh-100 page-header-founder"
+        class="page-header page-header-founder min-vh-100"
         :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
         loading="lazy"
       >
-        <img class="founder-image" :src="adrienImgNoBg" alt="" />
+        <img class="founder-image animate__animated animate__backInLeft" :src="adrienImg" alt="" />
         <div class="container">
           <div class="row">
             <div class="col-lg-4 text-center mx-auto position-relative"></div>
             <div
-              class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
+              class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column mx-auto"
             >
-              <h1 class="text-white">ADRIEN</h1>
-              <p class="text-white lead">
+              <h1 class="text-white animate__animated animate__fadeInLeft">ADRIEN</h1>
+              <p class="text-white lead animate__animated animate__fadeInLeft">
                 With seven years of seasoned experience in the security
                 industry, Adrien’s expertise is the cornerstone of our
                 operational excellence.
@@ -118,22 +102,23 @@ export default {
         </div>
       </div>
     </div>
-
-    <div class="section" data-anchor="aus3">
+          </div>
+          <div class="carousel-item">
+            <div class="section" data-anchor="aus3">
       <div
-        class="page-header min-vh-100 page-header-founder "
+        class="page-header  page-header-founder min-vh-100"
         :style="`background-image: url(${adrienImgBg2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 60%)`"
         loading="lazy"
       >
-        <img class="founder-image" :src="adrienImg" alt="" />
+        <img class="founder-image animate__animated animate__backInLeft" :src="adrienBlack" alt="" />
         <div class="container">
           <div class="row">
             <div class="col-lg-4 text-center mx-auto position-relative"></div>
             <div
               class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
             >
-              <h1 class="text-white">ADRIEN</h1>
-              <p class="text-white lead">His knack for identifying and nurturing
+              <h1 class="text-white animate__animated animate__fadeInLeft">ADRIEN</h1>
+              <p class="text-white lead animate__animated animate__fadeInLeft">His knack for identifying and nurturing
                 talent has been instrumental in assembling a team that’s not
                 just proficient but also genuinely committed to our clients’
                 safety
@@ -143,57 +128,17 @@ export default {
         </div>
       </div>
     </div>
-
-    <div class="section" data-anchor="aus3">
-      <div
-        class="page-header min-vh-100 page-header-founder "
-        :style="`background-image: url(${adrienImgBg});`"
-        loading="lazy"
-      >
-        <img class="founder-image" :src="adrienImg" alt="" />
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 text-center mx-auto position-relative"></div>
-            <div
-              class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
-            >
-              <h1 class="text-white">ADRIEN</h1>
-              <p class="text-white lead">His knack for identifying and nurturing
-                talent has been instrumental in assembling a team that’s not
-                just proficient but also genuinely committed to our clients’
-                safety
-              </p>
-            </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
-
-    <!-- <div class="section" data-anchor="aus3">
-      <div
-        class="page-header min-vh-100"
-        :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
-        loading="lazy"
-      >
-        <img class="founder-image" :src="arinaImg" alt="" />
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 text-center mx-auto position-relative"></div>
-            <div
-              class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
-            >
-              <h1 class="text-white">ARINA</h1>
-              <p class="text-white">
-                Co-founder Arina, the entrepreneurial force behind ASK33 and
-                Nexus College of London, brings a strategic perspective to our
-                services, ensuring our approaches are not just effective but
-                also aligned with our clients’ long-term objectives.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <div class="section" data-anchor="aus4">
       <div
@@ -228,7 +173,7 @@ export default {
     <div class="section" data-anchor="aus5">
       <div
         class="page-header min-vh-100"
-        :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+        :style="`background-image: url(${adrienImgBg2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 60%)`"
         loading="lazy"
       >
         <div class="container">
@@ -269,15 +214,14 @@ export default {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
-  </full-page>
 </template>
 
 <style>
 .founder-image {
   position: absolute;
   left: 16px;
-  bottom: 16px;
   max-height: 50vh;
   border-radius: 12px;
 }

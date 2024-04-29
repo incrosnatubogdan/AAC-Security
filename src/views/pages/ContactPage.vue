@@ -12,6 +12,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 // material-input
 import setMaterialInput from "@/assets/js/material-input";
 import MaterialAlert from "@/components/MaterialAlert.vue";
+import Footer from "@/components/Footer.vue";
 onMounted(async () => {
   setMaterialInput();
 });
@@ -108,7 +109,7 @@ export default {
 </script>
 
 <template>
-  <DefaultNavbar light :isOnFirstSlide="true" :sticky="true" />
+  <DefaultNavbar light :sticky="true" />
   <section>
     <div
       class="page-header min-vh-100"
@@ -195,6 +196,7 @@ export default {
         </div>
       </div>
     </div>
+    <Footer />
   </section>
 
   <MaterialAlert

@@ -3,6 +3,7 @@ import NavbarDefault from "@/components/NavbarDefault.vue";
 import hiring_2 from "@/assets/img/hiring/hiring_2.jpg";
 //hooks
 import hiring_1 from "@/assets/img/hiring/hiring_1.jpg";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <script>
@@ -49,9 +50,8 @@ export default {
 };
 </script>
 <template>
-  <NavbarDefault light :isOnFirstSlide="isFirstSlide" />
-  <!-- <WhatsAppButton /> -->
-  <full-page ref="fullpage" :options="options" id="fullpage">
+  <NavbarDefault light />
+  <WhatsAppButton />
     <div class="section">
       <div
           class="page-header min-vh-100"
@@ -75,7 +75,7 @@ export default {
                         >chevron_right</i
                       >
                     </a>
-                    <a class="d-flex cursor-pointer align-items-center flex-row hiring-page-options pb-0 mt-2" href="#security-manager"> 
+                    <a class="d-flex cursor-pointer align-items-center flex-row hiring-page-options pb-0 mt-2" href="#security-officer"> 
                       <h5 class="text-white">SECURITY MANAGER/SUPERVISOR
                         <p class="text-white mb-0">LONDON</p>
                       </h5>
@@ -93,9 +93,9 @@ export default {
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="security-officer">
       <div
-          class="page-header min-vh-100"
+          class="page-header min-vh-100 py-5"
           :style="`background-image: url(${hiring_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
           loading="lazy"
         >
@@ -148,8 +148,8 @@ export default {
             </div>
           </div>
         </div>
+        <Footer />
     </div>
-  </full-page>
 </template>
 
 <style>
