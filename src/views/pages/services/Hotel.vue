@@ -27,7 +27,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <NavbarDefault />
+  <NavbarDefault light />
   <!-- <WhatsAppButton /> -->
   <header>
     <div

@@ -46,5 +46,22 @@ button.btn.cta-button-services:hover {
   .navbar-toggler + .navbar-collapse .dropdown.nav-item .dropdown-menu {
     overflow: hidden;
   }
+
+  .page-header.page-header-founder {
+    align-items: self-start;
+    padding-top: 88px;
+  }
+}
+
+.page-header.page-header-founder.no-bg {
+    background: rgb(164,162,162);
+    background: -moz-linear-gradient(49deg, rgba(164,162,162,0.8323704481792717) 30%, rgba(134,43,43,0.8687850140056023) 82%);
+    background: -webkit-linear-gradient(49deg, rgba(164,162,162,0.8323704481792717) 30%, rgba(134,43,43,0.8687850140056023) 82%);
+    background: linear-gradient(49deg, rgba(164,162,162,0.8323704481792717) 30%, rgba(134,43,43,0.8687850140056023) 82%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a4a2a2",endColorstr="#862b2b",GradientType=1);
+  }
+
+.page-header.min-vh-100 {
+
 }
 </style>

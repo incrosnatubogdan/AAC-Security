@@ -18,10 +18,10 @@ export default {
       isFirstSlide: true,
       options: {
         licenseKey: "gplv3-license",
-        scrollingSpeed: 200,
-        responsiveWidth: 1200,
+        scrollingSpeed: 700,
+        responsiveWidth: 0,
         dragAndMove: true,
-        easingcss3: "fade",
+        easingcss3: "animate__zoomIn",
         paddingTop: 0,
         menu: "#menu",
         anchors: [
@@ -34,6 +34,8 @@ export default {
         onLeave: (origin, destination) => {
           const firstPage = "landing-page";
           if (destination) {
+            origin.item.classList.remove('fadeIn', 'animated');
+            destination.item.classList.add('fadeIn', 'animated');
             this.isFirstSlide = destination.anchor === firstPage;
           }
         },
@@ -57,7 +59,7 @@ export default {
 </script>
 
 <template>
-  <NavbarDefault :isOnFirstSlide="isFirstSlide" />
+  <NavbarDefault light :isOnFirstSlide="isFirstSlide" />
 
   <full-page ref="fullpageHome" :options="options" id="fullpageHome">
     <div class="section" data-anchor="landing-page">

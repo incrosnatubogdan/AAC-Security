@@ -3,7 +3,6 @@ import { onMounted, onUnmounted } from "vue";
 
 //example components
 import NavbarDefault from "@/components/NavbarDefault.vue";
-import WhatsAppButton from "@/components/WhatsAppButton.vue";
 
 //image
 import bg0 from "@/assets/img/services/close_protection_cover.jpg";
@@ -29,7 +28,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <NavbarDefault />
+  <NavbarDefault light />
   <!-- <WhatsAppButton /> -->
   <header class="bg-gradient-dark">
     <div

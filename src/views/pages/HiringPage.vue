@@ -9,10 +9,17 @@ import hiring_1 from "@/assets/img/hiring/hiring_1.jpg";
 const body = document.getElementsByTagName("body")[0];
 const options = {
     licenseKey: 'gplv3-license',
-    responsiveWidth: 1200,
+    responsiveWidth: 0,
     dragAndMove: true,
+    easingcss3: 'animate__zoomIn',
     menu: '#menu',
     anchors: ['hiring_lp', 'security-officer', 'security-manager'],
+    onLeave: (origin, destination, direction, trigger) => {
+          if (destination) {
+            origin.item.classList.remove('fadeIn', 'animated');
+            destination.item.classList.add('fadeIn', 'animated');
+          }
+        },
 }
 
 onMounted(() => {

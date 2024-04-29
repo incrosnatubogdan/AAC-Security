@@ -321,7 +321,6 @@ function toggleMenu() {
   color: black;
 }
 
-.navbar.bg-white .nav-item span:hover,
 .navbar.bg-white .nav-item a.nav-link:hover {
   color: var(--bs-dropdown-link-hover-bg);
 }

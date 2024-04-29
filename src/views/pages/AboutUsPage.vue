@@ -5,8 +5,9 @@ import { onMounted, onUnmounted } from "vue";
 import NavbarDefault from "@/components/NavbarDefault.vue";
 import about_2 from "@/assets/img/about/about_2.jpg";
 //image
-import adrienImg from "@/assets/img/team_1.png";
-import arinaImg from "@/assets/img/team_2.webp";
+import adrienImg from "@/assets/img/about/team_1.jpeg";
+import arinaImg from "@/assets/img/about/team_1.jpeg";
+import adrienImgNoBg from "@/assets/img/about/team_1.png";
 </script>
 
 <script>
@@ -18,17 +19,19 @@ export default {
       options: {
         licenseKey: "gplv3-license",
         scrollingSpeed: 200,
-        responsiveWidth: 1200,
+        responsiveWidth: 0,
         dragAndMove: true,
-        easingcss3: 'fade',
+        easingcss3: 'animate__zoomIn',
         paddingTop: 0,
         menu: "#menu",
         anchors: ["aus1", "aus2", "aus3", "aus4", "aus5"],
-        sectionsColor: ["transparent", "#ff5f45", "#0798ec", "#0798ec"],
+        sectionsColor: ["#ffffff"],
         
         onLeave: (origin, destination, direction, trigger) => {
           const firstPage = "aus1";
           if (destination) {
+            origin.item.classList.remove('fadeIn', 'animated');
+            destination.item.classList.add('fadeIn', 'animated');
             this.isFirstSlide = destination.anchor === firstPage;
           }
         },
@@ -51,7 +54,7 @@ export default {
 };
 </script>
 <template>
-  <NavbarDefault :isOnFirstSlide="isFirstSlide" />
+  <NavbarDefault light :isOnFirstSlide="isFirstSlide" />
   <!-- <WhatsAppButton /> -->
   <full-page ref="fullpageAbout" id="fullpageAbout" :options="options">
     <div class="section" data-anchor="aus1">
@@ -85,8 +88,32 @@ export default {
 
     <div class="section" data-anchor="aus2">
       <div
-        class="page-header min-vh-100"
+        class="page-header min-vh-100 page-header-founder"
         :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+        loading="lazy"
+      >
+        <img class="founder-image" :src="adrienImgNoBg" alt="" />
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 text-center mx-auto position-relative"></div>
+            <div
+              class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
+            >
+              <h1 class="text-white">ADRIEN</h1>
+              <p class="text-white lead">
+                With seven years of seasoned experience in the security
+                industry, Adrien’s expertise is the cornerstone of our
+                operational excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-anchor="aus3">
+      <div
+        class="page-header min-vh-100 page-header-founder  no-bg"
         loading="lazy"
       >
         <img class="founder-image" :src="adrienImg" alt="" />
@@ -97,10 +124,7 @@ export default {
               class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
             >
               <h1 class="text-white">ADRIEN</h1>
-              <p class="text-white">
-                With seven years of seasoned experience in the security
-                industry, Adrien’s expertise is the cornerstone of our
-                operational excellence. His knack for identifying and nurturing
+              <p class="text-white lead">His knack for identifying and nurturing
                 talent has been instrumental in assembling a team that’s not
                 just proficient but also genuinely committed to our clients’
                 safety
@@ -111,7 +135,7 @@ export default {
       </div>
     </div>
 
-    <div class="section" data-anchor="aus3">
+    <!-- <div class="section" data-anchor="aus3">
       <div
         class="page-header min-vh-100"
         :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
@@ -135,7 +159,7 @@ export default {
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="section" data-anchor="aus4">
       <div
@@ -218,8 +242,8 @@ export default {
 <style>
 .founder-image {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 16px;
+  bottom: 16px;
   max-height: 50vh;
 }
 

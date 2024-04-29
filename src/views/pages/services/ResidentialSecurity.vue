@@ -7,14 +7,11 @@ import DefaultNavbar from "../../../components/NavbarDefault.vue";
 //image
 import bg0 from "@/assets/img/services/residential_cover.jpg";
 //sections
-import Information from "../sections/ServicesInformation.vue";
 
 import {
   residentialSecurityServices,
-  residentialSecurityServicesCta,
 } from "../../../helpers/services/residentialSecurity";
 import servicesData from "../../../helpers/services/data";
-import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
@@ -33,7 +30,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <DefaultNavbar />
+  <DefaultNavbar light />
   <!-- <WhatsAppButton /> -->
   <header>
     <div

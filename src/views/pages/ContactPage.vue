@@ -108,11 +108,11 @@ export default {
 </script>
 
 <template>
-  <DefaultNavbar :sticky="true" />
+  <DefaultNavbar light :sticky="true" />
   <section>
     <div
       class="page-header min-vh-100"
-      :style="`background-image: url(${contact_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+      :style="`background-image: url(${contact_1});`"
       loading="lazy"
     >
       <div class="container">
