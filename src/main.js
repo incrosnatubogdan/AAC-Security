@@ -8,7 +8,7 @@ import "./assets/css/nucleo-icons.css";
 import "./assets/css/nucleo-svg.css";
 import materialKit from "./material-kit";
 // import VueCompareImage from 'vue3-compare-image'
-
+import 'animate.css';
 import 'vue-fullpage.js/dist/style.css'
 import VueFullPage from 'vue-fullpage.js'
 

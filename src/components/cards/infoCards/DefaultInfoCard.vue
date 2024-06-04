@@ -29,15 +29,25 @@ defineProps({
     type: String,
     default: "",
   },
+  href: {
+    type: String,
+    default: "",
+  }
 });
 </script>
 <script>
+
 export default {
   inheritAttrs: false,
 };
+
+
+function sendtoRoute(href) {
+  window.location.href = href
+}
 </script>
 <template>
-  <div :class="`${col ? col : 'col-md-6'}`">
+  <div :class="`${col ? col : 'col-md-6'}`" @click="sendtoRoute(href)">
     <div v-bind="$attrs" class="info services-card">
       <i
         v-if="icon"

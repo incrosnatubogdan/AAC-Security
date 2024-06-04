@@ -3,16 +3,14 @@ import { onMounted, onUnmounted } from "vue";
 
 //example components
 import NavbarDefault from "../../../components/NavbarDefault.vue";
-
+import Footer from "@/components/Footer.vue";
 //image
 import bg0 from "@/assets/img/services/corporate_cover_dash.jpg";
-import bg1 from "@/assets/img/services/corporate_cover.jpg";
 
 import {
   corporateServices,
 } from "../../../helpers/services/corporate";
 import servicesData from "../../../helpers/services/data";
-import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
@@ -30,7 +28,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <NavbarDefault />
+  <NavbarDefault light />
   <!-- <WhatsAppButton /> -->
   <header class="bg-gradient-dark" >
     <div
@@ -59,5 +57,6 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
+    <Footer />
   </header>
 </template>
