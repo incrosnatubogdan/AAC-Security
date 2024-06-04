@@ -1,18 +1,12 @@
 <script setup>
-import { onMounted, onUnmounted } from "vue";
-
 //example components
 import NavbarDefault from "@/components/NavbarDefault.vue";
 import about_2 from "@/assets/img/about/about_2.jpg";
 //image
 import adrienImg from "@/assets/img/about/team_1.jpeg";
-import arinaImg from "@/assets/img/about/team_1.jpeg";
 
-
-import adrienImgNoBg from "@/assets/img/about/team_1.png";
-import adrienImgBg from "@/assets/img/about/team_1_bg_ai.jpg";
 import adrienImgBg2 from "@/assets/img/about/team_1_bg.jpeg";
-import adrienBlack from '@/assets/img/about/team_1_black.jpeg'
+import arinaImg from '@/assets/img/about/team_2.jpg'
 import Footer from "@/components/Footer.vue";
 </script>
 
@@ -95,7 +89,11 @@ export default {
               <p class="text-white lead animate__animated animate__fadeInLeft py-5 mb-300">
                 With seven years of seasoned experience in the security
                 industry, Adrien’s expertise is the cornerstone of our
-                operational excellence.
+                operational excellence. <br> <br>
+                His knack for identifying and nurturing
+                talent has been instrumental in assembling a team that’s not
+                just proficient but also genuinely committed to our clients’
+                safety.
               </p>
             </div>
           </div>
@@ -110,18 +108,18 @@ export default {
         :style="`background-image: url(${adrienImgBg2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 60%)`"
         loading="lazy"
       >
-        <img class="founder-image animate__animated animate__backInLeft" :src="adrienBlack" alt="" />
+        <img class="founder-image animate__animated animate__backInLeft" :src="arinaImg" alt="" />
         <div class="container">
           <div class="row">
             <div class="col-lg-4 text-center mx-auto position-relative"></div>
             <div
               class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
             >
-              <h1 class="text-white animate__animated animate__fadeInLeft">ADRIEN</h1>
-              <p class="text-white lead animate__animated animate__fadeInLeft py-5 mb-300">His knack for identifying and nurturing
-                talent has been instrumental in assembling a team that’s not
-                just proficient but also genuinely committed to our clients’
-                safety.
+              <h1 class="text-white animate__animated animate__fadeInLeft">ARINA</h1>
+              <p class="text-white lead animate__animated animate__fadeInLeft py-5 mb-300">
+                Co founder Arina, the entrepreneurial force behind ASK33 and
+Nexus College of London, brings a strategic perspective to our services, ensuring our
+approaches are not just effective but also aligned with our clients’ long term objectives.
               </p>
             </div>
           </div>
