@@ -3,10 +3,12 @@
 import NavbarDefault from "@/components/NavbarDefault.vue";
 import about_2 from "@/assets/img/about/about_2.jpg";
 //image
-import adrienImg from "@/assets/img/about/team_1.jpeg";
+
 
 import adrienImgBg2 from "@/assets/img/about/team_1_bg.jpeg";
-import arinaImg from '@/assets/img/about/team_2.jpg'
+
+import adrienImg from "@/assets/img/about/team_1.png";
+import arinaImg from '@/assets/img/about/team_2.png'
 import Footer from "@/components/Footer.vue";
 </script>
 
@@ -220,6 +222,7 @@ approaches are not just effective but also aligned with our clients’ long term
 .founder-image {
   position: absolute;
   left: 16px;
+  bottom: 0;
   max-height: 50vh;
   border-radius: 12px;
 }
