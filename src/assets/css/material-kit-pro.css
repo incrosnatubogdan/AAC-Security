@@ -19171,7 +19171,7 @@ body.dark-version {
     .dropup .dropdown-toggle:after,
     .dropstart .dropdown-toggle:after,
     .dropend .dropdown-toggle:after {
-        content: "\f107";
+        content: "▼";
         font: normal normal normal 14px/1 FontAwesome;
         border: none;
         vertical-align: middle;
