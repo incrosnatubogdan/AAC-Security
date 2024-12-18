@@ -1,5 +1,3 @@
-import closeProtectionCta from "@/assets/img/services/close_protection/cta.jpg";
-
 export const hotelServices = [
   {
     icon: "stadium",
@@ -28,7 +26,7 @@ export const hotelServices = [
 ];
 
 export const hotelServicesCta = {
-  icon: closeProtectionCta,
+  icon: null,
   title: "Call now",
   description: "Give us a call for all your training needs",
 };

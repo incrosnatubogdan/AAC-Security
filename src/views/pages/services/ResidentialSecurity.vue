@@ -5,7 +5,7 @@ import { onMounted, onUnmounted } from "vue";
 import DefaultNavbar from "../../../components/NavbarDefault.vue";
 import Footer from "@/components/Footer.vue";
 //image
-import bg0 from "@/assets/img/services/residential_cover.jpg";
+import bg0 from "@/assets/img/services/residential_cover.webp";
 //sections
 
 import {
@@ -31,7 +31,6 @@ onUnmounted(() => {
 
 <template>
   <DefaultNavbar light />
-  <!-- <WhatsAppButton /> -->
   <header>
     <div
       class="page-header min-vh-100"

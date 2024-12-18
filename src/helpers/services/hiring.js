@@ -1,5 +1,3 @@
-import closeProtectionCta from "@/assets/img/services/close_protection/cta.jpg";
-
 export const hiringServices = [
   {
     icon: "stadium",
@@ -30,7 +28,7 @@ export const hiringServices = [
 const email = import.meta.env.VITE_HIRING_EMAIL;
 
 export const hiringServicesCta = {
-  icon: closeProtectionCta,
+  icon: null,
   title: "Email us your CV",
   description: "Send your CV to us and we'll respond as soon as possbile",
   action: {

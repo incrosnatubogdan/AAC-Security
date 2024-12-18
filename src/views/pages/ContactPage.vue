@@ -1,18 +1,14 @@
 <script setup>
 import { onMounted } from "vue";
-
-//example components
 import DefaultNavbar from "@/components/NavbarDefault.vue";
-import contact_1 from "@/assets/img/contact/contact_1.jpg";
-//material components
 import MaterialInput from "@/components/MaterialInput.vue";
 import MaterialTextArea from "@/components/MaterialTextArea.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
-
-// material-input
 import setMaterialInput from "@/assets/js/material-input";
 import MaterialAlert from "@/components/MaterialAlert.vue";
 import Footer from "@/components/Footer.vue";
+
+import contact_1 from "@/assets/img/contact/contact_1.webp";
 onMounted(async () => {
   setMaterialInput();
 });

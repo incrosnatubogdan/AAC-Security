@@ -8,14 +8,7 @@ import DefaultNavbar from "../../../components/NavbarDefault.vue";
 import bg0 from "@/assets/img/services/close_protection/cover.jpg";
 //sections
 import Information from "../AboutUs/Sections/AboutInformation.vue";
-
-import {
-  closeProtectionServices,
-  closeProtectionServicesCta,
-} from "../../../helpers/services/closeProtection";
 import servicesData from "../../../helpers/services/data";
-
-import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
@@ -50,7 +43,7 @@ onUnmounted(() => {
           </div>
 
           <div class="d-flex">
-            <p v-for="services in closeProtectionServices">
+            <p v-for="services in closeProtectionServices" :key="services.id">
               {{ services }}
             </p>
           </div>
@@ -66,4 +59,4 @@ onUnmounted(() => {
   </div>
 
   <!-- <WhatsAppButton /> -->
-</template>../../pages/AboutInformation.vue../../../components/NavbarDefault.vue
+</template>

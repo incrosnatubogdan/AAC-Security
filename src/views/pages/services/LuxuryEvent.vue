@@ -5,13 +5,12 @@ import { onMounted, onUnmounted } from "vue";
 import NavbarDefault from "../../../components/NavbarDefault.vue";
 import Footer from "@/components/Footer.vue";
 //image
-import bg0 from "@/assets/img/services/luxury_cover.jpg";
+import bg0 from "@/assets/img/services/luxury_cover.webp";
 
 import {
   luxuryEventServices,
 } from "../../../helpers/services/luxuryEvent";
 import servicesData from "../../../helpers/services/data";
-import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
@@ -30,7 +29,6 @@ onUnmounted(() => {
 </script>
 <template>
   <NavbarDefault light />
-  <!-- <WhatsAppButton /> -->
   <header>
     <div
       class="page-header min-vh-100"
