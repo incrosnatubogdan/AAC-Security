@@ -4,11 +4,11 @@ import DefaultNavbar from "@/components/NavbarDefault.vue";
 import MaterialInput from "@/components/MaterialInput.vue";
 import MaterialTextArea from "@/components/MaterialTextArea.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
-import setMaterialInput from "https://0scd2a2h.dev.cdn.imgeng.in/js/material-input";
+import setMaterialInput from "@/assets/js/material-input";
 import MaterialAlert from "@/components/MaterialAlert.vue";
 import Footer from "@/components/Footer.vue";
 
-import contact_1 from "https://0scd2a2h.dev.cdn.imgeng.in/img/contact/contact_1.webp";
+import contact_1 from "@/assets/img/contact/contact_1.webp";
 onMounted(async () => {
   setMaterialInput();
 });

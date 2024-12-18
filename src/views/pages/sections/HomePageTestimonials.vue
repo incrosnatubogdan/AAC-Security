@@ -33,44 +33,6 @@ import DefaultReviewCard from "@/components/cards/reviewCards/DefaultReviewCard.
           :rating="5.0"
         />
       </div>
-      <!-- <hr class="horizontal dark my-5" />
-      <div class="row">
-        <div class="col-lg-2 col-md-4 col-6 ms-auto">
-          <img
-            class="w-100 opacity-6"
-            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-apple.svg"
-            alt="Logo"
-          />
-        </div>
-        <div class="col-lg-2 col-md-4 col-6">
-          <img
-            class="w-100 opacity-6"
-            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-facebook.svg"
-            alt="Logo"
-          />
-        </div>
-        <div class="col-lg-2 col-md-4 col-6">
-          <img
-            class="w-100 opacity-6"
-            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-nasa.svg"
-            alt="Logo"
-          />
-        </div>
-        <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
-          <img
-            class="w-100 opacity-6"
-            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-vodafone.svg"
-            alt="Logo"
-          />
-        </div>
-        <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
-          <img
-            class="w-100 opacity-6"
-            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-digitalocean.svg"
-            alt="Logo"
-          />
-        </div>
-      </div> -->
     </div>
   </section>
 </template>

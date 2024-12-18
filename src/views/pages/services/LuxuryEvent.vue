@@ -5,7 +5,7 @@ import { onMounted, onUnmounted } from "vue";
 import NavbarDefault from "../../../components/NavbarDefault.vue";
 import Footer from "@/components/Footer.vue";
 //image
-import bg0 from "https://0scd2a2h.dev.cdn.imgeng.in/img/services/luxury_cover.webp";
+import bg0 from "@/assets/img/services/luxury_cover.webp";
 
 import {
   luxuryEventServices,

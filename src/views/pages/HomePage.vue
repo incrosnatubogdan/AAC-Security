@@ -5,9 +5,9 @@ import Footer from "@/components/Footer.vue";
 
 import HomePageInfo from "./sections/HomePageInfo.vue";
 //images
-import vueMkHeader from "https://0scd2a2h.dev.cdn.imgeng.in/assets/img/home/header.webp";
-import home_bg_1 from "https://0scd2a2h.dev.cdn.imgeng.in/assets/img/home/home_bg_1.webp";
-import home_bg_3 from "https://0scd2a2h.dev.cdn.imgeng.in/assets/img/home/home_why.webp";
+import vueMkHeader from "@/assets/img/home/header.webp";
+import home_bg_1 from "@/assets/img/home/home_bg_1.webp";
+import home_bg_3 from "@/assets/img/home/home_why.webp";
 </script>
 
 <script>

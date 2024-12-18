@@ -2,10 +2,10 @@
 import NavbarDefault from "@/components/NavbarDefault.vue";
 import Footer from "@/components/Footer.vue";
 
-import about_2 from "https://0scd2a2h.dev.cdn.imgeng.in/img/about/about_2.webp";
-import adrienImgBg2 from "https://0scd2a2h.dev.cdn.imgeng.in/img/about/team_1_bg.webp";
-import adrienImg from "https://0scd2a2h.dev.cdn.imgeng.in/img/about/team_1.webp";
-import arinaImg from "https://0scd2a2h.dev.cdn.imgeng.in/img/about/team_2.webp";
+import about_2 from "@/assets/img/about/about_2.webp";
+import adrienImgBg2 from "@/assets/img/about/team_1_bg.webp";
+import adrienImg from "@/assets/img/about/team_1.webp";
+import arinaImg from "@/assets/img/about/team_2.webp";
 </script>
 
 <script>

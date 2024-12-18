@@ -1,7 +1,7 @@
 <script setup>
-import facebook_icon from "https://0scd2a2h.dev.cdn.imgeng.in/img/icons/facebook.png";
-import instagram_icon from "https://0scd2a2h.dev.cdn.imgeng.in/img/icons/instagram.png";
-import linkedin_icon from "https://0scd2a2h.dev.cdn.imgeng.in/img/icons/linkedin.png";
+import facebook_icon from "@/assets/img/icons/facebook.png";
+import instagram_icon from "@/assets/img/icons/instagram.png";
+import linkedin_icon from "@/assets/img/icons/linkedin.png";
 </script>
 
 <template>

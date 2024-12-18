@@ -5,7 +5,7 @@ import { onMounted, onUnmounted } from "vue";
 import DefaultNavbar from "../../../components/NavbarDefault.vue";
 
 //image
-import bg0 from "https://0scd2a2h.dev.cdn.imgeng.in/img/services/close_protection/cover.jpg";
+import bg0 from "@/assets/img/services/close_protection/cover.jpg";
 //sections
 import Information from "../AboutUs/Sections/AboutInformation.vue";
 
@@ -14,7 +14,6 @@ import {
   luxuryEventServicesCta,
 } from "../../../helpers/services/luxuryEvent";
 import servicesData from "../../../helpers/services/data";
-import WhatsAppButton from "../../../components/WhatsAppButton.vue";
 
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
@@ -57,6 +56,4 @@ onUnmounted(() => {
       :callToAction="luxuryEventServicesCta"
     />
   </div>
-  <!-- <WhatsAppButton /> -->
 </template>
-../../pages/AboutInformation.vue../../../components/NavbarDefault.vue

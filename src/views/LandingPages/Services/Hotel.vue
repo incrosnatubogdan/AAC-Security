@@ -1,21 +1,13 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
-
-//example components
 import DefaultNavbar from "../../../components/NavbarDefault.vue";
-
-//image
-import bg0 from "https://0scd2a2h.dev.cdn.imgeng.in/img/services/close_protection/cover.jpg";
-//sections
+import bg0 from "@/assets/img/services/close_protection/cover.jpg";
 import Information from "../AboutUs/Sections/AboutInformation.vue";
-
-import {
-  hotelServices,
-  hotelServicesCta,
-} from "../../../helpers/services/hotel";
 import servicesData from "../../../helpers/services/data";
-import WhatsAppButton from "../../../components/WhatsAppButton.vue";
-
+import {
+  luxuryEventServices,
+  luxuryEventServicesCta,
+} from "../../../helpers/services/luxuryEvent";
 const body = document.getElementsByTagName("body")[0];
 const pageInfo = servicesData.filter(
   (service) => service.id === "hotel-security"
@@ -57,6 +49,4 @@ onUnmounted(() => {
       :callToAction="hotelServicesCta"
     />
   </div>
-  <!-- <WhatsAppButton /> -->
 </template>
-../../pages/AboutInformation.vue../../../components/NavbarDefault.vue

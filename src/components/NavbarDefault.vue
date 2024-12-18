@@ -1,11 +1,10 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import LogoWhite from "https://0scd2a2h.dev.cdn.imgeng.in/img/logo_red.png";
-import LogoDark from "https://0scd2a2h.dev.cdn.imgeng.in/img/logo_black.png";
-
-import facebook_icon from "https://0scd2a2h.dev.cdn.imgeng.in/img/icons/facebook.png";
-import instagram_icon from "https://0scd2a2h.dev.cdn.imgeng.in/img/icons/instagram.png";
-import linkedin_icon from "https://0scd2a2h.dev.cdn.imgeng.in/img/icons/linkedin.png";
+import LogoWhite from "@/assets/img/logo_red.png";
+import LogoDark from "@/assets/img/logo_black.png";
+import facebook_icon from "@/assets/img/icons/facebook.png";
+import instagram_icon from "@/assets/img/icons/instagram.png";
+import linkedin_icon from "@/assets/img/icons/linkedin.png";
 const props = defineProps({
   light: {
     type: Boolean,
