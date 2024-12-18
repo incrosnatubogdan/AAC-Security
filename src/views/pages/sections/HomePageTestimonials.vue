@@ -38,35 +38,35 @@ import DefaultReviewCard from "@/components/cards/reviewCards/DefaultReviewCard.
         <div class="col-lg-2 col-md-4 col-6 ms-auto">
           <img
             class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-apple.svg"
+            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-apple.svg"
             alt="Logo"
           />
         </div>
         <div class="col-lg-2 col-md-4 col-6">
           <img
             class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-facebook.svg"
+            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-facebook.svg"
             alt="Logo"
           />
         </div>
         <div class="col-lg-2 col-md-4 col-6">
           <img
             class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-nasa.svg"
+            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-nasa.svg"
             alt="Logo"
           />
         </div>
         <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
           <img
             class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-vodafone.svg"
+            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-vodafone.svg"
             alt="Logo"
           />
         </div>
         <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
           <img
             class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-digitalocean.svg"
+            src="https://0scd2a2h.dev.cdn.imgeng.in/img/logos/gray-logos/logo-digitalocean.svg"
             alt="Logo"
           />
         </div>

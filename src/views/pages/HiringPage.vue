@@ -2,8 +2,8 @@
 import NavbarDefault from "@/components/NavbarDefault.vue";
 import Footer from "@/components/Footer.vue";
 
-import hiring_2 from "@/assets/img/hiring/hiring_2.webp";
-import hiring_1 from "@/assets/img/hiring/hiring_1.webp";
+import hiring_2 from "https://0scd2a2h.dev.cdn.imgeng.in/img/hiring/hiring_2.webp";
+import hiring_1 from "https://0scd2a2h.dev.cdn.imgeng.in/img/hiring/hiring_1.webp";
 </script>
 
 <script>

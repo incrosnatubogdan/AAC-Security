@@ -5,9 +5,9 @@ import Footer from "@/components/Footer.vue";
 
 import HomePageInfo from "./sections/HomePageInfo.vue";
 //images
-import vueMkHeader from "@/assets/img/vue-mk-header.webp";
-import home_bg_1 from "@/assets/img/home/home_bg_1.webp";
-import home_bg_3 from "@/assets/img/home/home_why.webp";
+import vueMkHeader from "https://0scd2a2h.dev.cdn.imgeng.in/assets/img/home/header.webp";
+import home_bg_1 from "https://0scd2a2h.dev.cdn.imgeng.in/assets/img/home/home_bg_1.webp";
+import home_bg_3 from "https://0scd2a2h.dev.cdn.imgeng.in/assets/img/home/home_why.webp";
 </script>
 
 <script>
@@ -24,9 +24,6 @@ export default {
     const body = document.getElementsByTagName("body")[0];
     body.classList.add("bg-gray-200");
     window.location.href = document.URL.replace(/#.*$/, "") + "#landing-page";
-    this.loadedHeader = new Image();
-    this.loadedHeader.src =
-      "https://fomantic-ui.com/images/wireframe/image.png";
   },
 
   beforeUnmount() {
@@ -43,14 +40,8 @@ export default {
     <Header>
       <div
         class="page-header min-vh-100 animated fade-in"
-        :style="`box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+        :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
       >
-        <img
-          class="header-img"
-          :src="vueMkHeader"
-          alt="Beyond Safety: Total Peace of Mind AAP Security London"
-          fetchpriority="high"
-        />
         <div class="container">
           <div class="row">
             <div class="col-lg-7 text-center mx-auto position-relative">
@@ -73,12 +64,6 @@ export default {
     data-anchor="landing-page2"
     :style="`background-image: url(${home_bg_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
   >
-    <img
-      class="header-img"
-      :src="home_bg_1"
-      alt="Personal Security London with Corportate Security AAP Security London"
-      fetchpriority="eager"
-    />
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -126,11 +111,7 @@ export default {
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img
-          :src="home_bg_3"
-          class="d-block min-vh-100"
-          alt="Commitment to Excellence"
-        />
+        <img :src="home_bg_3" class="d-block min-vh-100" alt="..." />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Commitment to Excellence</h5>
           <p class="lead">
@@ -141,11 +122,7 @@ export default {
         </div>
       </div>
       <div class="carousel-item">
-        <img
-          :src="home_bg_3"
-          class="d-block min-vh-100"
-          alt="Proactive Approach"
-        />
+        <img :src="home_bg_3" class="d-block min-vh-100" alt="..." />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Proactive Approach</h5>
           <p class="lead">
@@ -156,11 +133,7 @@ export default {
         </div>
       </div>
       <div class="carousel-item">
-        <img
-          :src="home_bg_3"
-          class="d-block min-vh-100"
-          alt="Comprehensive Security Approach"
-        />
+        <img :src="home_bg_3" class="d-block min-vh-100" alt="..." />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Comprehensive Security Approach</h5>
           <p class="lead">
@@ -170,11 +143,7 @@ export default {
         </div>
       </div>
       <div class="carousel-item">
-        <img
-          :src="home_bg_3"
-          class="d-block min-vh-100"
-          alt="Leadership and Expertise"
-        />
+        <img :src="home_bg_3" class="d-block min-vh-100" alt="..." />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Leadership and Expertise</h5>
           <p class="lead">
@@ -207,11 +176,3 @@ export default {
 
   <Footer />
 </template>
-
-<style scoped>
-.header-img {
-  height: 100%;
-  position: absolute;
-  left: 0;
-}
-</style>

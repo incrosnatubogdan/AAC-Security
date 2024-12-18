@@ -5,7 +5,7 @@ import { onMounted, onUnmounted } from "vue";
 import DefaultNavbar from "../../../components/NavbarDefault.vue";
 import Footer from "@/components/Footer.vue";
 //image
-import bg0 from "@/assets/img/services/residential_cover.webp";
+import bg0 from "https://0scd2a2h.dev.cdn.imgeng.in/img/services/residential_cover.webp";
 //sections
 
 import {

@@ -5,7 +5,7 @@ import { onMounted, onUnmounted } from "vue";
 import DefaultNavbar from "../../../components/NavbarDefault.vue";
 
 //image
-import bg0 from "@/assets/img/services/close_protection/cover.jpg";
+import bg0 from "https://0scd2a2h.dev.cdn.imgeng.in/img/services/close_protection/cover.jpg";
 //sections
 import Information from "../AboutUs/Sections/AboutInformation.vue";
 import servicesData from "../../../helpers/services/data";

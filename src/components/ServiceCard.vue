@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 
 // tooltip
-import setTooltip from "@/assets/js/tooltip";
+import setTooltip from "https://0scd2a2h.dev.cdn.imgeng.in/js/tooltip";
 
 // store
 import { useAppStore } from "@/stores";

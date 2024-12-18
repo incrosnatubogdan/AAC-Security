@@ -5,7 +5,7 @@ import { onMounted, onUnmounted } from "vue";
 import DefaultNavbar from "../../../components/NavbarDefault.vue";
 
 //image
-import bg0 from "@/assets/img/services/close_protection/cover.jpg";
+import bg0 from "https://0scd2a2h.dev.cdn.imgeng.in/img/services/close_protection/cover.jpg";
 //sections
 import Information from "../AboutUs/Sections/AboutInformation.vue";
 
@@ -58,4 +58,5 @@ onUnmounted(() => {
     />
   </div>
   <!-- <WhatsAppButton /> -->
-</template>../../pages/AboutInformation.vue../../../components/NavbarDefault.vue
+</template>
+../../pages/AboutInformation.vue../../../components/NavbarDefault.vue
