@@ -40,7 +40,6 @@ export default {
       <div
         class="page-header min-vh-100 animated fade-in"
         :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
-        loading="lazy"
       >
         <div class="container">
           <div class="row">
