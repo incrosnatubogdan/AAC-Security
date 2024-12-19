@@ -17,6 +17,13 @@ export default {
     return {
       isFirstSlide: true,
       loadedHeader: null,
+      images: [
+        import.meta.env.VITE_NODE_ENV === "production" ? "" : vueMkHeader,
+        home_bg_1,
+        import.meta.env.VITE_NODE_ENV === "production"
+          ? "https://aapsecurity.twic.pics/home_why-CFjRmGiC.webp"
+          : home_bg_3,
+      ],
     };
   },
 
@@ -24,6 +31,7 @@ export default {
     const body = document.getElementsByTagName("body")[0];
     body.classList.add("bg-gray-200");
     window.location.href = document.URL.replace(/#.*$/, "") + "#landing-page";
+    console.log(vueMkHeader);
   },
 
   beforeUnmount() {
@@ -111,7 +119,7 @@ export default {
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img :src="home_bg_3" class="d-block min-vh-100" alt="..." />
+        <img :src="images[2]" class="d-block min-vh-100" alt="..." />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Commitment to Excellence</h5>
           <p class="lead">
@@ -122,7 +130,7 @@ export default {
         </div>
       </div>
       <div class="carousel-item">
-        <img :src="home_bg_3" class="d-block min-vh-100" alt="..." />
+        <img :src="images[2]" class="d-block min-vh-100" alt="..." />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Proactive Approach</h5>
           <p class="lead">
@@ -133,7 +141,7 @@ export default {
         </div>
       </div>
       <div class="carousel-item">
-        <img :src="home_bg_3" class="d-block min-vh-100" alt="..." />
+        <img :src="images[2]" class="d-block min-vh-100" alt="..." />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Comprehensive Security Approach</h5>
           <p class="lead">
@@ -143,7 +151,7 @@ export default {
         </div>
       </div>
       <div class="carousel-item">
-        <img :src="home_bg_3" class="d-block min-vh-100" alt="..." />
+        <img :src="images[2]" class="d-block min-vh-100" alt="..." />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Leadership and Expertise</h5>
           <p class="lead">
