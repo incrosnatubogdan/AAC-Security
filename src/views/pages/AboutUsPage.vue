@@ -2,8 +2,6 @@
 import NavbarDefault from "@/components/NavbarDefault.vue";
 import Footer from "@/components/Footer.vue";
 
-import about_2 from "@/assets/img/about/about_2.webp";
-import adrienImgBg2 from "@/assets/img/about/team_1_bg.webp";
 import adrienImg from "@/assets/img/about/team_1.webp";
 import arinaImg from "@/assets/img/about/team_2.webp";
 </script>
@@ -36,7 +34,7 @@ export default {
   <div class="section" data-anchor="aus1">
     <div
       class="page-header min-vh-100"
-      :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+      :style="`background-image: url(https://aapsecurity-601095978.imgix.net/assets/about_2-B7quEeyq.webp?auto=compress,format&cs=srgb?fit=max); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
       loading="lazy"
     >
       <div class="container">
@@ -88,7 +86,7 @@ export default {
         <div class="section" data-anchor="aus2">
           <div
             class="page-header page-header-founder min-vh-100 py-5 px-4"
-            :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+            :style="`background-image: url(https://aapsecurity-601095978.imgix.net/assets/about_2-B7quEeyq.webp?auto=compress,format&cs=srgb?fit=max); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
             loading="lazy"
           >
             <img
@@ -128,7 +126,7 @@ export default {
         <div class="section" data-anchor="aus3">
           <div
             class="page-header page-header-founder min-vh-100 py-5 px-4"
-            :style="`background-image: url(${adrienImgBg2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 60%)`"
+            :style="`background-image: url(https://aapsecurity-601095978.imgix.net/assets/team_1_bg-DTpWJuHw.webp?auto=compress,format&cs=srgb?fit=max); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 60%)`"
             loading="lazy"
           >
             <img
@@ -185,7 +183,7 @@ export default {
   <div class="section" data-anchor="aus4">
     <div
       class="page-header min-vh-100"
-      :style="`background-image: url(${about_2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+      :style="`background-image: url(https://aapsecurity-601095978.imgix.net/assets/about_2-B7quEeyq.webp?auto=compress,format&cs=srgb?fit=max); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
       loading="lazy"
     >
       <div class="container">
@@ -214,7 +212,7 @@ export default {
   <div class="section" data-anchor="aus5">
     <div
       class="page-header min-vh-100"
-      :style="`background-image: url(${adrienImgBg2}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 60%)`"
+      :style="`background-image: url(https://aapsecurity-601095978.imgix.net/assets/team_1_bg-DTpWJuHw.webp?auto=compress,format&cs=srgb?fit=max); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 60%)`"
       loading="lazy"
     >
       <div class="container">

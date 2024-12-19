@@ -4,10 +4,6 @@ import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 
 import HomePageInfo from "./sections/HomePageInfo.vue";
-//images
-import vueMkHeader from "@/assets/img/home/header.webp";
-import home_bg_1 from "@/assets/img/home/home_bg_1.webp";
-import home_bg_3 from "@/assets/img/home/home_why.webp";
 </script>
 
 <script>
@@ -17,13 +13,6 @@ export default {
     return {
       isFirstSlide: true,
       loadedHeader: null,
-      images: [
-        import.meta.env.VITE_NODE_ENV === "production" ? "" : vueMkHeader,
-        home_bg_1,
-        import.meta.env.VITE_NODE_ENV === "production"
-          ? "https://aapsecurity.twic.pics/home_why-CFjRmGiC.webp"
-          : home_bg_3,
-      ],
     };
   },
 
@@ -31,7 +20,6 @@ export default {
     const body = document.getElementsByTagName("body")[0];
     body.classList.add("bg-gray-200");
     window.location.href = document.URL.replace(/#.*$/, "") + "#landing-page";
-    console.log(vueMkHeader);
   },
 
   beforeUnmount() {
@@ -48,7 +36,7 @@ export default {
     <Header>
       <div
         class="page-header min-vh-100 animated fade-in"
-        :style="`background-image: url(${vueMkHeader}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+        :style="`background-image: url(https://aapsecurity-601095978.imgix.net/assets/header-CpLKWpR_.webp?auto=compress,format&cs=srgb?fit=max); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
       >
         <div class="container">
           <div class="row">
@@ -70,7 +58,7 @@ export default {
   <div
     class="section page-header min-vh-100"
     data-anchor="landing-page2"
-    :style="`background-image: url(${home_bg_1}); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
+    :style="`background-image: url(https://aapsecurity-601095978.imgix.net/assets/home_bg_1-DRtmjQIG.webp?auto=compress,format&cs=srgb?fit=max); box-shadow:inset 0 0 0 2000px rgb(0 0 0 / 40%)`"
   >
     <div class="container">
       <div class="row">
@@ -119,7 +107,11 @@ export default {
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img :src="images[2]" class="d-block min-vh-100" alt="..." />
+        <img
+          src="https://aapsecurity-601095978.imgix.net/assets/home_why-CFjRmGiC.webp?auto=compress,format&cs=srgb?fit=max"
+          class="d-block min-vh-100"
+          alt="..."
+        />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Commitment to Excellence</h5>
           <p class="lead">
@@ -130,7 +122,11 @@ export default {
         </div>
       </div>
       <div class="carousel-item">
-        <img :src="images[2]" class="d-block min-vh-100" alt="..." />
+        <img
+          src="https://aapsecurity-601095978.imgix.net/assets/home_why-CFjRmGiC.webp?auto=compress,format&cs=srgb?fit=max"
+          class="d-block min-vh-100"
+          alt="..."
+        />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Proactive Approach</h5>
           <p class="lead">
@@ -141,7 +137,11 @@ export default {
         </div>
       </div>
       <div class="carousel-item">
-        <img :src="images[2]" class="d-block min-vh-100" alt="..." />
+        <img
+          src="https://aapsecurity-601095978.imgix.net/assets/home_why-CFjRmGiC.webp?auto=compress,format&cs=srgb?fit=max"
+          class="d-block min-vh-100"
+          alt="..."
+        />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Comprehensive Security Approach</h5>
           <p class="lead">
@@ -151,7 +151,11 @@ export default {
         </div>
       </div>
       <div class="carousel-item">
-        <img :src="images[2]" class="d-block min-vh-100" alt="..." />
+        <img
+          src="https://aapsecurity-601095978.imgix.net/assets/home_why-CFjRmGiC.webp?auto=compress,format&cs=srgb?fit=max"
+          class="d-block min-vh-100"
+          alt="..."
+        />
         <div class="carousel-caption d-block">
           <h5 class="c-white">Leadership and Expertise</h5>
           <p class="lead">
