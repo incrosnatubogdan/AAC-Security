@@ -16,13 +16,5 @@ export default defineConfig({
   build: {
     outDir: "./docs",
     emptyOutDir: false,
-    rollupOptions: {
-      external: ["vue"],
-      output: {
-        paths: {
-          vue: "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
-        },
-      },
-    },
   },
 });
