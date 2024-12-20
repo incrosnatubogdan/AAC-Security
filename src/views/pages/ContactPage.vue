@@ -1,21 +1,12 @@
-<script setup>
-import { onMounted } from "vue";
+<script>
+import emailjs from "@emailjs/browser";
 import DefaultNavbar from "@/components/NavbarDefault.vue";
 import MaterialInput from "@/components/MaterialInput.vue";
 import MaterialTextArea from "@/components/MaterialTextArea.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
 import setMaterialInput from "@/assets/js/material-input";
 import MaterialAlert from "@/components/MaterialAlert.vue";
-import Footer from "@/components/Footer.vue";
-
-import contact_1 from "@/assets/img/contact/contact_1.webp";
-onMounted(async () => {
-  setMaterialInput();
-});
-</script>
-
-<script>
-import emailjs from "@emailjs/browser";
+import NavFooter from "@/components/Footer.vue";
 
 export default {
   data() {
@@ -25,6 +16,17 @@ export default {
         description: "",
       },
     };
+  },
+  components: {
+    DefaultNavbar,
+    MaterialInput,
+    MaterialTextArea,
+    MaterialButton,
+    MaterialAlert,
+    NavFooter,
+  },
+  mounted: async () => {
+    setMaterialInput();
   },
   methods: {
     setEmailStatus(status, description) {
@@ -107,9 +109,10 @@ export default {
 <template>
   <DefaultNavbar light :sticky="true" />
   <section>
+    <!--  -->
     <div
       class="page-header min-vh-100"
-      :style="`background-image: url(${contact_1});`"
+      :style="`background-image: url(https://aapsecurity-601095978.imgix.net/assets/contact_1-Dwq4FSd6.webp?auto=compress,format&cs=srgb?fit=max);`"
       loading="lazy"
     >
       <div class="container">
@@ -192,7 +195,7 @@ export default {
         </div>
       </div>
     </div>
-    <Footer />
+    <NavFooter />
   </section>
 
   <MaterialAlert
