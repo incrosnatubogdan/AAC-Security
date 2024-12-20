@@ -90,7 +90,7 @@ export default {
             loading="lazy"
           >
             <img
-              class="founder-image animate__animated animate__backInLeft"
+              class="founder-image animate__animated"
               :src="adrienImg"
               alt=""
             />
@@ -102,12 +102,8 @@ export default {
                 <div
                   class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column mx-auto"
                 >
-                  <h1 class="text-white animate__animated animate__fadeInLeft">
-                    ADRIEN
-                  </h1>
-                  <p
-                    class="text-white lead animate__animated animate__fadeInLeft py-5 mb-300"
-                  >
+                  <h1 class="text-white animate__animated">ADRIEN</h1>
+                  <p class="text-white lead animate__animated py-5 mb-300">
                     With seven years of seasoned experience in the security
                     industry, Adrien’s expertise is the cornerstone of our
                     operational excellence. <br />
@@ -130,7 +126,7 @@ export default {
             loading="lazy"
           >
             <img
-              class="founder-image animate__animated animate__backInLeft"
+              class="founder-image animate__animated"
               :src="arinaImg"
               alt=""
             />
@@ -142,12 +138,8 @@ export default {
                 <div
                   class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
                 >
-                  <h1 class="text-white animate__animated animate__fadeInLeft">
-                    ARINA
-                  </h1>
-                  <p
-                    class="text-white lead animate__animated animate__fadeInLeft py-5 mb-300"
-                  >
+                  <h1 class="text-white animate__animated">ARINA</h1>
+                  <p class="text-white lead animate__animated py-5 mb-300">
                     Co founder Arina, the entrepreneurial force behind ASK33 and
                     Nexus College of London, brings a strategic perspective to
                     our services, ensuring our approaches are not just effective
