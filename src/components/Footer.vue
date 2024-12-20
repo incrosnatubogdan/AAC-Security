@@ -23,7 +23,7 @@ import linkedin_icon from "@/assets/img/icons/linkedin.png";
         <ul
           class="nav col-md-6 col-12 justify-content-lg-end justify-content-center list-unstyled d-flex"
         >
-          <li>
+          <!-- <li>
             <a
               target="_blank"
               href="https://www.facebook.com/profile.php?id=61558573751283&mibextid=LQQJ4d"
@@ -48,7 +48,7 @@ import linkedin_icon from "@/assets/img/icons/linkedin.png";
                 :src="linkedin_icon"
                 alt="linkedin logo"
             /></a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
