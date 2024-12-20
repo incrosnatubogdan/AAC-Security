@@ -3,9 +3,10 @@
   "version": "2.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "npm i && vite build --base=/AAC-Security",
+    "build": "vite build --base=/AAC-Security",
     "preview": "vite preview --port 4173",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "build-local": "vite build --base=/AAC-Security"
   },
   "dependencies": {
     "@emailjs/browser": "^3.12.1",

@@ -4,7 +4,6 @@ import DefaultNavbar from "@/components/NavbarDefault.vue";
 import MaterialInput from "@/components/MaterialInput.vue";
 import MaterialTextArea from "@/components/MaterialTextArea.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
-import setMaterialInput from "@/assets/js/material-input";
 import MaterialAlert from "@/components/MaterialAlert.vue";
 import NavFooter from "@/components/Footer.vue";
 
@@ -24,9 +23,6 @@ export default {
     MaterialButton,
     MaterialAlert,
     NavFooter,
-  },
-  mounted: async () => {
-    setMaterialInput();
   },
   methods: {
     setEmailStatus(status, description) {
@@ -152,6 +148,7 @@ export default {
                           model="full_name"
                           class="input-group-static mb-4"
                           type="text"
+                          value=""
                           label="Full Name"
                           placeholder="Full Name"
                         />
@@ -162,6 +159,7 @@ export default {
                           type="email"
                           model="email"
                           label="Email"
+                          value=""
                           placeholder="your@email.com"
                         />
                       </div>

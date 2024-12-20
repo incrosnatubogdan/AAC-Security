@@ -1,83 +1,5 @@
-<script setup>
-import { defineProps, toRefs } from "vue";
-
-const props = defineProps({
-  id: {
-    type: String,
-    default: "",
-  },
-  type: {
-    type: String,
-    default: "text",
-  },
-  label: {
-    type: [String, Object],
-    text: String,
-    class: String,
-    default: () => ({
-      class: "",
-    }),
-  },
-  value: {
-    type: String,
-    default: "",
-  },
-  placeholder: {
-    type: String,
-    default: "",
-  },
-  size: {
-    type: String,
-    default: "md",
-  },
-  error: {
-    type: Boolean,
-    default: false,
-  },
-  success: {
-    type: Boolean,
-    default: false,
-  },
-  isRequired: {
-    type: Boolean,
-    default: false,
-  },
-  isDisabled: {
-    type: Boolean,
-    default: false,
-  },
-  inputClass: {
-    type: String,
-    default: "",
-  },
-  icon: {
-    type: String,
-    default: "",
-  },
-  model: {
-    type: String,
-    default: "",
-  },
-});
-
-function getClasses(size, success, error) {
-  let sizeValue, isValidValue;
-
-  sizeValue = size && `form-control-${size}`;
-
-  if (error) {
-    isValidValue = "is-invalid";
-  } else if (success) {
-    isValidValue = "is-valid";
-  } else {
-    isValidValue = "";
-  }
-
-  return `${sizeValue} ${isValidValue}`;
-}
-</script>
-
 <script>
+import { toRefs } from "vue";
 export default {
   data() {
     return {
@@ -85,21 +7,82 @@ export default {
     };
   },
 
-  mounted() {
-    const { model } = toRefs(this.props);
-    this.inputValue = this.fetchData(model.value);
+  props: {
+    id: {
+      type: String,
+      default: "",
+    },
+    type: {
+      type: String,
+      default: "text",
+    },
+    label: {
+      type: [String, Object],
+      text: String,
+      class: String,
+      default: () => ({
+        class: "",
+      }),
+    },
+    value: {
+      type: String,
+      default: "",
+    },
+    placeholder: {
+      type: String,
+      default: "",
+    },
+    size: {
+      type: String,
+      default: "md",
+    },
+    error: {
+      type: Boolean,
+      default: false,
+    },
+    success: {
+      type: Boolean,
+      default: false,
+    },
+    isRequired: {
+      type: Boolean,
+      default: false,
+    },
+    isDisabled: {
+      type: Boolean,
+      default: false,
+    },
+    inputClass: {
+      type: String,
+      default: "",
+    },
+    icon: {
+      type: String,
+      default: "",
+    },
+    model: {
+      type: String,
+      default: "",
+    },
   },
 
-  methods: {
-    fetchData(model) {
-      const previousData = localStorage.getItem("contactData");
+  mounted() {},
 
-      if (previousData) {
-        const parsedPrevData = JSON.parse(previousData);
-        return parsedPrevData[model];
+  methods: {
+    getClasses(size, success, error) {
+      let sizeValue, isValidValue;
+
+      sizeValue = size && `form-control-${size}`;
+
+      if (error) {
+        isValidValue = "is-invalid";
+      } else if (success) {
+        isValidValue = "is-valid";
+      } else {
+        isValidValue = "";
       }
 
-      return "";
+      return `${sizeValue} ${isValidValue}`;
     },
 
     handleInput(value, model) {
