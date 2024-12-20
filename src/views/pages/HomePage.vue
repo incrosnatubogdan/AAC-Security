@@ -109,7 +109,7 @@ export default {
       <div class="carousel-item active">
         <img
           src="https://aapsecurity-601095978.imgix.net/assets/home_why-CFjRmGiC.webp?auto=compress,format&cs=srgb?fit=max"
-          class="d-block min-vh-100"
+          class="d-block min-vh-100 min-vw-100"
           alt="..."
         />
         <div class="carousel-caption d-block">
@@ -124,7 +124,7 @@ export default {
       <div class="carousel-item">
         <img
           src="https://aapsecurity-601095978.imgix.net/assets/home_why-CFjRmGiC.webp?auto=compress,format&cs=srgb?fit=max"
-          class="d-block min-vh-100"
+          class="d-block min-vh-100 min-vw-100"
           alt="..."
         />
         <div class="carousel-caption d-block">
@@ -139,7 +139,7 @@ export default {
       <div class="carousel-item">
         <img
           src="https://aapsecurity-601095978.imgix.net/assets/home_why-CFjRmGiC.webp?auto=compress,format&cs=srgb?fit=max"
-          class="d-block min-vh-100"
+          class="d-block min-vh-100 min-vw-100"
           alt="..."
         />
         <div class="carousel-caption d-block">
@@ -153,7 +153,7 @@ export default {
       <div class="carousel-item">
         <img
           src="https://aapsecurity-601095978.imgix.net/assets/home_why-CFjRmGiC.webp?auto=compress,format&cs=srgb?fit=max"
-          class="d-block min-vh-100"
+          class="d-block min-vh-100 min-vw-100"
           alt="..."
         />
         <div class="carousel-caption d-block">
