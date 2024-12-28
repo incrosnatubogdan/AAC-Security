@@ -102,7 +102,10 @@ export default {
                 <div
                   class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column mx-auto"
                 >
-                  <h1 class="text-white animate__animated">ADRIEN</h1>
+                  <h1 class="text-white animate__animated mb-0">
+                    ADRIEN<br />
+                    <h5 class="text-white">Operations Director</h5>
+                  </h1>
                   <p class="text-white lead animate__animated py-5 mb-300">
                     With seven years of seasoned experience in the security
                     industry, Adrien’s expertise is the cornerstone of our
@@ -138,7 +141,11 @@ export default {
                 <div
                   class="col-lg-8 text-align-center justify-content-center d-flex flex-wrap flex-column"
                 >
-                  <h1 class="text-white animate__animated">ARINA</h1>
+                  <h1 class="text-white animate__animated mb-0">
+                    ARINA
+                    <br />
+                    <h5 class="text-white">Financial Director</h5>
+                  </h1>
                   <p class="text-white lead animate__animated py-5 mb-300">
                     Co founder Arina, the entrepreneurial force behind ASK33 and
                     Nexus College of London, brings a strategic perspective to

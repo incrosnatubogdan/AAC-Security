@@ -52,7 +52,7 @@ export default {
       href="https://maps.app.goo.gl/bg9B9fkdkcrCZgtp9"
       >{{ address }}</a
     >
-    <a
+    <!-- <a
       target="_blank"
       rel="noopener noreferrer"
       href="https://www.facebook.com/profile.php?id=61558573751283&mibextid=LQQJ4d"
@@ -77,7 +77,7 @@ export default {
       class="mb-0 mx-3 text-white d-flex align-items-center"
     >
       <img :src="linkedin_icon" alt="linkedin logo"
-    /></a>
+    /></a> -->
   </div>
   <nav
     class="navbar navbar-expand-lg z-index-3 w-100 shadow-none navbar-transparent position-fixed mb-3 navbar-dark z-index-3 py-3 min-vw-100"
